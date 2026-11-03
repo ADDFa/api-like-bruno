@@ -1,0 +1,163 @@
+info:
+  name: Index
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{api_url}}/unor?includes=eselon&diatasan=8ae483a769385f9a01694799ddef3e91&is_active=1"
+  params:
+    - name: includes
+      value: eselon,leader,parent,parentRecursive,childs,allChilds,subordinate,allSubordinate
+      type: query
+      disabled: true
+    - name: includes
+      value: eselon
+      type: query
+    - name: search
+      value: dinas pendidikan
+      type: query
+      disabled: true
+    - name: per_page
+      value: "10"
+      type: query
+      disabled: true
+    - name: limit
+      value: "5"
+      type: query
+      disabled: true
+    - name: unor_induk
+      value: 8ae4828859d211720159d49c046246b8
+      type: query
+      disabled: true
+    - name: unor_induk
+      value: 8ae4828659d52a570159d539b70c0377
+      type: query
+      disabled: true
+    - name: diatasan
+      value: 8ae483a769385f9a01694799ddef3e91
+      type: query
+    - name: eselon
+      value: "99"
+      type: query
+      disabled: true
+    - name: eselon_in
+      value: 21,22
+      type: query
+      disabled: true
+    - name: is_active
+      value: "1"
+      type: query
+    - name: has_leader
+      value: "1"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Unor
+    request:
+      url: "{{api_url}}/unor?limit=5"
+      method: GET
+      params:
+        - name: includes
+          value: eselon,childs,allChilds,subordinate,allSubordinate
+          type: query
+          disabled: true
+        - name: includes
+          value: eselon
+          type: query
+          disabled: true
+        - name: search
+          value: dinas pendidikan
+          type: query
+          disabled: true
+        - name: per_page
+          value: "10"
+          type: query
+          disabled: true
+        - name: limit
+          value: "5"
+          type: query
+        - name: unor_induk
+          value: 8ae4828859d211720159d4af349e5bc5
+          type: query
+          disabled: true
+        - name: diatasan
+          value: 8ae4828859d211720159d4d546647e75
+          type: query
+          disabled: true
+        - name: eselon
+          value: "21"
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 30 Jun 2026 06:37:52 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "002680c2-5f62-46d5-bd1f-3954207465eb",
+              "nama": "SMA NEGERI 11 KOTA BENGKULU",
+              "nama_jabatan": "KEPALA SEKOLAH SMA NEGERI 11 KOTA BENGKULU",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-06-24 16:03"
+            },
+            {
+              "id": "0041832c-16ae-40ea-8f07-412f380e8f45",
+              "nama": "Cabang Dinas Energi dan Sumber Daya Mineral Curup",
+              "nama_jabatan": "Kepala Cabang Dinas Energi dan Sumber Daya Mineral Curup",
+              "tanggal_dibuat": "2026-06-25 12:42",
+              "update_terakhir": "2026-06-25 12:42"
+            },
+            {
+              "id": "01018884-7941-40aa-bd54-29204dc4cdcc",
+              "nama": "SMK NEGERI 1 KOTA BENGKULU",
+              "nama_jabatan": "KEPALA SEKOLAH SMK NEGERI 1 KOTA BENGKULU",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-06-24 16:03"
+            },
+            {
+              "id": "0219ed14-fb87-4771-afcc-72569f6e1d35",
+              "nama": "SMAN 6 REJANG LEBONG",
+              "nama_jabatan": "KEPALA SEKOLAH SMAN 6 REJANG LEBONG",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-06-24 16:03"
+            },
+            {
+              "id": "024a1aac-66a0-4ff1-bb2b-014176caedb2",
+              "nama": "Seksi Pengujian dan Penerapan Mutu Hasil Perikanan",
+              "nama_jabatan": "Kepala Seksi Pengujian dan Penerapan Mutu Hasil Perikanan",
+              "tanggal_dibuat": "2026-06-25 12:42",
+              "update_terakhir": "2026-06-25 12:42"
+            }
+          ]

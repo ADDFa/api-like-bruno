@@ -1,0 +1,51 @@
+info:
+  name: Status
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/status"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Status Authenticate
+    request:
+      url: "{{api_url}}/status"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 14 Jul 2026 04:46:00 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "authenticated": true
+          }

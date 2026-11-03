@@ -1,0 +1,43 @@
+info:
+  name: Set Leader
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{api_url}}/unor/set-leader"
+  body:
+    type: multipart-form
+    data:
+      - name: unor_id
+        type: text
+        value: 8ae483a76007a66c01600c266f4c6c48
+      - name: jenis_unor_id
+        type: text
+        value: 8ae4828939d914f60139dc58f8b01b16
+      - name: pemimpin_id
+        type: text
+        value: 0A3D692356862FA8E050640A15027E0A
+      - name: nomor_sk
+        type: text
+        value: Ini Nomor SK
+      - name: tanggal_sk
+        type: text
+        value: 2025-12-01
+      - name: doc_sk
+        type: file
+        value:
+          - D:\Users\Asus\Desktop\Grafis Jumlah ASN.pdf
+      - name: tmt_jabatan
+        type: text
+        value: 2026-01-01
+      - name: tmt_pelantikan
+        type: text
+        value: 2026-01-01
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,53 @@
+info:
+  name: Home
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Home
+    request:
+      url: https://api-ekinerja.test:8443
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 26 May 2026 04:57:27 GMT
+        - name: set-cookie
+          value: XSRF-TOKEN=eyJpdiI6IjRkZXpWR3NQUEkzMEcrVjNvNStXMlE9PSIsInZhbHVlIjoiSVJEcVJrelFRTUtOQkd3RlltanNUd2d0eVJGQUplS3BLbG5yODM1V3ZvQjBLNEplOEszYkZCS25abk1QdjNQYlZmMTErc21YK0o5QVRxdTYyMitvTGRaZ2U4QThsOFhQTGltclQwUE1uQWFVS1ZQT1FmZ3NpdFBLcTM3Q0YyQWYiLCJtYWMiOiIyNzMxMDQ5Y2RhOGViYjAwODI0NGI4YWNjYjMzYmNkOTVjYjcwYzg5ZTQzNjBhMjdhN2RlYzYwZDJkY2NlMzc2IiwidGFnIjoiIn0%3D; expires=Tue, 26 May 2026 06:57:27 GMT; Max-Age=7200; path=/; secure; samesite=lax,api-e-kinerja-session=eyJpdiI6ImxBZy90NjBZbnZOSzF2VUl4d0c4Znc9PSIsInZhbHVlIjoiRVlsZFpqN1ZWbEl5UlU3MjQxK0Q4KzRUYVFlT1JYcHFYRVVVZXNvQ0k1Y3g2QUd0QlFuNlBrbjBiUnVBYllaOU9ETlk5MDd1MXlyTjdvaWszRWQwSitQd0xGTk9Qb2VNYWk3REY0clh6bWdLc3NoS3M4aUhjSFpqZXd4R1lWUEIiLCJtYWMiOiI1Njk0M2ZhOWMyNWI2YmE0ZDUyMWJhMWI1MjllMjRiMmYyZGI5MDI2NDczZDc3OTllMmM2MDZhNTdlMzY4ZWU1IiwidGFnIjoiIn0%3D; expires=Tue, 26 May 2026 06:57:27 GMT; Max-Age=7200; path=/; secure; httponly; samesite=lax
+      body:
+        type: json
+        data: |-
+          {
+            "info": {
+              "laravel_version": "13.8.0",
+              "app_name": "API E-Kinerja",
+              "app_version": "1.0.0",
+              "timezone": "UTC",
+              "timestamp": "2026-05-26 04:57:27",
+              "user_timestamp": "2026-05-26 04:57:27"
+            }
+          }

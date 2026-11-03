@@ -1,0 +1,310 @@
+info:
+  name: Sync
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{api_url}}/public/talent-mapping/{{nip}}/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Talent Maping
+    request:
+      url: "{{api_url}}/public/talent-mapping/{{nip}}/sync"
+      method: POST
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 18 Aug 2026 04:04:06 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "01a012ff-1329-7243-bf46-60d65272f4b8",
+            "asn_id": "c6122688-288f-4dd1-b342-79494306f03e",
+            "detail_nilai_sumbu": {
+              "detail_nilai_sumbu": {
+                "nip": "199808292025212015",
+                "level": "1",
+                "box_attr": {
+                  "box": 1,
+                  "x_axis": 105,
+                  "y_axis": 72,
+                  "z_axis": 1,
+                  "axis_categories": {
+                    "x": "Rendah",
+                    "y": "Rendah"
+                  }
+                },
+                "dimension": "2D",
+                "score_attr": {
+                  "total": 41.5,
+                  "nilai_x": 17.5,
+                  "nilai_y": 24
+                },
+                "weight_mode": "mode_b",
+                "axis_weights": {
+                  "x": 50,
+                  "y": 50
+                },
+                "nilai_talenta": 41.5,
+                "axis_categories": {
+                  "x": "Rendah",
+                  "y": "Rendah"
+                },
+                "is_use_kepka411": true,
+                "axis_percentages": {
+                  "x": 35,
+                  "y": 48
+                },
+                "detail_compacted": true,
+                "snapshot_version": 3,
+                "regulation_version": "kepka-411-2025",
+                "calculation_details": {
+                  "X": {
+                    "total": 17.5,
+                    "components": [
+                      {
+                        "path": "kompetensi",
+                        "type": "parent",
+                        "weight": 40,
+                        "children": [
+                          {
+                            "path": "kompetensi.penkom",
+                            "type": "leaf",
+                            "weight": 20,
+                            "children": [],
+                            "component": "penkom",
+                            "total_score": 0,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 40,
+                            "converted_value": 0,
+                            "effective_weight_absolute": 20
+                          },
+                          {
+                            "path": "kompetensi.pengembangan_kompetensi",
+                            "type": "leaf",
+                            "weight": 10,
+                            "children": [],
+                            "component": "pengembangan_kompetensi",
+                            "total_score": 0,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 40,
+                            "converted_value": 0,
+                            "effective_weight_absolute": 10
+                          },
+                          {
+                            "path": "kompetensi.rjb",
+                            "type": "leaf",
+                            "weight": 10,
+                            "children": [],
+                            "component": "rjb",
+                            "total_score": 2,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 40,
+                            "converted_value": 40,
+                            "effective_weight_absolute": 10
+                          }
+                        ],
+                        "component": "kompetensi",
+                        "total_score": 2,
+                        "weight_mode": "mode_b",
+                        "parent_weight": 100,
+                        "effective_weight_absolute": 40
+                      },
+                      {
+                        "path": "potensi",
+                        "type": "parent",
+                        "weight": 25,
+                        "children": [
+                          {
+                            "path": "potensi.penilaian_potensi",
+                            "type": "leaf",
+                            "weight": 25,
+                            "children": [],
+                            "component": "penilaian_potensi",
+                            "total_score": 0,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 25,
+                            "converted_value": 0,
+                            "effective_weight_absolute": 25
+                          }
+                        ],
+                        "component": "potensi",
+                        "total_score": 0,
+                        "weight_mode": "mode_b",
+                        "parent_weight": 100,
+                        "effective_weight_absolute": 25
+                      },
+                      {
+                        "path": "kualifikasi",
+                        "type": "parent",
+                        "weight": 20,
+                        "children": [
+                          {
+                            "path": "kualifikasi.tingkat_pendidikan",
+                            "type": "leaf",
+                            "weight": 10,
+                            "children": [],
+                            "component": "tingkat_pendidikan",
+                            "total_score": 3,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 20,
+                            "converted_value": 60,
+                            "effective_weight_absolute": 10
+                          },
+                          {
+                            "path": "kualifikasi.kbi",
+                            "type": "leaf",
+                            "weight": 10,
+                            "children": [],
+                            "component": "kbi",
+                            "total_score": 5,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 20,
+                            "converted_value": 100,
+                            "effective_weight_absolute": 10
+                          }
+                        ],
+                        "component": "kualifikasi",
+                        "total_score": 8,
+                        "weight_mode": "mode_b",
+                        "parent_weight": 100,
+                        "effective_weight_absolute": 20
+                      },
+                      {
+                        "path": "integritas_moralitas",
+                        "type": "parent",
+                        "weight": 15,
+                        "children": [
+                          {
+                            "path": "integritas_moralitas.hukdis",
+                            "type": "leaf",
+                            "weight": 15,
+                            "children": [],
+                            "component": "hukdis",
+                            "total_score": 7.5,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 15,
+                            "converted_value": 100,
+                            "effective_weight_absolute": 15
+                          }
+                        ],
+                        "component": "integritas_moralitas",
+                        "total_score": 7.5,
+                        "weight_mode": "mode_b",
+                        "parent_weight": 100,
+                        "effective_weight_absolute": 15
+                      }
+                    ]
+                  },
+                  "Y": {
+                    "total": 24,
+                    "components": [
+                      {
+                        "path": "kinerja_utama",
+                        "type": "parent",
+                        "weight": 60,
+                        "children": [
+                          {
+                            "path": "kinerja_utama.skp",
+                            "type": "leaf",
+                            "weight": 60,
+                            "children": [],
+                            "component": "skp",
+                            "total_score": 24,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 60,
+                            "converted_value": 80,
+                            "effective_weight_absolute": 60
+                          }
+                        ],
+                        "component": "kinerja_utama",
+                        "total_score": 24,
+                        "weight_mode": "mode_b",
+                        "parent_weight": 100,
+                        "effective_weight_absolute": 60
+                      },
+                      {
+                        "path": "kinerja_penguat",
+                        "type": "parent",
+                        "weight": 40,
+                        "children": [
+                          {
+                            "path": "kinerja_penguat.penghargaan",
+                            "type": "leaf",
+                            "weight": 15,
+                            "children": [],
+                            "component": "penghargaan",
+                            "total_score": 0,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 40,
+                            "converted_value": 0,
+                            "effective_weight_absolute": 15
+                          },
+                          {
+                            "path": "kinerja_penguat.p_tim",
+                            "type": "leaf",
+                            "weight": 15,
+                            "children": [],
+                            "component": "p_tim",
+                            "total_score": 0,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 40,
+                            "converted_value": 0,
+                            "effective_weight_absolute": 15
+                          },
+                          {
+                            "path": "kinerja_penguat.penilaian_360",
+                            "type": "leaf",
+                            "weight": 10,
+                            "children": [],
+                            "component": "penilaian_360",
+                            "total_score": 0,
+                            "weight_mode": "mode_b",
+                            "parent_weight": 40,
+                            "converted_value": 0,
+                            "effective_weight_absolute": 10
+                          }
+                        ],
+                        "component": "kinerja_penguat",
+                        "total_score": 0,
+                        "weight_mode": "mode_b",
+                        "parent_weight": 100,
+                        "effective_weight_absolute": 40
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "created_at": "2026-08-18T03:51:41.000000Z",
+            "updated_at": "2026-08-18T03:51:41.000000Z"
+          }

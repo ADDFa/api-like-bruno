@@ -1,0 +1,320 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/asn?search=akhmad yuli"
+  params:
+    - name: includes
+      value: unor,unorInduk,kedudukanHukum,kpkn,nilaiIpAsn,golongan,jabatan,pendidikan
+      type: query
+      disabled: true
+    - name: includes
+      value: kedudukanHukum
+      type: query
+      disabled: true
+    - name: search
+      value: akhmad yuli
+      type: query
+    - name: opd
+      value: 8ae4828859d211720159d4af349e5bc5
+      type: query
+      disabled: true
+    - name: unor_induk
+      value: 8ae4828859d211720159d4af349e5bc5
+      type: query
+      disabled: true
+    - name: unor
+      value: 8ae4828859d211720159d4d94568011c
+      type: query
+      disabled: true
+    - name: kedudukan
+      value: "01"
+      type: query
+      disabled: true
+    - name: in_kedudukan
+      value: 99,101
+      type: query
+      disabled: true
+    - name: per_page
+      value: "10"
+      type: query
+      disabled: true
+    - name: limit
+      value: "5"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data ASN
+    request:
+      url: "{{api_url}}/asn?opd=8ae4828859d211720159d4af349e5bc5&kedudukan=01&limit=5"
+      method: GET
+      params:
+        - name: includes
+          value: unor,unorInduk
+          type: query
+          disabled: true
+        - name: search
+          value: "198703172015031001"
+          type: query
+          disabled: true
+        - name: opd
+          value: 8ae4828859d211720159d4af349e5bc5
+          type: query
+        - name: unor_induk
+          value: 8ae4828859d211720159d4af349e5bc5
+          type: query
+          disabled: true
+        - name: unor
+          value: 8ae4828859d211720159d4af349e5bc5
+          type: query
+          disabled: true
+        - name: kedudukan
+          value: "01"
+          type: query
+        - name: per_page
+          value: "10"
+          type: query
+          disabled: true
+        - name: limit
+          value: "5"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 30 Jun 2026 06:38:54 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "0A3D692356692FA8E050640A15027E0A",
+              "nip": "198811032015012001",
+              "nomor_dokumen_asn": "1771074311880001",
+              "latihan_struktural": null,
+              "nomor_spmt": "080/SDP-Korpri/Prov/IV/2015",
+              "tanggal_spmt": "2015-04-01",
+              "pangkat_akhir": "Penata",
+              "kartu_pegawai": null,
+              "jenjang": null,
+              "is_penyetaraan": 0,
+              "nama": "VIRA FELIYANTIS.H.,",
+              "gelar_depan": null,
+              "gelar_belakang": "S.H.",
+              "nik": "1771074311880001",
+              "alamat": "JL. PARIWISATA NO.E9 RT.8 RW.3 KEL.TIMUR INDAH KEC.SINGARAN PATI KOTA BENGKULU",
+              "kode_pos": null,
+              "email": "vira_feliyanti@ymail.com",
+              "nomor_hp": "082186814831",
+              "nomor_telp": "0",
+              "jenis_kelamin": "F",
+              "tempat_lahir_id": null,
+              "tanggal_lahir": "1988-11-03",
+              "tmt_cpns": "2015-01-01",
+              "nomor_sk_cpns": "V.263 TAHUN 2015 tanggal 30 Maret 2015",
+              "tanggal_sk_cpns": "2015-03-30",
+              "tmt_pns": "2016-08-01",
+              "nomor_sk_pns": "SK.813-J.308 TAHUN 2016",
+              "tanggal_sk_pns": "2016-06-13",
+              "nomor_sttpl": "00002418/Diklat Prajabatan III/17/1771/LAN/2016",
+              "tanggal_sttpl": "2016-04-12",
+              "tmt_pensiun": null,
+              "nomor_sk_pensiun": null,
+              "tanggal_sk_pensiun": null,
+              "masa_kerja_tahun": 8,
+              "masa_kerja_bulan": 3,
+              "gaji_pokok": "3426000.00000000000000000000000000000000000000000000000000000",
+              "tanggal_dibuat": "2026-06-25 11:47",
+              "update_terakhir": null
+            },
+            {
+              "id": "0A3D6923566A2FA8E050640A15027E0A",
+              "nip": "198903122015012001",
+              "nomor_dokumen_asn": "1771035203890005",
+              "latihan_struktural": null,
+              "nomor_spmt": "080/SDP-Korpri/Prov/IV/2015",
+              "tanggal_spmt": "2015-04-01",
+              "pangkat_akhir": "Penata",
+              "kartu_pegawai": null,
+              "jenjang": null,
+              "is_penyetaraan": 0,
+              "nama": "FENI SRI WAHYUNIS.H.,",
+              "gelar_depan": null,
+              "gelar_belakang": "S.H.",
+              "nik": "1771035203890005",
+              "alamat": "JL. ISKANDAR 10 RT. 12 KEL. TENGAH PADANG KEC. TELUK SEGARA BENGKULU",
+              "kode_pos": null,
+              "email": "feni_dunk@yahoo.co.id",
+              "nomor_hp": "085357748803",
+              "nomor_telp": "085664945461",
+              "jenis_kelamin": "F",
+              "tempat_lahir_id": null,
+              "tanggal_lahir": "1989-03-12",
+              "tmt_cpns": "2015-01-01",
+              "nomor_sk_cpns": "V. 263 TAHUN 2015 tanggal 30 Maret 2015",
+              "tanggal_sk_cpns": "2015-03-30",
+              "tmt_pns": "2016-08-01",
+              "nomor_sk_pns": "SK.813-J.308 TAHUN 2016",
+              "tanggal_sk_pns": "2016-06-13",
+              "nomor_sttpl": "00002363/Diklat Prajabatan III/17/1771/LAN/2016",
+              "tanggal_sttpl": "2016-04-12",
+              "tmt_pensiun": null,
+              "nomor_sk_pensiun": null,
+              "tanggal_sk_pensiun": null,
+              "masa_kerja_tahun": 8,
+              "masa_kerja_bulan": 3,
+              "gaji_pokok": "3172300.00000000000000000000000000000000000000000000000000000",
+              "tanggal_dibuat": "2026-06-25 11:47",
+              "update_terakhir": null
+            },
+            {
+              "id": "0A3D692356862FA8E050640A15027E0A",
+              "nip": "199010202015012001",
+              "nomor_dokumen_asn": "1702186010900002",
+              "latihan_struktural": null,
+              "nomor_spmt": "800/0023/I.1/2022",
+              "tanggal_spmt": null,
+              "pangkat_akhir": "Penata Muda",
+              "kartu_pegawai": null,
+              "jenjang": "MH",
+              "is_penyetaraan": 0,
+              "nama": "NASUHAS.E.,",
+              "gelar_depan": null,
+              "gelar_belakang": "S.E.",
+              "nik": "1702186010900002",
+              "alamat": "JL. KALIMANTAN RT.004 / RW.001 KELURAHAN KAMPUNG KELAWI KEC. SUNGAI SERUT KOTA BENGKULU",
+              "kode_pos": null,
+              "email": "nanasuha.bona@gmail.com",
+              "nomor_hp": "085378487650",
+              "nomor_telp": "085378487650",
+              "jenis_kelamin": "F",
+              "tempat_lahir_id": null,
+              "tanggal_lahir": "1990-10-20",
+              "tmt_cpns": "2015-01-01",
+              "nomor_sk_cpns": "V. 263 TAHUN 2015 Tanggal 30 Maret 3015",
+              "tanggal_sk_cpns": "2015-03-30",
+              "tmt_pns": "2016-08-01",
+              "nomor_sk_pns": "SK.813-J.308 TAHUN 2016",
+              "tanggal_sk_pns": "2016-06-13",
+              "nomor_sttpl": "002276/Diklat Prajabatan II/17/1771/LAN/2016",
+              "tanggal_sttpl": "2016-04-12",
+              "tmt_pensiun": null,
+              "nomor_sk_pensiun": null,
+              "tanggal_sk_pensiun": null,
+              "masa_kerja_tahun": 7,
+              "masa_kerja_bulan": 1,
+              "gaji_pokok": "3057300.00000000000000000000000000000000000000000000000000000",
+              "tanggal_dibuat": "2026-06-25 11:47",
+              "update_terakhir": null
+            },
+            {
+              "id": "0A3D692356922FA8E050640A15027E0A",
+              "nip": "199007012015011001",
+              "nomor_dokumen_asn": "1771020107900199",
+              "latihan_struktural": null,
+              "nomor_spmt": "080/SDP-Korpri/Prov/IV/2015",
+              "tanggal_spmt": "2015-04-01",
+              "pangkat_akhir": "Penata Muda Tingkat I",
+              "kartu_pegawai": null,
+              "jenjang": "PT",
+              "is_penyetaraan": 0,
+              "nama": "DWI SANTOSOS.H.,",
+              "gelar_depan": null,
+              "gelar_belakang": "S.H.",
+              "nik": "1771020107900199",
+              "alamat": "JL. SUTOYO NO. 7, RT. 02, RW. 01, KELURAHAN JEMBATAN KECIL, KECAMATAN SINGARAN PATI, KOTA BENGKULU",
+              "kode_pos": null,
+              "email": "ds.cancer90@gmail.com",
+              "nomor_hp": "081279670557",
+              "nomor_telp": "081279670557",
+              "jenis_kelamin": "M",
+              "tempat_lahir_id": null,
+              "tanggal_lahir": "1990-07-01",
+              "tmt_cpns": "2015-01-01",
+              "nomor_sk_cpns": "V. 263 TAHUN 2015",
+              "tanggal_sk_cpns": "2015-03-30",
+              "tmt_pns": "2016-08-01",
+              "nomor_sk_pns": "SK.813-J.308 TAHUN 2016",
+              "tanggal_sk_pns": "2016-06-13",
+              "nomor_sttpl": "00002357/Diklat Prajabatan III/17/1771/LAN/2016",
+              "tanggal_sttpl": "2016-04-12",
+              "tmt_pensiun": null,
+              "nomor_sk_pensiun": null,
+              "tanggal_sk_pensiun": null,
+              "masa_kerja_tahun": 4,
+              "masa_kerja_bulan": 3,
+              "gaji_pokok": "2860500.00000000000000000000000000000000000000000000000000000",
+              "tanggal_dibuat": "2026-06-25 11:47",
+              "update_terakhir": null
+            },
+            {
+              "id": "0A3D692358632FA8E050640A15027E0A",
+              "nip": "199011052015012001",
+              "nomor_dokumen_asn": "1703094511900001",
+              "latihan_struktural": null,
+              "nomor_spmt": "080/SDP-Korpri/Prov/IV/2015",
+              "tanggal_spmt": "2015-04-01",
+              "pangkat_akhir": "Penata",
+              "kartu_pegawai": null,
+              "jenjang": null,
+              "is_penyetaraan": 0,
+              "nama": "NOVARIA FRETYS.E., M.M.,",
+              "gelar_depan": null,
+              "gelar_belakang": "S.E., M.M.",
+              "nik": "1703094511900001",
+              "alamat": "JL. RE. MARTADINATA VI NOMOR 7 RT 43 RW 8 KEL. PAGAR DEWA",
+              "kode_pos": null,
+              "email": "novariafrety05@gmail.com",
+              "nomor_hp": "085281426389",
+              "nomor_telp": "085281426389",
+              "jenis_kelamin": "F",
+              "tempat_lahir_id": null,
+              "tanggal_lahir": "1990-11-05",
+              "tmt_cpns": "2015-01-01",
+              "nomor_sk_cpns": "V. 263 TAHUN 2015 tanggal 30 Maret 2015",
+              "tanggal_sk_cpns": "2015-03-30",
+              "tmt_pns": "2016-08-01",
+              "nomor_sk_pns": "SK.813-J.308 TAHUN 2016",
+              "tanggal_sk_pns": "2016-06-13",
+              "nomor_sttpl": "00002405/Diklat Prajabatan III/17/1771/LAN/2016",
+              "tanggal_sttpl": "2016-04-12",
+              "tmt_pensiun": null,
+              "nomor_sk_pensiun": null,
+              "tanggal_sk_pensiun": null,
+              "masa_kerja_tahun": 11,
+              "masa_kerja_bulan": 5,
+              "gaji_pokok": "3533900.00000000000000000000000000000000000000000000000000000",
+              "tanggal_dibuat": "2026-06-25 11:47",
+              "update_terakhir": null
+            }
+          ]

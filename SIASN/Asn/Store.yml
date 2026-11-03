@@ -1,0 +1,20 @@
+info:
+  name: Store
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{api_url}}/{{prefix_siasn}}/asn"
+  body:
+    type: form-urlencoded
+    data:
+      - name: nip
+        value: "199010202015012001"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

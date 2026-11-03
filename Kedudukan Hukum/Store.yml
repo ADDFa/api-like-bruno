@@ -1,0 +1,66 @@
+info:
+  name: Store
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{api_url}}/kedudukan-hukum"
+  body:
+    type: form-urlencoded
+    data:
+      - name: id
+        value: "02"
+      - name: nama
+        value: CLTN
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Tambah Kedudukan Hukum
+    request:
+      url: "{{api_url}}/kedudukan-hukum"
+      method: POST
+      body:
+        type: form-urlencoded
+        data:
+          - name: id
+            value: "102"
+          - name: nama
+            value: Coba
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 14 Jul 2026 09:41:39 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "102",
+            "nama": "Coba"
+          }

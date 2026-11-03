@@ -1,0 +1,78 @@
+info:
+  name: Add
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{api_url}}/role-user/{{role_id}}"
+  body:
+    type: json
+    data: |-
+      {
+        "users": [
+          "0979b1fe-1ccc-41dc-b3da-4cc6d5427364"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Tambah Role User Tertentu
+    request:
+      url: "{{process.env.BASE_URL}}/role-user/{{role_id}}"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "users": [
+              "cd5b2ffc-3cc6-4b60-a049-154c1d408a7b"
+            ]
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: host
+          value: 127.0.0.1:8000
+        - name: connection
+          value: close
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 13 Apr 2026 17:15:06 GMT
+        - name: content-type
+          value: application/json
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "cd5b2ffc-3cc6-4b60-a049-154c1d408a7b",
+              "name": "Jace O'Connell",
+              "username": "user-1",
+              "email": "fmckenzie@example.com",
+              "email_verified_at": "2026-04-13T17:01:05.000000Z",
+              "status": "active",
+              "last_updated": "2026-04-13T17:01:05.000000Z"
+            },
+            {
+              "id": "d9be741b-79d8-4eed-b219-840513bf03c5",
+              "name": "Tyree Veum",
+              "username": "admin",
+              "email": "amiya.pfeffer@example.net",
+              "email_verified_at": "2026-04-13T17:01:05.000000Z",
+              "status": "active",
+              "last_updated": "2026-04-13T17:01:05.000000Z"
+            }
+          ]

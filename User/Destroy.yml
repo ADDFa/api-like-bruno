@@ -1,0 +1,60 @@
+info:
+  name: Destroy
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{api_url}}/user/{{user_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Hapus User
+    request:
+      url: "{{api_url}}/user/{{user_id}}"
+      method: DELETE
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 15 Jul 2026 08:55:06 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "is_success": true,
+            "data": {
+              "id": "019f64f2-bfd3-700f-becf-af564f970060",
+              "name": "User 1",
+              "username": "user1",
+              "email": "user1@gmail.com",
+              "status": "active",
+              "opd": null,
+              "unor": null
+            }
+          }

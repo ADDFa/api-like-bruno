@@ -1,0 +1,82 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/agama"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Agama
+    request:
+      url: "{{api_url}}/agama"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 14 Sep 2026 08:46:13 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": 1,
+              "nama": "Islam"
+            },
+            {
+              "id": 2,
+              "nama": "Kristen"
+            },
+            {
+              "id": 3,
+              "nama": "Katholik"
+            },
+            {
+              "id": 4,
+              "nama": "Hindu"
+            },
+            {
+              "id": 5,
+              "nama": "Budha"
+            },
+            {
+              "id": 6,
+              "nama": "Konghucu"
+            },
+            {
+              "id": 7,
+              "nama": "Lainnya"
+            },
+            {
+              "id": 8,
+              "nama": "Kepercayaan Terhadap Tuhan YME"
+            }
+          ]

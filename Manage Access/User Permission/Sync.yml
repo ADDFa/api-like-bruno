@@ -1,0 +1,25 @@
+info:
+  name: Sync
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{api_url}}/user-permission/{{user_id}}/sync"
+  body:
+    type: json
+    data: |-
+      {
+        "permissions": [
+          "019f6a3a-25a9-7273-bf82-23cf1da45d6b",
+      //     "019f6a3a-2630-71fb-bd24-037a76607c2a",
+          "019f6a3a-2648-7081-91d6-9b9c3a1c729a"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

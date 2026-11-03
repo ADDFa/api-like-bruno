@@ -1,0 +1,10 @@
+info:
+  name: SIASN
+  type: folder
+  seq: 20
+
+request:
+  auth: inherit
+  variables:
+    - name: prefix_siasn
+      value: siasn

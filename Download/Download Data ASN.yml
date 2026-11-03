@@ -1,0 +1,25 @@
+info:
+  name: Download Data ASN
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{api_url}}/download"
+  body:
+    type: form-urlencoded
+    data:
+      - name: context
+        value: data-asn
+      - name: payload[type]
+        value: kedudukan-hukum-unit-organisasi
+        disabled: true
+      - name: payload[type]
+        value: jenis-jabatan-pendidikan
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

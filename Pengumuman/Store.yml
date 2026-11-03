@@ -1,0 +1,72 @@
+info:
+  name: Store
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{api_url}}/pengumuman"
+  body:
+    type: form-urlencoded
+    data:
+      - name: judul
+        value: Perubahan SKP
+      - name: konten
+        value: Batas akhir pengisian SKP periode ini adalah tanggal 31 Mei.
+      - name: tanggal_efektif
+        value: 2026-07-08
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Tambah Pengumuman
+    request:
+      url: "{{api_url}}/pengumuman"
+      method: POST
+      body:
+        type: form-urlencoded
+        data:
+          - name: judul
+            value: Perubahan SKP
+          - name: konten
+            value: Batas akhir pengisian SKP periode ini adalah tanggal 31 Mei.
+          - name: tanggal_efektif
+            value: 2026-07-08
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 09 Jul 2026 07:39:54 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "019f45d1-a1b5-72d1-898a-dbdb21ab25a5",
+            "judul": "Perubahan SKP",
+            "konten": "Batas akhir pengisian SKP periode ini adalah tanggal 31 Mei.",
+            "tanggal_efektif": "2026-07-08"
+          }

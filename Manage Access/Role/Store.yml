@@ -1,0 +1,59 @@
+info:
+  name: Store
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{api_url}}/role"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "admin-kominfo"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Tambah Role
+    request:
+      url: "{{process.env.BASE_URL}}/role"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "name": "hr"
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: host
+          value: 127.0.0.1:8000
+        - name: connection
+          value: close
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 13 Apr 2026 15:57:31 GMT
+        - name: content-type
+          value: application/json
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "role_id": "019d878f-f2f8-73c8-81e2-33c3c6a61ab4",
+            "name": "hr",
+            "name_title": "Hr"
+          }

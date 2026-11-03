@@ -1,0 +1,186 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/kedudukan-hukum"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Kedudukan Hukum
+    request:
+      url: "{{api_url}}/kedudukan-hukum"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 14 Jul 2026 08:49:55 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "54"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "01",
+              "nama": "Aktif"
+            },
+            {
+              "id": "02",
+              "nama": "CLTN"
+            },
+            {
+              "id": "03",
+              "nama": "Tugas Belajar"
+            },
+            {
+              "id": "04",
+              "nama": "Pemberhentian Sementara"
+            },
+            {
+              "id": "05",
+              "nama": "Penerima Uang Tunggu"
+            },
+            {
+              "id": "06",
+              "nama": "Prajurit Wajib"
+            },
+            {
+              "id": "07",
+              "nama": "Pejabat Negara"
+            },
+            {
+              "id": "08",
+              "nama": "Kepala Desa"
+            },
+            {
+              "id": "09",
+              "nama": "Sedang dlm Proses Banding BAPEK"
+            },
+            {
+              "id": "101",
+              "nama": "PPPK Paruh Waktu Aktif"
+            },
+            {
+              "id": "11",
+              "nama": "Pegawai Titipan"
+            },
+            {
+              "id": "12",
+              "nama": "Pengungsi"
+            },
+            {
+              "id": "13",
+              "nama": "Perpanjangan CLTN"
+            },
+            {
+              "id": "14",
+              "nama": "PNS yang dinyatakan hilang"
+            },
+            {
+              "id": "15",
+              "nama": "PNS kena hukuman disiplin"
+            },
+            {
+              "id": "16",
+              "nama": "Pemindahan dalam rangka penurunan Jabatan"
+            },
+            {
+              "id": "20",
+              "nama": "Masa Persiapan Pensiun"
+            },
+            {
+              "id": "51",
+              "nama": "CPNS yang belum menerima SK CPNS"
+            },
+            {
+              "id": "52",
+              "nama": "Tidak Aktif"
+            },
+            {
+              "id": "66",
+              "nama": "Diberhentikan"
+            },
+            {
+              "id": "67",
+              "nama": "Punah"
+            },
+            {
+              "id": "68",
+              "nama": "Eks PNS Timor Timur"
+            },
+            {
+              "id": "69",
+              "nama": "TMS Dari Pengadaan"
+            },
+            {
+              "id": "70",
+              "nama": "Pembatalan NIP"
+            },
+            {
+              "id": "71",
+              "nama": "PPPK Aktif"
+            },
+            {
+              "id": "72",
+              "nama": "PPPK tidak aktif"
+            },
+            {
+              "id": "77",
+              "nama": "Pemberhentian tanpa hak pensiun"
+            },
+            {
+              "id": "88",
+              "nama": "Pemberhentian dengan hak pensiun"
+            },
+            {
+              "id": "89",
+              "nama": "Tidak aktif tetapi diusulkan Pensiun"
+            },
+            {
+              "id": "90",
+              "nama": "Tidak Ikut PUPNS 2015"
+            },
+            {
+              "id": "91",
+              "nama": "Tindak Pidana/ Tindak Pidana Jabatan"
+            },
+            {
+              "id": "92",
+              "nama": "Pemblokiran Data PNS"
+            },
+            {
+              "id": "98",
+              "nama": "Mencapai BUP"
+            },
+            {
+              "id": "99",
+              "nama": "Pensiun"
+            }
+          ]

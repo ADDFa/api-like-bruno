@@ -1,0 +1,194 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/asn/{{nip}}/riwayat-skp"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Riwayat SKP
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-skp"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 05 Aug 2026 02:41:07 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "ff808081560b9acd01560bf4a0d13cc8",
+              "tahun": "2014",
+              "nilai_skp": 89.92,
+              "orientasi_pelayanan": 83,
+              "integritas": 82,
+              "komitmen": 82,
+              "disiplin": 82,
+              "kerjasama": 82,
+              "nilai_perilaku_kerja": 32.88,
+              "nilai_prestasi_kerja": 86.83,
+              "kepemimpinan": 0,
+              "inisiatif_kerja": 0,
+              "konversi_nilai": 0,
+              "nilai_integrasi": 0,
+              "jumlah": 411,
+              "nilai_rata_rata": 82.2,
+              "atasan_pejabat_penilai": null,
+              "pejabat_penilai": null,
+              "nomor_induk_penilai": "196602121989011002",
+              "nomor_induk_atasan_penilai": "196708231994121003",
+              "nama_penilai": "MUSTAPA LUFTI",
+              "nama_atasan_penilai": "AGUS SOSIAWAN",
+              "nama_unor_penilai": "SMKN I BS",
+              "nama_unor_atasan_penilai": "DINAS DIKPORA",
+              "jabatan_penilai": "KEPALA SEKOLAH",
+              "jabatan_atasan_penilai": "KABID DIKMEN",
+              "golongan_penilai": "IV/b",
+              "golongan_atasan_penilai": "IV/a",
+              "tmt_golongan_penilai": "2013-10-01",
+              "tmt_golongan_atasan_penilai": "2008-10-01",
+              "status_penilai": "PNS",
+              "status_atasan_penilai": "PNS",
+              "id_jenis_jabatan": 2,
+              "jenis_peraturan_kinerja_kd": null
+            },
+            {
+              "id": "ff808081560b9acd01560bf86c8a4110",
+              "tahun": "2015",
+              "nilai_skp": 90.13,
+              "orientasi_pelayanan": 83,
+              "integritas": 83,
+              "komitmen": 82,
+              "disiplin": 82,
+              "kerjasama": 82,
+              "nilai_perilaku_kerja": 32.96,
+              "nilai_prestasi_kerja": 87.04,
+              "kepemimpinan": 0,
+              "inisiatif_kerja": 0,
+              "konversi_nilai": 0,
+              "nilai_integrasi": 0,
+              "jumlah": 412,
+              "nilai_rata_rata": 82.4,
+              "atasan_pejabat_penilai": null,
+              "pejabat_penilai": null,
+              "nomor_induk_penilai": "196708231994121003",
+              "nomor_induk_atasan_penilai": "196601111992031003",
+              "nama_penilai": "AGUS SOSIAWAN",
+              "nama_atasan_penilai": "AHMAT",
+              "nama_unor_penilai": "DINAS DIKPORA",
+              "nama_unor_atasan_penilai": "DINAS PENDIDIKAN, PEMUDA DAN OLAHRAGA",
+              "jabatan_penilai": "KABID DIKMEN",
+              "jabatan_atasan_penilai": "KEPALA DINAS",
+              "golongan_penilai": "IV/a",
+              "golongan_atasan_penilai": "IV/c",
+              "tmt_golongan_penilai": "2008-10-01",
+              "tmt_golongan_atasan_penilai": "2013-04-01",
+              "status_penilai": "PNS",
+              "status_atasan_penilai": "PNS",
+              "id_jenis_jabatan": 2,
+              "jenis_peraturan_kinerja_kd": null
+            },
+            {
+              "id": "0194f84b-24ee-4e39-8d5e-6151a51abc23",
+              "tahun": "2021",
+              "nilai_skp": 100.54,
+              "orientasi_pelayanan": 105,
+              "integritas": 0,
+              "komitmen": 102,
+              "disiplin": 0,
+              "kerjasama": 101,
+              "nilai_perilaku_kerja": 30.98,
+              "nilai_prestasi_kerja": 101.35,
+              "kepemimpinan": 0,
+              "inisiatif_kerja": 105,
+              "konversi_nilai": 0,
+              "nilai_integrasi": 102.67,
+              "jumlah": 0,
+              "nilai_rata_rata": 103.25,
+              "atasan_pejabat_penilai": "A8ACA7D503723912E040640A040269BB",
+              "pejabat_penilai": "A8ACA7D374A33912E040640A040269BB",
+              "nomor_induk_penilai": "196304032000121001",
+              "nomor_induk_atasan_penilai": "196711241996031003",
+              "nama_penilai": "HALIMAN, SE",
+              "nama_atasan_penilai": "DIAZDADO PUTRA JAYA, SE M.Si",
+              "nama_unor_penilai": "Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu",
+              "nama_unor_atasan_penilai": "Dinas Komunikasi, Informatika dan Statistik Provinsi Bengkulu",
+              "jabatan_penilai": "Guru Madya",
+              "jabatan_atasan_penilai": "Sekretaris Dinas Komunikasi, Informatika Dan Statistik",
+              "golongan_penilai": "42",
+              "golongan_atasan_penilai": "42",
+              "tmt_golongan_penilai": "2021-04-01",
+              "tmt_golongan_atasan_penilai": "2023-04-01",
+              "status_penilai": "ASN",
+              "status_atasan_penilai": "ASN",
+              "id_jenis_jabatan": null,
+              "jenis_peraturan_kinerja_kd": "PP30"
+            },
+            {
+              "id": "2007f04f-cbbc-4bdf-add1-271391fb30ed",
+              "tahun": "2021",
+              "nilai_skp": 88.25,
+              "orientasi_pelayanan": 85,
+              "integritas": 84,
+              "komitmen": 83,
+              "disiplin": 83,
+              "kerjasama": 82,
+              "nilai_perilaku_kerja": 33.36,
+              "nilai_prestasi_kerja": 86.31,
+              "kepemimpinan": 0,
+              "inisiatif_kerja": 87,
+              "konversi_nilai": 103.99,
+              "nilai_integrasi": 102.67,
+              "jumlah": 0,
+              "nilai_rata_rata": 83.4,
+              "atasan_pejabat_penilai": "A8ACA7D503723912E040640A040269BB",
+              "pejabat_penilai": "A8ACA7D374A33912E040640A040269BB",
+              "nomor_induk_penilai": "196304032000121001",
+              "nomor_induk_atasan_penilai": "196711241996031003",
+              "nama_penilai": "HALIMAN, SE",
+              "nama_atasan_penilai": "DIAZDADO PUTRA JAYA, SE M.Si",
+              "nama_unor_penilai": "Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu",
+              "nama_unor_atasan_penilai": "Dinas Komunikasi, Informatika dan Statistik Provinsi Bengkulu",
+              "jabatan_penilai": "Guru Madya",
+              "jabatan_atasan_penilai": "Sekretaris Dinas Komunikasi, Informatika Dan Statistik",
+              "golongan_penilai": "42",
+              "golongan_atasan_penilai": "42",
+              "tmt_golongan_penilai": "2021-04-01",
+              "tmt_golongan_atasan_penilai": "2023-04-01",
+              "status_penilai": "ASN",
+              "status_atasan_penilai": "ASN",
+              "id_jenis_jabatan": null,
+              "jenis_peraturan_kinerja_kd": "PP46"
+            }
+          ]

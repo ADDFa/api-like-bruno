@@ -1,0 +1,68 @@
+info:
+  name: Sync
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-hukdis/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Riwayat Hukdis
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-hukdis/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 04 Aug 2026 05:02:27 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "8ae483a57a6523e2017a74706830223e",
+              "id_golongan": "34",
+              "id_golongan_lama": null,
+              "id_kedudukan_hukum": null,
+              "id_jenis_hukdis": "14",
+              "nama_jenis_hukdis": "Penurunan pangkat setingkat lebih rendah selama 3 (tiga) tahun",
+              "nomor_sk": "H.699 TAHUN 2021",
+              "tanggal_sk": "2021-06-04",
+              "masa_tahun": 3,
+              "masa_bulan": 0,
+              "tanggal_berakhir": "2024-07-01",
+              "nomor_pp": "PP 53 TAHUN 2010",
+              "nomor_sk_pembatalan": null,
+              "tanggal_sk_pembatalan": null,
+              "id_alasan_hukuman_disiplin": "11EC54D9B39957B1E050640A15026590",
+              "nama_alasan_hukuman_disiplin": null
+            }
+          ]

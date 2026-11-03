@@ -1,0 +1,61 @@
+info:
+  name: Sync
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-penghargaan/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Riwayat Penghargaan
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-penghargaan/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 04 Aug 2026 09:42:59 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "8ae483a56fc5c966016fcbcceba13629",
+              "nomor_sk": "KEPRES RI NO: 35/TK/Tahun 2018",
+              "tanggal_sk": "2018-04-19",
+              "id_penghargaan": "201",
+              "nama_penghargaan": "TANDA KEHORMATAN SATYALANCANA KARYA SATYA X TAHUN",
+              "id_kelompok_penghargaan": null,
+              "nama_kelompok_penghargaan": null,
+              "id_skala_penghargaan": null,
+              "nama_skala_penghargaan": null
+            }
+          ]

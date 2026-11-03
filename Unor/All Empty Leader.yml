@@ -1,0 +1,1306 @@
+info:
+  name: All Empty Leader
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{api_url}}/unor?includes=parentRecursive,eselon&has_leader=0&is_active=1&limit=2000&eselon_in=31,32"
+  params:
+    - name: includes
+      value: parentRecursive,eselon
+      type: query
+    - name: has_leader
+      value: "0"
+      type: query
+    - name: is_active
+      value: "1"
+      type: query
+    - name: limit
+      value: "2000"
+      type: query
+    - name: eselon_in
+      value: 31,32
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Unor - Pemimpin Kosong
+    request:
+      url: "{{api_url}}/unor?includes=parentRecursive,eselon&has_leader=0&is_active=1&limit=2000&eselon_in=31,32"
+      method: GET
+      params:
+        - name: includes
+          value: parentRecursive,eselon
+          type: query
+        - name: has_leader
+          value: "0"
+          type: query
+        - name: is_active
+          value: "1"
+          type: query
+        - name: limit
+          value: "2000"
+          type: query
+        - name: eselon_in
+          value: 31,32
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 20 Oct 2026 08:45:03 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "8ae483c67c8cc5fe017c8d6dba6f0965",
+              "nama": "Bagian Bantuan Hukum dan Hak Asasi Manusia",
+              "nama_jabatan": "Kepala Bagian Bantuan Hukum dan Hak Asasi Manusia",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4a33f1e4f70",
+                "nama": "Biro Hukum",
+                "nama_jabatan": "Kepala Biro Hukum",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49e5a2848ba",
+                  "nama": "Asisten Pemerintahan dan Kesejahteraan Rakyat",
+                  "nama_jabatan": "Asisten Pemerintahan dan Kesejahteraan Rakyat",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:31",
+                  "parent_recursive": {
+                    "id": "8ae4828859d211720159d49dafdd4816",
+                    "nama": "Sekretariat Daerah",
+                    "nama_jabatan": "Sekretaris Daerah",
+                    "tanggal_dibuat": "2026-06-24 16:01",
+                    "update_terakhir": "2026-10-20 06:32",
+                    "parent_recursive": {
+                      "id": "8ae4828859d211720159d49c046246b8",
+                      "nama": "PEMERINTAH PROVINSI BENGKULU",
+                      "nama_jabatan": "GUBERNUR BENGKULU",
+                      "tanggal_dibuat": "2026-06-24 16:01",
+                      "update_terakhir": "2026-10-20 06:30",
+                      "parent_recursive": null
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d4cef0fd79d5",
+              "nama": "Bagian Kebijakan Perekonomian",
+              "nama_jabatan": "Kepala Bagian Kebijakan Perekonomian",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4a398cc4f8f",
+                "nama": "Biro Perekonomian",
+                "nama_jabatan": "Kepala Biro Perekonomian",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49ec946492a",
+                  "nama": "Asisten Perekonomian dan Pembangunan",
+                  "nama_jabatan": "Asisten Perekonomian dan Pembangunan",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:32",
+                  "parent_recursive": {
+                    "id": "8ae4828859d211720159d49dafdd4816",
+                    "nama": "Sekretariat Daerah",
+                    "nama_jabatan": "Sekretaris Daerah",
+                    "tanggal_dibuat": "2026-06-24 16:01",
+                    "update_terakhir": "2026-10-20 06:32",
+                    "parent_recursive": {
+                      "id": "8ae4828859d211720159d49c046246b8",
+                      "nama": "PEMERINTAH PROVINSI BENGKULU",
+                      "nama_jabatan": "GUBERNUR BENGKULU",
+                      "tanggal_dibuat": "2026-06-24 16:01",
+                      "update_terakhir": "2026-10-20 06:30",
+                      "parent_recursive": null
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "8ae483a67aada58e017ab9b4e484084c",
+              "nama": "Bagian Kesejahteraan Rakyat",
+              "nama_jabatan": "Kepala Bagian Kesejahteraan Rakyat",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4a2ad1e4ece",
+                "nama": "Biro Pemerintahan dan Kesejahteraan Rakyat",
+                "nama_jabatan": "Kepala Biro Pemerintahan dan Kesejahteraan Rakyat",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49e5a2848ba",
+                  "nama": "Asisten Pemerintahan dan Kesejahteraan Rakyat",
+                  "nama_jabatan": "Asisten Pemerintahan dan Kesejahteraan Rakyat",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:31",
+                  "parent_recursive": {
+                    "id": "8ae4828859d211720159d49dafdd4816",
+                    "nama": "Sekretariat Daerah",
+                    "nama_jabatan": "Sekretaris Daerah",
+                    "tanggal_dibuat": "2026-06-24 16:01",
+                    "update_terakhir": "2026-10-20 06:32",
+                    "parent_recursive": {
+                      "id": "8ae4828859d211720159d49c046246b8",
+                      "nama": "PEMERINTAH PROVINSI BENGKULU",
+                      "nama_jabatan": "GUBERNUR BENGKULU",
+                      "tanggal_dibuat": "2026-06-24 16:01",
+                      "update_terakhir": "2026-10-20 06:30",
+                      "parent_recursive": null
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "8ae483a67aada58e017ab9b42d43083e",
+              "nama": "Bagian Otonomi Daerah",
+              "nama_jabatan": "Kepala Bagian Otonomi Daerah",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4a2ad1e4ece",
+                "nama": "Biro Pemerintahan dan Kesejahteraan Rakyat",
+                "nama_jabatan": "Kepala Biro Pemerintahan dan Kesejahteraan Rakyat",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49e5a2848ba",
+                  "nama": "Asisten Pemerintahan dan Kesejahteraan Rakyat",
+                  "nama_jabatan": "Asisten Pemerintahan dan Kesejahteraan Rakyat",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:31",
+                  "parent_recursive": {
+                    "id": "8ae4828859d211720159d49dafdd4816",
+                    "nama": "Sekretariat Daerah",
+                    "nama_jabatan": "Sekretaris Daerah",
+                    "tanggal_dibuat": "2026-06-24 16:01",
+                    "update_terakhir": "2026-10-20 06:32",
+                    "parent_recursive": {
+                      "id": "8ae4828859d211720159d49c046246b8",
+                      "nama": "PEMERINTAH PROVINSI BENGKULU",
+                      "nama_jabatan": "GUBERNUR BENGKULU",
+                      "tanggal_dibuat": "2026-06-24 16:01",
+                      "update_terakhir": "2026-10-20 06:30",
+                      "parent_recursive": null
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "8ae483c67c8cc5fe017c8d72231e09ae",
+              "nama": "Bagian Reformasi Birokrasi dan Akuntabilitas Kinerja",
+              "nama_jabatan": "Kepala Bagian Reformasi Birokrasi dan Akuntabilitas Kinerja",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:31",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4a4bd18508c",
+                "nama": "Biro Organisasi",
+                "nama_jabatan": "Kepala Biro Organisasi",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d4a06f824b35",
+                  "nama": "Asisten Administrasi Umum",
+                  "nama_jabatan": "Asisten Administrasi Umum",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": {
+                    "id": "8ae4828859d211720159d49dafdd4816",
+                    "nama": "Sekretariat Daerah",
+                    "nama_jabatan": "Sekretaris Daerah",
+                    "tanggal_dibuat": "2026-06-24 16:01",
+                    "update_terakhir": "2026-10-20 06:32",
+                    "parent_recursive": {
+                      "id": "8ae4828859d211720159d49c046246b8",
+                      "nama": "PEMERINTAH PROVINSI BENGKULU",
+                      "nama_jabatan": "GUBERNUR BENGKULU",
+                      "tanggal_dibuat": "2026-06-24 16:01",
+                      "update_terakhir": "2026-10-20 06:30",
+                      "parent_recursive": null
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "8ae483c67c8cc5fe017c8d765a600a20",
+              "nama": "Bagian Tatalaksana",
+              "nama_jabatan": "Kepala Bagian Tatalaksana",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4a4bd18508c",
+                "nama": "Biro Organisasi",
+                "nama_jabatan": "Kepala Biro Organisasi",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d4a06f824b35",
+                  "nama": "Asisten Administrasi Umum",
+                  "nama_jabatan": "Asisten Administrasi Umum",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": {
+                    "id": "8ae4828859d211720159d49dafdd4816",
+                    "nama": "Sekretariat Daerah",
+                    "nama_jabatan": "Sekretaris Daerah",
+                    "tanggal_dibuat": "2026-06-24 16:01",
+                    "update_terakhir": "2026-10-20 06:32",
+                    "parent_recursive": {
+                      "id": "8ae4828859d211720159d49c046246b8",
+                      "nama": "PEMERINTAH PROVINSI BENGKULU",
+                      "nama_jabatan": "GUBERNUR BENGKULU",
+                      "tanggal_dibuat": "2026-06-24 16:01",
+                      "update_terakhir": "2026-10-20 06:30",
+                      "parent_recursive": null
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "8ae4828559d737c90159d891b47c31eb",
+              "nama": "Bidang Ekonomi Kreatif",
+              "nama_jabatan": "Kepala Bidang Ekonomi Kreatif",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d526603c2a53",
+                "nama": "Dinas Pariwisata Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Pariwisata Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d528de662c3e",
+              "nama": "Bidang Fasilitasi Pencatatan Sipil",
+              "nama_jabatan": "Kepala Bidang Fasilitasi Pencatatan Sipil",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d5222fbf280c",
+                "nama": "Dinas Kependudukan Dan Pencatatan Sipil Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Kependudukan Dan Pencatatan Sipil Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d4ce38a8795f",
+              "nama": "Bidang Hubungan Industrial dan Pengawasan Ketenagakerjaan",
+              "nama_jabatan": "Kepala Bidang Hubungan Industrial dan Pengawasan Ketenagakerjaan",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4bef8ac6c80",
+                "nama": "Dinas Ketenagakerjaan Dan Transmigrasi Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Ketenagakerjaan Dan Transmigrasi Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae482a759d908630159da2710bc4734",
+              "nama": "Bidang Kesehatan Lingkungan dan Penunjang Medik",
+              "nama_jabatan": "Kepala Bidang Kesehatan Lingkungan dan Kesehatan Kerja",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "32",
+                "nama": "III.b",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae482a759d579350159d8cc39b93bc9",
+                "nama": "UPTD Khusus Rumah Sakit Umum Daerah Dr. M. Yunus",
+                "nama_jabatan": "Direktur Rumah Sakit Umum Daerah Dr. M. Yunus",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae482a759d908630159da2a5fac49bd",
+              "nama": "Bidang Ketertiban Umum dan Ketenteraman Masyarakat",
+              "nama_jabatan": "Kepala Bidang Ketertiban Umum dan Ketenteraman Masyarakat",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae482a759d908630159da222f7343ca",
+                "nama": "Satuan Polisi Pamong Praja Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Satuan Polisi Pamong Praja Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d5149e0e20d7",
+              "nama": "Bidang Mineral dan Batubara",
+              "nama_jabatan": "Kepala Bidang Mineral dan Batubara",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d51221d71fa8",
+                "nama": "Dinas Energi Dan Sumber Daya Mineral Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Energi Dan Sumber Daya Mineral Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae482a759d908630159d9e4fdb56789",
+              "nama": "Bidang Pembinaan dan Pengawasan Kearsipan",
+              "nama_jabatan": "Kepala Bidang Pembinaan dan Pengawasan Kearsipan",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae482a759d579350159d8c633212a97",
+                "nama": "Dinas Perpustakaan dan Kearsipan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Perpustakaan dan Kearsipan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828659d52a570159d53b37a603f7",
+              "nama": "Bidang Pembinaan Sekolah Menengah Kejuruan",
+              "nama_jabatan": "Kepala Bidang Pembinaan Sekolah Menengah Kejuruan",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828659d52a570159d539b70c0377",
+                "nama": "Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae482855a4883a6015a49d7b84e3041",
+              "nama": "Bidang Pengawasan dan Pemeriksaan",
+              "nama_jabatan": "Kepala Bidang Pengawasan dan Pemeriksaan",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae482855a435d5f015a461194ea510a",
+                "nama": "Dinas Koperasi, Usaha Kecil dan Menengah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Koperasi, Usaha Kecil dan Menengah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d4f37e5b0fad",
+              "nama": "Bidang Pengelolaan Pendapatan Daerah",
+              "nama_jabatan": "Kepala Bidang Pengelolaan Pendapatan Daerah",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:33",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4b11c7f5da4",
+                "nama": "Badan Keuangan dan Aset Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Keuangan dan Aset Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae482a759d579350159d8cca70a3cd0",
+              "nama": "Bidang Pengembangan Pemuda",
+              "nama_jabatan": "Kepala Bidang Pengembangan Pemuda",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:31",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828559d737c90159d85571ed36c4",
+                "nama": "Dinas Pemuda dan Olahraga Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Pemuda dan Olahraga Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828659d52a570159d534d30d01d9",
+              "nama": "Bidang Pengembangan Usaha Peternakan",
+              "nama_jabatan": "Kepala Bidang Pengembangan Usaha Peternakan",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d52755ce2b22",
+                "nama": "Dinas Peternakan dan Kesehatan Hewan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Peternakan dan Kesehatan Hewan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828559d737c90159d8b979526910",
+              "nama": "Bidang Pengendalian Penduduk dan Keluarga Berencana",
+              "nama_jabatan": "Kepala Bidang Pengendalian Penduduk dan Keluarga Berencana",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828559d737c90159d854f538365d",
+                "nama": "Dinas Pemberdayaan Perempuan, Perlindungan Anak, Pengendalian Penduduk Dan Keluarga Berencana Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Pemberdayaan Perempuan, Perlindungan Anak, Pengendalian Penduduk Dan Keluarga Berencana Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d4f304a00f35",
+              "nama": "Bidang Perencanaan dan Evaluasi Pendapatan",
+              "nama_jabatan": "Kepala Bidang Perencanaan dan Evaluasi Pendapatan",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4b11c7f5da4",
+                "nama": "Badan Keuangan dan Aset Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Keuangan dan Aset Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d51cc89a25a0",
+              "nama": "Bidang Perikanan Tangkap",
+              "nama_jabatan": "Kepala Bidang Perikanan Tangkap",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d513eb8c2063",
+                "nama": "Dinas Kelautan dan Perikanan",
+                "nama_jabatan": "Kepala Dinas Kelautan dan Perikanan",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:31",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae482a759d908630159da300bc14d61",
+              "nama": "Bidang Perlindungan Masyarakat",
+              "nama_jabatan": "Kepala Bidang Perlindungan Masyarakat",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae482a759d908630159da222f7343ca",
+                "nama": "Satuan Polisi Pamong Praja Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Satuan Polisi Pamong Praja Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d50685a419ed",
+              "nama": "Bidang Tanaman Pangan",
+              "nama_jabatan": "Kepala Bidang Tanaman Pangan",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4ccc4e47840",
+                "nama": "Dinas Tanaman Pangan, Hortikultura Dan Perkebunan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Tanaman Pangan, Hortikultura Dan Perkebunan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae483a769385f9a01694799ddef3e91",
+              "nama": "Cabang Dinas Pendidikan Wilayah IV Mukomuko",
+              "nama_jabatan": "Kepala Cabang Dinas Pendidikan Wilayah IV Mukomuko",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "32",
+                "nama": "III.b",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828659d52a570159d539b70c0377",
+                "nama": "Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae483a76899b5d601689ddec5425953",
+              "nama": "Cabang Dinas Pendidikan Wilayah VIII Karang Tinggi",
+              "nama_jabatan": "Kepala Cabang Dinas Pendidikan Wilayah VIII Karang Tinggi",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "32",
+                "nama": "III.b",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828659d52a570159d539b70c0377",
+                "nama": "Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae482a759d908630159d9f726640fd6",
+              "nama": "Inspektur Pembantu II",
+              "nama_jabatan": "Inspektur Pembantu II",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae482a759d908630159d9ed1c3f7763",
+                "nama": "Inspektorat Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Inspektur Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828559d737c90159d8a70e575845",
+              "nama": "Sekretariat",
+              "nama_jabatan": "Sekretaris",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d5283e152be5",
+                "nama": "Dinas Pemberdayaan Masyarakat Dan Desa Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Pemberdayaan Masyarakat Dan Desa Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:31",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d512f4ce201d",
+              "nama": "Sekretariat",
+              "nama_jabatan": "Sekretaris",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4aea88b5aaa",
+                "nama": "Badan Kesatuan Bangsa Dan Politik Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kesatuan Bangsa Dan Politik Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:33",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d4f037380de9",
+              "nama": "Sekretariat Badan Keuangan dan Aset Daerah Provinsi Bengkulu",
+              "nama_jabatan": "Sekretaris Badan Keuangan dan Aset Daerah Provinsi Bengkulu",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4b11c7f5da4",
+                "nama": "Badan Keuangan dan Aset Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Keuangan dan Aset Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828859d211720159d5139d4e204c",
+              "nama": "Sekretariat Dinas  Energi Sumber Daya Mineral Provinsi Bengkulu",
+              "nama_jabatan": "Sekretaris Dinas  Energi Sumber Daya Mineral Provinsi Bengkulu",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d51221d71fa8",
+                "nama": "Dinas Energi Dan Sumber Daya Mineral Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Energi Dan Sumber Daya Mineral Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae4828559d737c90159d89992f53fc6",
+              "nama": "Sekretariat Dinas Pekerjaan Umum dan Penataan Ruang Provinsi Bengkulu",
+              "nama_jabatan": "Sekretaris Dinas Pekerjaan Umum dan Penataan Ruang Provinsi Bengkulu",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d527c1992b59",
+                "nama": "Dinas Pekerjaan Umum dan Penataan Ruang Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Pekerjaan Umum dan Penataan Ruang Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae483a6656489cb016569d4957e4c86",
+              "nama": "UPTD Balai Latihan Koperasi, Usaha Kecil dan Menengah",
+              "nama_jabatan": "Kepala UPTD Balai Latihan Koperasi, Usaha Kecil Dan Menengah",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:33",
+              "eselon": {
+                "id": "32",
+                "nama": "III.b",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae482855a435d5f015a461194ea510a",
+                "nama": "Dinas Koperasi, Usaha Kecil dan Menengah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Koperasi, Usaha Kecil dan Menengah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae483a86583f2e7016583fba5ee0250",
+              "nama": "UPTD Kesatuan Pengelolaan Hutan Lindung (KPHL) Bukit Daun",
+              "nama_jabatan": "Kepala UPTD Kesatuan Pengelolaan Hutan Lindung (KPHL) Bukit Daun",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "32",
+                "nama": "III.b",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d525e8d82a1a",
+                "nama": "Dinas Lingkungan Hidup dan Kehutanan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Lingkungan Hidup dan Kehutanan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae483a86583f2e7016583fce0bc02db",
+              "nama": "UPTD Kesatuan Pengelolaan Hutan Lindung (KPHL) Seluma",
+              "nama_jabatan": "Kepala UPTD Kesatuan Pengelolaan Hutan Lindung (KPHL) Seluma",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:30",
+              "eselon": {
+                "id": "32",
+                "nama": "III.b",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d525e8d82a1a",
+                "nama": "Dinas Lingkungan Hidup dan Kehutanan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Lingkungan Hidup dan Kehutanan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae483a6656489cb016569b4c7fc29a6",
+              "nama": "UPTD Kesatuan Pengelolaan Hutan Produksi (KPHP) Mukomuko",
+              "nama_jabatan": "Kepala UPTD Kesatuan Pengelolaan Hutan Produksi (KPHP) Mukomuko",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "32",
+                "nama": "III.b",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d525e8d82a1a",
+                "nama": "Dinas Lingkungan Hidup dan Kehutanan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Lingkungan Hidup dan Kehutanan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:30",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae483a565648a650165649d6d830b2c",
+              "nama": "UPTD Laboratorium dan Klinik Kesehatan Hewan",
+              "nama_jabatan": "Kepala UPTD Laboratorium dan Klinik Kesehatan Hewan",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:31",
+              "eselon": {
+                "id": "31",
+                "nama": "III.a",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d52755ce2b22",
+                "nama": "Dinas Peternakan dan Kesehatan Hewan Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Peternakan dan Kesehatan Hewan Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae483a7657e620a0165834f413a3eaa",
+              "nama": "UPTD Pengawasan Ketenagakerjaan Wilayah III",
+              "nama_jabatan": "Kepala UPTD Pengawasan Ketenagakerjaan Wilayah III",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "32",
+                "nama": "III.b",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4bef8ac6c80",
+                "nama": "Dinas Ketenagakerjaan Dan Transmigrasi Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Ketenagakerjaan Dan Transmigrasi Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:32",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            },
+            {
+              "id": "8ae483a564a234310164a5e3c38f4ace",
+              "nama": "UPTD Pengelolaan Dan Pengembangan Sarana Dan Prasarana Kepemudaan Dan Keolahragaan",
+              "nama_jabatan": "Kepala UPTD Pengelolaan Dan Pengembangan Sarana Dan Prasarana Kepemudaan Dan Keolahragaan",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-10-20 06:32",
+              "eselon": {
+                "id": "32",
+                "nama": "III.b",
+                "level": 3,
+                "level_text": "III",
+                "tanggal_dibuat": "2026-06-23 15:16",
+                "update_terakhir": "2026-06-23 15:16"
+              },
+              "parent_recursive": {
+                "id": "8ae4828559d737c90159d85571ed36c4",
+                "nama": "Dinas Pemuda dan Olahraga Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Pemuda dan Olahraga Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-10-20 06:12",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-10-20 06:30",
+                  "parent_recursive": null
+                }
+              }
+            }
+          ]

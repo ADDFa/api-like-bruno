@@ -1,0 +1,61 @@
+info:
+  name: Sync
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-diklat/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Riwayat Diklat
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-diklat/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 03 Aug 2026 09:50:05 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "003d13a8-af61-11f0-84ac-0a580a800924",
+              "id_latihan_struktural": "2",
+              "nama_latihan_struktural": "SEPALA/ADUM/DIKLAT PIM TK.IV/PKP",
+              "nomor": "00008669/PKP/5800/012/LAN-BPSDMBKL/2023",
+              "tanggal": "2023-07-18",
+              "tahun": 2023,
+              "jumlah_jam": 830,
+              "tanggal_selesai": "2023-11-24",
+              "institusi_penyelenggara": "Badan Pengembangan Sumber Daya Manusia Provinsi Bengkulu"
+            }
+          ]

@@ -1,0 +1,93 @@
+info:
+  name: Update
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{api_url}}/user/{{user_id}}"
+  body:
+    type: form-urlencoded
+    data:
+      - name: asn_id
+        value: ""
+        disabled: true
+      - name: nama
+        value: User 1 Update
+      - name: email
+        value: user1update@gmail.com
+      - name: username
+        value: user1update
+      - name: password
+        value: User1.123
+      - name: password_confirmation
+        value: User1.123
+      - name: status
+        value: active
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Edit User
+    request:
+      url: "{{api_url}}/user/{{user_id}}"
+      method: PUT
+      body:
+        type: form-urlencoded
+        data:
+          - name: asn_id
+            value: ""
+            disabled: true
+          - name: nama
+            value: User 1 Update
+          - name: email
+            value: user1update@gmail.com
+          - name: username
+            value: user1update
+          - name: password
+            value: User1.123 Update
+          - name: password_confirmation
+            value: User1.123 Update
+          - name: status
+            value: active
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 15 Jul 2026 09:28:00 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "56"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "019f6512-f189-72ed-a3ae-3477fbf6deb9",
+            "name": "User 1 Update",
+            "username": "user1update",
+            "email": "user1update@gmail.com",
+            "status": "active",
+            "opd": null,
+            "unor": null
+          }

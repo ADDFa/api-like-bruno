@@ -1,0 +1,54 @@
+info:
+  name: Show
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{api_url}}/pengumuman/{{pengumuman_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Detail Pengumuman
+    request:
+      url: "{{api_url}}/pengumuman/{{pengumuman_id}}"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 09 Jul 2026 07:40:58 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "019f45d0-e77f-7052-b8d0-d8e70af6a0d1",
+            "judul": "Pembaruan WFH",
+            "konten": "Jadwal wfh sekarang digenerate setiap minggu di hari Kamis/Jum'at",
+            "tanggal_efektif": "2026-07-20"
+          }

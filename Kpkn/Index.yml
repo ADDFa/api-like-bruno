@@ -1,0 +1,460 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/kpkn"
+  params:
+    - name: search
+      value: BPKD
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data KPKN
+    request:
+      url: "{{api_url}}/kpkn"
+      method: GET
+      params:
+        - name: search
+          value: BPKD
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 17 Sep 2026 16:32:50 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "8ae48286587907f701587b96e561179f",
+              "nama": "KALIMANTAN UTARA"
+            },
+            {
+              "id": "8ae482873af26d4e013b1cd79b3b4131",
+              "nama": "GUNUNG SUGIH"
+            },
+            {
+              "id": "8ae48287437185cf01437a52870c3ff9",
+              "nama": "BADAN PENGELOLAAN KEUANGAN DAN BARANG DAERAH"
+            },
+            {
+              "id": "8ae482874f15a0f9014f1b7ee2386f3b",
+              "nama": "PAPUA"
+            },
+            {
+              "id": "8ae48287523eb43d01523ee300f80fe9",
+              "nama": "PAKU DITHUBAD NA.2.01.08"
+            },
+            {
+              "id": "8ae48287528109bf01528135efb2024a",
+              "nama": "KU DENMA MABESAD NA 2.01.01"
+            },
+            {
+              "id": "8ae48287528109bf0152813693140280",
+              "nama": "KU PUSPENERBAD NA 2.01.06"
+            },
+            {
+              "id": "8ae48287528109bf01528137413502b4",
+              "nama": "KU DITZIAD NA 2.01.07"
+            },
+            {
+              "id": "8ae48287528109bf01528137ac2b02c7",
+              "nama": "KU DITTOPAD NA 2.01.12"
+            },
+            {
+              "id": "8ae48287528109bf0152813f3c2008e0",
+              "nama": "KU DITKUAD NA 2.01.13"
+            },
+            {
+              "id": "8ae48287528109bf0152814109fb0ae1",
+              "nama": "KU PUSSENKAV NA 2.02.03"
+            },
+            {
+              "id": "8ae4828752cac5310152d34e035a7c17",
+              "nama": "KAUR KEU PUSINAFIS POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d34edfb67d6e",
+              "nama": "KAUR KEU PUSLABFOR POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d34fc3207f9c",
+              "nama": "KAUR KEU PUSDIK GASUM"
+            },
+            {
+              "id": "8ae4828752cac5310152d35050310016",
+              "nama": "KAUR KEU PUSDIK BRIMOB"
+            },
+            {
+              "id": "8ae4828752cac5310152d351cc99023a",
+              "nama": "KAUR KEU SETUKPA POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d36d3f193a2a",
+              "nama": "KAUR KEU PUSDIK INTELKAM"
+            },
+            {
+              "id": "8ae4828752cac5310152d36d90ce3b2c",
+              "nama": "KAUR KEU KORBRIMOB POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d36e05aa3cce",
+              "nama": "KAUR KEU SEKOLAH STAF DAN PIMPINAN POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d36e572e3d3c",
+              "nama": "KAUR KEU PUSDIKMIN"
+            },
+            {
+              "id": "8ae4828752cac5310152d36eb9b83dc9",
+              "nama": "KAUR KEU AKADEMI KEPOLISIAN"
+            },
+            {
+              "id": "8ae4828752cac5310152d36f15253ee6",
+              "nama": "KAUR KEU PUSDIK BINMAS"
+            },
+            {
+              "id": "8ae4828752cac5310152d36f5d383f1c",
+              "nama": "KAUR KEU LEMDIKPOL"
+            },
+            {
+              "id": "8ae4828752cac5310152d36fa6a83fdc",
+              "nama": "KAUR KEU SESPIMMA POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d3701a8e4060",
+              "nama": "KAUR KEU PUSDIK POL AIR"
+            },
+            {
+              "id": "8ae4828752cac5310152d3705afe40da",
+              "nama": "KAUR KEU SEBASA"
+            },
+            {
+              "id": "8ae4828752cac5310152d370866b4155",
+              "nama": "KAUR KEU SEPOLWAN"
+            },
+            {
+              "id": "8ae4828752cac5310152d370b2b041b8",
+              "nama": "KAUR KEU PUSDIK LANTAS"
+            },
+            {
+              "id": "8ae4828752cac5310152d371143b424b",
+              "nama": "KAUR KEU RUMKIT BHAYANGKARA PUSDIK GASUM"
+            },
+            {
+              "id": "8ae4828752cac5310152d371788f436c",
+              "nama": "KAUR KEU RUMKIT BHAYANGKARA SETUKPA POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d371a3c44386",
+              "nama": "KAUR KEU PUSDIK RESKRIM"
+            },
+            {
+              "id": "8ae4828752cac5310152d371d82d4417",
+              "nama": "KAUR KEU DIT TIPIDNARKOBA"
+            },
+            {
+              "id": "8ae4828752cac5310152d372167a4538",
+              "nama": "KAUR KEU DENSUS 88 AT"
+            },
+            {
+              "id": "8ae4828752cac5310152d3724efe460e",
+              "nama": "KAUR KEU DIK TIPIDKOR POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d37294a546e8",
+              "nama": "KAUR KEU SAT I GEGANA/ KORBRIMOB POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d372c8dc4719",
+              "nama": "KAUR KEU SAT II PELOPOR/ KORBRIMOB POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d372fae44764",
+              "nama": "KAUR KEU SAT III PELOPOR/ KORBRIMOB POLRI"
+            },
+            {
+              "id": "8ae4828752cac5310152d37329de47b1",
+              "nama": "KAUR KEU PUSIKNAS POLRI"
+            },
+            {
+              "id": "8ae4828754fd78f2015500dbda7601cf",
+              "nama": "LANTAMAL XII"
+            },
+            {
+              "id": "8ae4828754fd78f2015500dc214701d5",
+              "nama": "LANTAMAL XIII"
+            },
+            {
+              "id": "8ae4828754fd78f2015500dcadb50208",
+              "nama": "LANTAMAL IV"
+            },
+            {
+              "id": "8ae4828754fd78f2015500dd301f0242",
+              "nama": "RUMKITAL DR MIDIYATO S"
+            },
+            {
+              "id": "8ae4828754fd78f2015500ddc2140251",
+              "nama": "LADOKGI YOS SUDARSO"
+            },
+            {
+              "id": "8ae4828754fd78f2015500de3c27025c",
+              "nama": "LADOKGI RE MARTADINATA"
+            },
+            {
+              "id": "8ae4828754fd78f2015500deab080260",
+              "nama": "LAFIAL"
+            },
+            {
+              "id": "8ae4828754fd78f2015500dee8390263",
+              "nama": "LAKESAL"
+            },
+            {
+              "id": "8ae4828754fd78f2015500df975a0274",
+              "nama": "LANTAMAL XII PONTIANAK"
+            },
+            {
+              "id": "8ae4828754fd78f2015500e02b990283",
+              "nama": "LANTAMAL XIII TARAKAN"
+            },
+            {
+              "id": "8ae4828754fd78f2015500e0895902a9",
+              "nama": "LANTAMAL XIV SORONG"
+            },
+            {
+              "id": "8ae482875669e88c01566db002fd2ee3",
+              "nama": "KAUR KEU DIVPROPAM"
+            },
+            {
+              "id": "8ae48287568b5c420156922d25e1735b",
+              "nama": "SUMATERA BARAT"
+            },
+            {
+              "id": "8ae482875818d2ac0158190825b90191",
+              "nama": "PAKU KOREM 081/DSJ NA.207.02"
+            },
+            {
+              "id": "8ae482875818d2ac01581908d6f501a5",
+              "nama": "PAKU KOREM 082/CPYJ NA.2.07.03"
+            },
+            {
+              "id": "8ae482875818d2ac01581909520601ab",
+              "nama": "PAKU KOREM 083/BDJ NA.204.04"
+            },
+            {
+              "id": "8ae482875818d2ac01581909c31c01ba",
+              "nama": "PAKU KOREM 084/BJ NA.2.07.05"
+            },
+            {
+              "id": "8ae482875818d2ac0158190a59f201c0",
+              "nama": "PAKU RINDAM NA.2.07.06"
+            },
+            {
+              "id": "8ae482875818d2ac0158190ab0db02a2",
+              "nama": "PAKU ZIDAM NA.2.07.07"
+            },
+            {
+              "id": "8ae482875818d2ac0158190b2a2702ad",
+              "nama": "PAKU BEKANGDAM NA.2.07.08"
+            },
+            {
+              "id": "8ae482875818d2ac0158190b9d8b02f8",
+              "nama": "PAKU PALDAM NA.2.07.09"
+            },
+            {
+              "id": "8ae482875818d2ac0158190bf49e02fa",
+              "nama": "PAKU HUBDAM NA.2.07.10"
+            },
+            {
+              "id": "8ae482875818d2ac0158190c3db70300",
+              "nama": "PAKU KESDAM NA.2.07.11"
+            },
+            {
+              "id": "8ae482875818d2ac0158190cce320309",
+              "nama": "PAKU BRIGIF 16/WY NA.207.12"
+            },
+            {
+              "id": "8ae482875a57f798015a5a13f0a76849",
+              "nama": "BADAN PENGELOLA KEUANGAN DAN PENDAPATAN ASLI DAERAH"
+            },
+            {
+              "id": "8ae482875aa14cd3015aa1e9490e2057",
+              "nama": "BADAN PENGELOLAAN KEUANGAN DAN PAJAK DAERAH"
+            },
+            {
+              "id": "8ae482875aa14cd3015aa25e098716e9",
+              "nama": "BADAN PENGELOLAAN KEUANGAN DAN PENDAPATAN DAERAH"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f65189ba1d9d",
+              "nama": "KAS PT. ANGKASA PURA I NGURAH RAI - BALI"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f6527a011dce",
+              "nama": "KAS PT. ANGKASA PURA I JUANDA - SURABAYA"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f65309541de0",
+              "nama": "KAS PT. ANGKASA PURA I SEPINGGAN"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f6538ab51e03",
+              "nama": "KAS PT. ANGKASA PURA I HASANUDDIN MAKASSAR"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f653e2ea1e10",
+              "nama": "KAS PT. ANGKASA PURA I SAM RATULANGI"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f6541eac1e1d",
+              "nama": "KAS PT. ANGKASA PURA I ADI SUMARMO"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f655095e1e38",
+              "nama": "KAS PT. ANGKASA PURA I ADI FRANS KAISEPO"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f65556f81e55",
+              "nama": "KAS PT. ANGKASA PURA I SELAPARANG"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f667d1fe22e2",
+              "nama": "KAS PT. ANGKASA PURA I PATTIMURA"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f6680ce822fb",
+              "nama": "KAS PT. ANGKASA PURA I AHMAD YANI"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f668470f2304",
+              "nama": "KAS PT. ANGKASA PURA I ADI SUTJIPTO"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66881c7230e",
+              "nama": "KAS PT. ANGKASA PURA I SYAMSUDDIN NOOR"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f668e7fc2327",
+              "nama": "KAS PT. ANGKASA PURA I EL TARI"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66a13cf238a",
+              "nama": "KAS PT. ANGK. PURA II SOEKAERNO-HATTA"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66a878e23d9",
+              "nama": "KAS PT. ANGKASA PURA I HALIM PERDANAKUSUMA"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66b0a16240a",
+              "nama": "KAS PT. ANGK. PURA I HUSEIN SASTRANEGARA"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66b43b32425",
+              "nama": "KAS PT. ANGKASA PURA II POLONIA"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66be57b246b",
+              "nama": "KAS PT. AP II SULTAN MAHMUD BADARUDDIN"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66c6e3324af",
+              "nama": "KAS PT. AP II SULTAN SYARIF KASIM II"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66cb58924cc",
+              "nama": "KAS PT. ANGKASA PURA II MINANGKABAU"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66d4cdc25b8",
+              "nama": "KAS PT. ANGKASA PURA II SUPADIO"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66dc5c3260e",
+              "nama": "KAS PT. AP II RAJA H. FISABILILLAH"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66e514a2685",
+              "nama": "KAS PT. ANGKASA PURA II SULTAN THAHA"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66e951f26bd",
+              "nama": "KAS PT. ANGKASA PURA II DEPATI AMIR"
+            },
+            {
+              "id": "8ae4828835f1f6a00135f66f0d7026f2",
+              "nama": "KAS PT. AP II SULTAN ISKANDAR MUDA"
+            },
+            {
+              "id": "8ae4828841312f47014133de9d3a57ca",
+              "nama": "PEKAS TNI WILAYAH JAKARTA VI"
+            },
+            {
+              "id": "8ae482884e29b5c2014e423327726fbd",
+              "nama": "PAKU DITBEKANGAD NA.2.01.10"
+            },
+            {
+              "id": "8ae4828852c511ca0152cf993f8f0a77",
+              "nama": "KAUR KEU RUMKIT BHAYANGKARA PUSDIK BRIMOB"
+            },
+            {
+              "id": "8ae4828852c511ca0152cf9bafeb0b4c",
+              "nama": "KAUR KEU RUMKIT BHAYANGKARA AKPOL"
+            },
+            {
+              "id": "8ae4828852c511ca0152cf9d94c10b9d",
+              "nama": "KAUR KEU RUMKIT BHAYANGKARA SELAPA"
+            },
+            {
+              "id": "8ae4828852c511ca0152cf9e2b560bd5",
+              "nama": "KAUR KEU RUMKIT BHAYANGKARA BRIMOB"
+            },
+            {
+              "id": "8ae4828852c511ca0152cf9f01db0c21",
+              "nama": "KAUR KEU BARESKRIM POLRI"
+            },
+            {
+              "id": "8ae482885807bc9101580a6ea5e83693",
+              "nama": "PAKU MAKODAM MA.2.07.01 SURABAYA"
+            },
+            {
+              "id": "8ae482885893962001589474dd2e5209",
+              "nama": "KEPULAUAN RIAU"
+            },
+            {
+              "id": "8ae48288589396200158947d699456c3",
+              "nama": "POLEWALI"
+            }
+          ]

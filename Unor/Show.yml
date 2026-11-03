@@ -1,0 +1,88 @@
+info:
+  name: Show
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{api_url}}/unor/{{unor_id}}?includes=leader"
+  params:
+    - name: includes
+      value: childs,leader,allChilds,subordinate,allSubordinate,eselon
+      type: query
+      disabled: true
+    - name: includes
+      value: leader
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Detail Unor
+    request:
+      url: "{{api_url}}/unor/{{unor_id}}?includes=allChilds,eselon,allSubordinate"
+      method: GET
+      params:
+        - name: includes
+          value: childs,allChilds,subordinate,allSubordinate,eselon
+          type: query
+          disabled: true
+        - name: includes
+          value: allChilds,eselon,allSubordinate
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 30 Jun 2026 06:38:28 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "id": "002680c2-5f62-46d5-bd1f-3954207465eb",
+            "nama": "SMA NEGERI 11 KOTA BENGKULU",
+            "nama_jabatan": "KEPALA SEKOLAH SMA NEGERI 11 KOTA BENGKULU",
+            "tanggal_dibuat": "2026-06-24 16:01",
+            "update_terakhir": "2026-06-24 16:03",
+            "eselon": {
+              "id": "99",
+              "nama": "NON",
+              "tanggal_dibuat": "2026-06-23 15:16",
+              "update_terakhir": "2026-06-23 15:16"
+            },
+            "all_childs": [],
+            "all_subordinate": []
+          }
+
+docs: |
+  ##### PARAMS
+  - childs: Unor langsung (1 tingkat di bawah) via unor_induk.
+  - allChilds: Unor bawahan secara rekursif (Anak -> Cucu -> Cicit, dst.).
+  - subordinate: Unor bawahan langsung via diatasan_id.
+  - allSubordinate: Unor bawahan dari atasan secara rekursif.
+
+  Catatan: Filter childs[in_eselon][] otomatis berlaku juga saat menggunakan relasi subordinate / allSubordinate.

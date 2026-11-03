@@ -1,0 +1,77 @@
+info:
+  name: Sign In
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{api_url}}/sign-in"
+  body:
+    type: form-urlencoded
+    data:
+      - name: username
+        value: "{{process.env.USERNAME}}"
+      - name: password
+        value: "{{process.env.PASSWORD}}"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        if (res.getStatus() === 200) {
+          const data = res.getBody()
+          bru.setVar("access_token", data.access_token)
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sign In
+    request:
+      url: "{{process.env.BASE_URL}}/sign-in"
+      method: POST
+      body:
+        type: form-urlencoded
+        data:
+          - name: username
+            value: addfa
+          - name: password
+            value: password
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 26 May 2026 04:41:23 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: access-control-allow-origin
+          value: "*"
+        - name: set-cookie
+          value: refresh_token=6b843yzkiQOYxRtRgFlGC9NjA4VaMIHJVrwzRD6PecOuAyKlc6jjlXBsIbEK-1779770483; expires=Tue, 09 Jun 2026 04:41:23 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none
+      body:
+        type: json
+        data: |-
+          {
+            "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1la2luZXJqYS50ZXN0Ojg0NDMvYXBpL3YxL3NpZ24taW4iLCJpYXQiOjE3Nzk3NzA0ODMsImV4cCI6MTc3OTc3NDA4MywibmJmIjoxNzc5NzcwNDgzLCJqdGkiOiJDbzFzdG1PaFBOOTBHdVAwIiwic3ViIjoiMDk3OWIxZmUtMWNjYy00MWRjLWIzZGEtNGNjNmQ1NDI3MzY0IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInVzZXJfaW5mbyI6eyJpZCI6IjA5NzliMWZlLTFjY2MtNDFkYy1iM2RhLTRjYzZkNTQyNzM2NCIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRkZmFAZXhhbXBsZS5jb20iLCJzdGF0dXMiOiJhY3RpdmUifX0.EuflcRYevj8tcIWPZKL6SMRNJRHDEjKXVUyuxbcohLQ",
+            "token_type": "bearer"
+          }

@@ -1,0 +1,571 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/user?includes=roles,permissions&status=active"
+  params:
+    - name: includes
+      value: roles,permissions,asn,unor,unorInduk
+      type: query
+      disabled: true
+    - name: includes
+      value: roles,permissions
+      type: query
+    - name: per_page
+      value: "10"
+      type: query
+      disabled: true
+    - name: search
+      value: user
+      type: query
+      disabled: true
+    - name: status
+      value: active
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data User
+    request:
+      url: "{{api_url}}/user?includes=unorInduk"
+      method: GET
+      params:
+        - name: includes
+          value: asn,unor,unorInduk
+          type: query
+          disabled: true
+        - name: includes
+          value: unorInduk
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 09 Jul 2026 08:04:21 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "0098a012-cdfc-4f6c-b524-a04cfee59101",
+              "name": "HENDRIX DESMAYER SIBARANI, SE",
+              "username": "198312072011011001",
+              "email": "hendrix07des@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "1633809f-7587-4874-9596-d0e1087f8260",
+              "name": "ILHAM SUCI PUTRA, S.Kom, M.Eng",
+              "username": "ispcpr",
+              "email": "ispcpr@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d50fe0eb1e67",
+                "nama": "Dinas Komunikasi, Informatika dan Statistik Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Komunikasi, Informatika dan Statistik Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "19059e1e-9d64-4486-976d-f161b58cabf8",
+              "name": "RIMA ANGGRAENI",
+              "username": "198612122010012011",
+              "email": "anggraeni.rima.ar@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "291300f1-0cbf-4dff-bead-177a9120dec9",
+              "name": "ROMDANI  DAROJAH",
+              "username": "rom",
+              "email": "romdarojah.skp@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "312779a0-2491-4f79-8e92-da3df440f695",
+              "name": "YUSINTA KESUMA SARI",
+              "username": "yusinta_kesuma",
+              "email": "rajashintha@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "32f03fa7-7bd2-4a85-b9a1-0384516c3412",
+              "name": "M. Oktarianndi",
+              "username": "oktarianndi",
+              "email": "oktarianndi@gmail.com",
+              "status": "active",
+              "unor_induk": null
+            },
+            {
+              "id": "389d7b9a-a40d-3d51-b3d1-a5bfeaad3c7f",
+              "name": "Administrator",
+              "username": "admin",
+              "email": "hijrahsaputra@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "4615f3e9-6c62-43fc-b3ff-aa8af33f78aa",
+              "name": "DORA OKTRINA KURNIATI",
+              "username": "197410032005022003",
+              "email": "doraoktrinakurniati@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "50e55575-d737-470b-9aa6-f66a4c9c80e1",
+              "name": "HARI APRIANSYAH",
+              "username": "198504142009031001",
+              "email": "hariapriansyah@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "5f0b0b20-af19-45c5-86b0-67796af435a4",
+              "name": "NOVARIA FRETY",
+              "username": "novaria.frety",
+              "email": "novariafrety05@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "6347293a-f405-434b-b585-93944af7a3c4",
+              "name": "SHANDY TRI UTAMA, S.H.",
+              "username": "shandy_tri_utama",
+              "email": "shandytriutama@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d49c046246b8",
+                "nama": "PEMERINTAH PROVINSI BENGKULU",
+                "nama_jabatan": "GUBERNUR BENGKULU",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "6f61fa30-9557-4f18-834b-15c359a74269",
+              "name": "HAIDIL GUSTIAWAN, S.Kom",
+              "username": "198608162010011004",
+              "email": "haidilbella@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d49c046246b8",
+                "nama": "PEMERINTAH PROVINSI BENGKULU",
+                "nama_jabatan": "GUBERNUR BENGKULU",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "7103ef01-64b0-453a-96db-bcc7ce40b18c",
+              "name": "AHMAD YANI",
+              "username": "196609251986021003",
+              "email": "ahmadyani250966@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d49c046246b8",
+                "nama": "PEMERINTAH PROVINSI BENGKULU",
+                "nama_jabatan": "GUBERNUR BENGKULU",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "name": "adha",
+              "username": "addfa",
+              "email": "addfa@email.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "74ae874d-a2ef-4751-9d0a-58053607316f",
+              "name": "Rachmi Ulizah",
+              "username": "rch19",
+              "email": "rachmiuliza19@gmail.com",
+              "status": "active",
+              "unor_induk": null
+            },
+            {
+              "id": "77b5080a-cecf-4c22-9b3a-69cf8a2b39a7",
+              "name": "DITI PURYANTI",
+              "username": "198309082010012010",
+              "email": "ditipuryanti37@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "7e331c2a-58e3-4bab-8ff2-55cc395e7539",
+              "name": "SEPTIANA",
+              "username": "197109192003122003",
+              "email": "septibkl63@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "7e6a23b9-6d0e-4381-8e84-2fdd1d57d88b",
+              "name": "FERI ANTONI",
+              "username": "feri_antoni",
+              "email": "feri79.f1@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d49c046246b8",
+                "nama": "PEMERINTAH PROVINSI BENGKULU",
+                "nama_jabatan": "GUBERNUR BENGKULU",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "833a7df1-c881-468a-9405-f189dc2f760e",
+              "name": "MUHAMMAD JILAN ALFARI",
+              "username": "200107262024091001",
+              "email": "muhammadjilanalfari@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "9ca2956f-fb0e-4ca2-8ac3-43c351792cef",
+              "name": "ECI PUSPITA ULANDARI, S.E.",
+              "username": "Ecipuspita",
+              "email": "ecipuspita94@gmail.com",
+              "status": "inactive",
+              "unor_induk": null
+            },
+            {
+              "id": "a0347692-195f-4999-a67f-2b0d7dd3160b",
+              "name": "NOPA TRIANA",
+              "username": "nopatriana",
+              "email": "nopatriana@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "a1def098-0455-4145-8373-b3353a797820",
+              "name": "USWANTO",
+              "username": "197706172007011003",
+              "email": "anto.uswantoskp@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "a65e7993-0999-4b91-b43c-702bb98ee108",
+              "name": "YOSSI MELISA, SE",
+              "username": "198601122008042001",
+              "email": "yossimelisa86@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d49c046246b8",
+                "nama": "PEMERINTAH PROVINSI BENGKULU",
+                "nama_jabatan": "GUBERNUR BENGKULU",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "aa6efe80-6664-4264-87bb-4b3be80e45c6",
+              "name": "NENNI OKTARIA.A.MD",
+              "username": "nennioktaria",
+              "email": "nennioktaria03@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "ad57b8ac-d0ab-416b-b684-616623453866",
+              "name": "CAESARIO PRATAMA, SE",
+              "username": "199206272019021002",
+              "email": "caesariopratama93@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "adabb390-c28a-4d13-97e6-1b79c5eb2758",
+              "name": "AKHMAD YULIANSYAH, S.Kom",
+              "username": "a111ek",
+              "email": "aakhmadd@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "ba772f26-6bed-4711-b16f-2659df4b5d4e",
+              "name": "INDRA IRAWAN",
+              "username": "indra",
+              "email": "indrairawankuyung@yahoo.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "bc7b7729-7d9d-4268-b01d-b43ca0922f24",
+              "name": "NASUHA",
+              "username": "mbNANA",
+              "email": "nasuhaprabowo.bona@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "be974ef0-aee5-4d96-9e90-8dee7936d75b",
+              "name": "HOTMIN.S.KOM",
+              "username": "hotmin.s.kom",
+              "email": "hotminm@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "c40756c3-d227-4bde-8f75-2c3735f6f77c",
+              "name": "YULISMAN",
+              "username": "lisman",
+              "email": "yulisman.skp@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "d04e0528-5e32-4947-bd6c-81181f48adf6",
+              "name": "NUR SANTY APRIANI",
+              "username": "199204152014062001",
+              "email": "nursanty.apriani@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "d4fa7b4f-8dc0-4c5e-96a7-458ee008c0fb",
+              "name": "APRIANI PURWITA SARI",
+              "username": "witaaps",
+              "email": "grewfyta92@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d50fe0eb1e67",
+                "nama": "Dinas Komunikasi, Informatika dan Statistik Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Komunikasi, Informatika dan Statistik Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "da40f1e4-57af-4385-8d94-9b6c754bd10e",
+              "name": "MUHAMAD YOSE SASTRA, S.T.",
+              "username": "yose",
+              "email": "muhamadyose65@gmail.com",
+              "status": "inactive",
+              "unor_induk": null
+            },
+            {
+              "id": "df40d82d-4fb0-4add-8284-193b0e3d50e4",
+              "name": "DODY SASONO",
+              "username": "dody_sasono",
+              "email": "dodysasono75@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "e0ae3139-2c80-438b-8060-f1073fd052f6",
+              "name": "DENNY IRAWAN, S.STP., M.SI",
+              "username": "198410142003121001",
+              "email": "denny.i.hazadin@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "e2f8049c-decf-4acd-9da9-8031a83e8100",
+              "name": "NEPI PEBRIANTI, S.Ikom.",
+              "username": "nepipebrianti",
+              "email": "febriantinevi@gmail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d50fe0eb1e67",
+                "nama": "Dinas Komunikasi, Informatika dan Statistik Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Dinas Komunikasi, Informatika dan Statistik Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            },
+            {
+              "id": "f1f69cb0-bca4-4b66-a09f-4723c80a0d76",
+              "name": "VIRA FELIYANTI",
+              "username": "vira",
+              "email": "vira_feliyanti@ymail.com",
+              "status": "active",
+              "unor_induk": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-06-24 16:03"
+              }
+            }
+          ]

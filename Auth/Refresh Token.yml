@@ -1,0 +1,63 @@
+info:
+  name: Refresh Token
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{api_url}}/refresh"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        if (res.getStatus() === 200) {
+          const data = res.getBody()
+          bru.setVar("access_token", data.access_token)
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Refresh Token
+    request:
+      url: "{{process.env.BASE_URL}}/refresh"
+      method: POST
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 26 May 2026 04:28:57 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: access-control-allow-origin
+          value: "*"
+        - name: set-cookie
+          value: refresh_token=aFBCYhrQDDvMbHaV99odiCPKTcwtKPO0I8W9CYCLKfFbXJffc9GbLL6Hkgc3-1779769737; expires=Tue, 09 Jun 2026 04:28:57 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none
+      body:
+        type: json
+        data: |-
+          {
+            "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS1la2luZXJqYS50ZXN0Ojg0NDMvYXBpL3YxL3JlZnJlc2giLCJpYXQiOjE3Nzk3Njk3MzcsImV4cCI6MTc3OTc3MzMzNywibmJmIjoxNzc5NzY5NzM3LCJqdGkiOiJxbTNsU2FoS1RaZlpqNmcwIiwic3ViIjoiNDIwYjk0N2QtZTc5My00OGIwLTlkZmUtMmMwMzA4M2Y1YmJiIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInVzZXJfaW5mbyI6eyJpZCI6IjQyMGI5NDdkLWU3OTMtNDhiMC05ZGZlLTJjMDMwODNmNWJiYiIsIm5hbWUiOiJBZGhhIiwiZW1haWwiOiJhZGRmYUBnbWFpbC5jb20iLCJzdGF0dXMiOiJhY3RpdmUifX0.Xth2czOxE9AHc9hSLZM1NWlIbCzjQfmtqxa79D7a5LY",
+            "token_type": "bearer"
+          }

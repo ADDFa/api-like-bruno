@@ -1,0 +1,62 @@
+info:
+  name: Jenis Jabatan Umum
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{api_url}}/{{prefix}}/jenis-jabatan-umum"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Jenis Jabatan Umum
+    request:
+      url: "{{api_url}}/{{prefix}}/jenis-jabatan-umum"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 14 Sep 2026 03:49:06 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "label": "Guru",
+              "value": "1"
+            },
+            {
+              "label": "Tenaga Medis",
+              "value": "2"
+            },
+            {
+              "label": "Tenaga Teknis Lainnya",
+              "value": "3"
+            }
+          ]

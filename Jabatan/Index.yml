@@ -1,0 +1,679 @@
+info:
+  name: Index
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{api_url}}/jabatan/{{jenis_jabatan_id}}?unor_induk_id={{unor_pempov}}"
+  params:
+    - name: search
+      value: guru
+      type: query
+      disabled: true
+    - name: except_ids[]
+      value: 0524537ec72948a69bb5d74fa7b952f9
+      type: query
+      disabled: true
+    - name: unor_induk_id
+      value: 8ae4828859d211720159d4a398cc4f8f
+      type: query
+      disabled: true
+    - name: unor_induk_id
+      value: "{{unor_pempov}}"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Jabatan
+    request:
+      url: "{{api_url}}/jabatan/{{jenis_jabatan_id}}"
+      method: GET
+      params:
+        - name: search
+          value: guru
+          type: query
+          disabled: true
+        - name: except_ids[]
+          value: 0524537ec72948a69bb5d74fa7b952f9
+          type: query
+          disabled: true
+        - name: opd_id
+          value: 8ae4828859d211720159d4a398cc4f8f
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 16 Sep 2026 03:03:28 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "001E18207BA610A4E060640AF10829DE",
+              "nama": "Asisten Perpustakaan Terampil",
+              "bup": 58,
+              "jenjang": "TR"
+            },
+            {
+              "id": "001E26C757B1C9AEE060640AF2087FC4",
+              "nama": "Asisten Perpustakaan Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "001E26C8BF652CD3E060640AF2087FC6",
+              "nama": "Asisten Perpustakaan Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "0524537ec72948a69bb5d74fa7b952f9",
+              "nama": "Penilai Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "05ba67cddcb74435baca63b0b5516790",
+              "nama": "Penilai Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "07E7587A92447007E060640AF1084BE6",
+              "nama": "Pengawas Kelautan Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "07E7587DF744ED7AE060640AF1084BEA",
+              "nama": "Pengawas Kelautan Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "07E78FC9E9690B4FE060640AF2086919",
+              "nama": "Pengawas Kelautan Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "07E78FCDE01D0205E060640AF208691D",
+              "nama": "Pengawas Kelautan Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "085EE6666FDB044EE060640AF1082C9C",
+              "nama": "Asisten Penguji Sarana Perkeretaapian Terampil",
+              "bup": 58,
+              "jenjang": "TR"
+            },
+            {
+              "id": "085EE669BA36CE7BE060640AF1082C9F",
+              "nama": "Asisten Penguji Sarana Perkeretaapian Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "085EF0EAA17AA484E060640AF1082E61",
+              "nama": "Asisten Penguji Prasarana Perkeretaapian Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "085F1E3BEE482456E060640AF20811D2",
+              "nama": "Asisten Penguji Sarana Perkeretaapian Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "085F28BCAAD6F734E060640AF208137C",
+              "nama": "Asisten Penguji Prasarana Perkeretaapian Terampil",
+              "bup": 58,
+              "jenjang": "TR"
+            },
+            {
+              "id": "085F28BF83062FF8E060640AF208137E",
+              "nama": "Asisten Penguji Prasarana Perkeretaapian Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "086F3223FBE3694FE060640AF1087D64",
+              "nama": "Penata Laksana Sumber Daya Air Terampil",
+              "bup": 58,
+              "jenjang": "TR"
+            },
+            {
+              "id": "086F3225424B9380E060640AF1087D66",
+              "nama": "Penata Laksana Sumber Daya Air Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "086F6A07B5643670E060640AF20851FB",
+              "nama": "Penata Laksana Sumber Daya Air Pemula",
+              "bup": 58,
+              "jenjang": "PM"
+            },
+            {
+              "id": "086F6A0BD6EA1589E060640AF20851FD",
+              "nama": "Penata Laksana Sumber Daya Air Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "089415744b654b9eb0bae70b6979ce3e",
+              "nama": "Pengawas Jaminan Produk Halal Ahli Utama",
+              "bup": 60,
+              "jenjang": "PT"
+            },
+            {
+              "id": "09866e089df843df90972a608b9c3edc",
+              "nama": "Panitera Konstitusi Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "09b9513a58da4c94a614a895f148c690",
+              "nama": "Entomolog Kesehatan Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "0f12ff5144f7410b8063c17d4e883dac",
+              "nama": "Inspektur Pos dan Informatika Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "0f447d21902042319c71f96643acc528",
+              "nama": "Analis Pembiayaan Infrastruktur Pekerjaan Umum dan Perumahan Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "13e05588ac9447208372b8071ec9f7f2",
+              "nama": "Penata Kelola Pengawasan Pemilihan Umum Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "1628aeb047c44d6a8ef321590ca45c63",
+              "nama": "Teknisi Pengendali Hama dan Penyakit Ikan Terampil",
+              "bup": 58,
+              "jenjang": "TR"
+            },
+            {
+              "id": "166e92c9e7c1473d9fb929493ff744c5",
+              "nama": "Asisten Pengawas Perikanan Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "1af204f69374417e977f0932703f56c4",
+              "nama": "Penata Kelola Informatika SPBE Ahli Utama",
+              "bup": 60,
+              "jenjang": "PT"
+            },
+            {
+              "id": "1c0b1c84f50f488884d486cac723c03d",
+              "nama": "Teknisi Pengendali Hama dan Penyakit Ikan Pemula",
+              "bup": 58,
+              "jenjang": "PM"
+            },
+            {
+              "id": "1c1f3bb83a9648429d72df65b803ad72",
+              "nama": "Panitera Konstitusi Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "1e70eacab5134b988ac76b66793add9e",
+              "nama": "Petugas Lapangan Keluarga Berencana Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "20d5512e99b543a9afccca928fe100f6",
+              "nama": "Penata Kelola Spektrum Frekuensi Radio Ahli Utama",
+              "bup": 60,
+              "jenjang": "PT"
+            },
+            {
+              "id": "2449b1a35f17404e86fe1bda72d3afdf",
+              "nama": "Penilai Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "25bbd112bbd642548c64dd02c91fb67a",
+              "nama": "Penilai Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "299e5febe2124fc89d7c62e1ab288d4c",
+              "nama": "Analis Kekayaan Intelektual Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "2ab7028bbf594d96a1936dd9faf70a58",
+              "nama": "Asisten Pengawas Kelautan Terampil",
+              "bup": 58,
+              "jenjang": "TR"
+            },
+            {
+              "id": "2afdc1df6d7c41a0a37d051143f1659c",
+              "nama": "Asisten Penyuluh Perikanan Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "2c88d2127c4f453890f2c9d9c373c22b",
+              "nama": "Analis Pembiayaan Infrastruktur Pekerjaan Umum dan Perumahan Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "2d6f83861dce430db06f40efe8bb984b",
+              "nama": "Epidemiolog Kesehatan Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "2d95f0848a9e42a6ad9998554154e56c",
+              "nama": "Asisten Penyuluh Perikanan Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "2e105c6527f0468fa70cef23670ed115",
+              "nama": "Teknisi Pengendali Hama dan Penyakit Ikan Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "30ada5acdf1348f08c8e9e249ec79bbf",
+              "nama": "Inspektur Sarana Perkeretaapian Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "343747d9400e4cc7ad0e414ed39a0bfe",
+              "nama": "Pengawas Keuangan Negara Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "37cf7696272d43ecb2554866a9b54160",
+              "nama": "Manggala Agni Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "3f37a7b9b1f84f07a33afca92c3d2e6e",
+              "nama": "Penguji Sarana Perkeretaapian Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "408207742a81471987ea44ee4a3bd3a2",
+              "nama": "Pengaman Pemasyarakatan Terampil",
+              "bup": 58,
+              "jenjang": "TR"
+            },
+            {
+              "id": "42a1cdba50de4e1eba2592b6f90b6964",
+              "nama": "Penata Laksana Penyehatan Lingkungan Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "4588ed510b964c489eb6fb27b080b42d",
+              "nama": "Penata Kelola Spektrum Frekuensi Radio Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "48f8327cf52d4a978ceee505bd5a85c6",
+              "nama": "Pengendali Sistem Elektronik dan Data Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "4a2a6de7dfcc494687dfcfe16c3033ad",
+              "nama": "Pengembang Tafsir Al Quran Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "4afb249a2efc4f57abb3c03f1e9b1f8b",
+              "nama": "Penguji Perangkat Telekomunikasi Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "4c39152282f7419da88d630a4d8c533e",
+              "nama": "Penguji Prasarana Perkeretaapian Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "4f6dcdb708f64fdfb30ad228de5f2f85",
+              "nama": "Asisten Pengawas Perikanan Pemula",
+              "bup": 58,
+              "jenjang": "PM"
+            },
+            {
+              "id": "50dff5dfcca049c0934196f60b264feb",
+              "nama": "Inspektur Sarana Perkeretaapian Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "513e9ee6622344378ffeb61489ba6e57",
+              "nama": "Auditor Perkeretaapian Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "523a9bc2d64c45a1b2eb19c9b340e668",
+              "nama": "Pengendali Sistem Elektronik dan Data Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "54600577fe6a4118929e435466e60845",
+              "nama": "Analis Keuangan Negara Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "56c1f29625434391913bc5433a6f6fa5",
+              "nama": "Analis Keuangan Negara Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "582893bb09394b62b4f9bfffefa423e4",
+              "nama": "Pengawas Keuangan Negara Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "59552fba804f4c138e4d7c24e9236afe",
+              "nama": "Analis Keuangan Negara Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "5a6dc89445f14f4886b245a532d1717f",
+              "nama": "Inspektur Pos dan Informatika Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "5bc70dcd3aff434da2e50483526cbf48",
+              "nama": "Petugas Lapangan Keluarga Berencana Pemula",
+              "bup": 58,
+              "jenjang": "PM"
+            },
+            {
+              "id": "613aad15461c4a0b994d9f185a7bcc73",
+              "nama": "Pengembang Tafsir Al Quran Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "64cfa5c095c34b82aa9d36c0f7c9261b",
+              "nama": "Asisten Pengawas Kelautan Pemula",
+              "bup": 58,
+              "jenjang": "PM"
+            },
+            {
+              "id": "661a5377443e4d41abe1c3974d66540e",
+              "nama": "Pengawas Jaminan Produk Halal Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "6cf5ededadbc4231a3b69274c89392a8",
+              "nama": "Analis Kerja Sama Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "6d54fafa52d54fcc87ddfb850184ed18",
+              "nama": "Pembina Profesi Keuangan Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "6e467a4d59ac43ada286e935cd56b02d",
+              "nama": "Penata Kelola Informatika SPBE Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "70738ee3caab40fea83af98b57666282",
+              "nama": "Pekerja Sosial Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "70c0a13c3a37445da93cab96d1b46d8f",
+              "nama": "Analis Keuangan Negara Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "712EACD8CCD76E56E050640A29033E3E",
+              "nama": "Analis Pertahanan Negara Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "712EACD8CCD86E56E050640A29033E3E",
+              "nama": "Analis Pertahanan Negara Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "712EACD8CCD96E56E050640A29033E3E",
+              "nama": "Analis Pertahanan Negara Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "74de4e45467e4c439950ac3d95b344dd",
+              "nama": "Pembina Profesi Keuangan Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "75ee906a65154adf81efa5430abf5968",
+              "nama": "Pengawas Keuangan Negara Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "786ddd21e7c34702984f1dd08d123237",
+              "nama": "Manggala Agni Mahir",
+              "bup": 58,
+              "jenjang": "MH"
+            },
+            {
+              "id": "78e3db1ae8c0417c833eb6d5078fc628",
+              "nama": "Penata Laksana Penyehatan Lingkungan Terampil",
+              "bup": 58,
+              "jenjang": "TR"
+            },
+            {
+              "id": "7b989cf33c4347299ed7566dfae7721b",
+              "nama": "Penata Penyelenggaraan Pos dan Informatika Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "7df41de691d040a9952588f1be552584",
+              "nama": "Analis Kerja Sama Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "7f4f7417140b46e78856f8a52a9c700d",
+              "nama": "Penguji Prasarana Perkeretaapian Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "8020aea3ab1f44969ba930e21258fee7",
+              "nama": "Pengembang Tafsir Al Quran Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "8107c5b681254474bdce2941e039530e",
+              "nama": "Pengaman Pemasyarakatan Penyelia",
+              "bup": 58,
+              "jenjang": "PY"
+            },
+            {
+              "id": "82d50493fbde400daa74d39dfbcfb988",
+              "nama": "Penghulu Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "837c112df2b04961a09718507bfeb9c8",
+              "nama": "Analis Kerja Sama Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "858ba19a26964af28f3bba6e5632f6bf",
+              "nama": "Pengawas Jaminan Produk Halal Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "86601451f2b742fea9e15c6f6aaad9ed",
+              "nama": "Penata Kelola Spektrum Frekuensi Radio Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "878a0cb943014b07984f0286e9074ecf",
+              "nama": "Panitera Konstitusi Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "88D10C5588E3AEECE050640A29037FE4",
+              "nama": "Administrator Database Kependudukan Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "88D10C5588E4AEECE050640A29037FE4",
+              "nama": "Administrator Database Kependudukan Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "88D10C5588E5AEECE050640A29037FE4",
+              "nama": "Administrator Database Kependudukan Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "88D10C5588E6AEECE050640A29037FE4",
+              "nama": "Analis Anggaran Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "88D10C5588E7AEECE050640A29037FE4",
+              "nama": "Analis Anggaran Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "88D10C5588E8AEECE050640A29037FE4",
+              "nama": "Analis Anggaran Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "88D10C5588E9AEECE050640A29037FE4",
+              "nama": "Analis Anggaran Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "88D10C5588EAAEECE050640A29037FE4",
+              "nama": "Analis Pembiayaan Dan Risiko Keuangan Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "88D10C5588EBAEECE050640A29037FE4",
+              "nama": "Analis Pembiayaan Dan Risiko Keuangan Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            },
+            {
+              "id": "88D10C5588ECAEECE050640A29037FE4",
+              "nama": "Analis Pembiayaan Dan Risiko Keuangan Ahli Pertama",
+              "bup": 58,
+              "jenjang": "PT"
+            },
+            {
+              "id": "88D10C5588EDAEECE050640A29037FE4",
+              "nama": "Analis Pembiayaan Dan Risiko Keuangan Ahli Utama",
+              "bup": 60,
+              "jenjang": "UT"
+            },
+            {
+              "id": "88D10C5588EEAEECE050640A29037FE4",
+              "nama": "Analis Pengelolaan Keuangan APBN Ahli Madya",
+              "bup": 60,
+              "jenjang": "MA"
+            },
+            {
+              "id": "88D10C5588EFAEECE050640A29037FE4",
+              "nama": "Analis Pengelolaan Keuangan APBN Ahli Muda",
+              "bup": 58,
+              "jenjang": "MU"
+            }
+          ]

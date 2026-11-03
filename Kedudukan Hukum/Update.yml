@@ -1,0 +1,62 @@
+info:
+  name: Update
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{api_url}}/kedudukan-hukum/{{kedudukan_hukum_id}}"
+  body:
+    type: form-urlencoded
+    data:
+      - name: nama
+        value: Coba Update
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update Kedudukan Hukum
+    request:
+      url: "{{api_url}}/kedudukan-hukum/{{kedudukan_hukum_id}}"
+      method: PUT
+      body:
+        type: form-urlencoded
+        data:
+          - name: nama
+            value: Coba Update
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 14 Jul 2026 09:44:54 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "102",
+            "nama": "Coba Update"
+          }

@@ -1,0 +1,66 @@
+opencollection: 1.0.0
+
+info:
+  name: API Like
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  headers:
+    - name: Accept
+      value: application/json
+    - name: X-Timezone
+      value: Asia/Jakarta
+  auth:
+    type: bearer
+    token: "{{access_token}}"
+  variables:
+    - name: role_id
+      value: 019f64f5-838a-7015-96ab-f132cc137972
+    - name: user_id
+      value: 7430c37e-e0c6-444d-921c-48dbdb831e6d
+    - name: profile_id
+      value: ""
+    - name: unor_id
+      value: 8ae483a76007a66c01600c266f4c6c48
+    - name: base_url
+      value: "{{process.env.APP_URL}}"
+    - name: api_url
+      value: "{{base_url}}/api/v1"
+    - name: asn_id
+      value: A8ACA7D277FE3912E040640A040269BB
+    - name: nip
+      value: "196206131989081003"
+    - name: pengumuman_id
+      value: 019f45d3-b35e-73af-bb9d-177ecf53b918
+    - name: kedudukan_hukum_id
+      value: "102"
+    - name: audit_id
+      value: 01a084a1-38cc-7174-aacf-c1aa00473f23
+    - name: jenis_jabatan_id
+      value: "1"
+    - name: unor_pempov
+      value: 8ae4828859d211720159d49c046246b8
+    - name: riwayat_jabatan_id
+      value: 679c2e05-d45a-11f1-bbe6-1ab69573c028
+    - name: riwayat_golongan_id
+      value: 8ae483a5689eea8d0168a2025d004a8b
+    - name: riwayat_pendidikan_id
+      value: A8ACA96D7BDB3912E040640A040269BB
+    - name: batch_id
+      value: a2de70d3-033e-413f-b275-75ca0223e5d3
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

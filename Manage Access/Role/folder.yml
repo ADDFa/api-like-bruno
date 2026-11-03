@@ -1,0 +1,63 @@
+info:
+  name: Role
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    ### Super Admin
+    - Role Super Admin tidak dapat ditambah, diubah, ataupun dihapus
+    - Contoh Response Ketika Aksi tambah/ubah/hapus role: super-admin
+    ```json
+    {
+      "message": "This action is unauthorized."
+    }
+    ```
+
+    # API Documentation - Role Management
+
+    Modul ini digunakan oleh Administrator untuk mengelola hak akses kelompok (Roles) di dalam sistem.
+
+    **Base URL:** `/v1/api/role`
+
+    ---
+
+    ## 📋 1. List Roles
+    Mengambil daftar semua role yang terdaftar.
+
+    - **URL:** `/v1/api/role`
+    - **Method:** `GET`
+    - **Auth Required:** Yes (Bearer Token)
+
+    ### 📥 Query Parameters
+    | Parameter | Tipe | Default | Deskripsi |
+    | :--- | :--- | :--- | :--- |
+    | `with_super_admin` | `boolean` | `0` | Jika `1`, akan menampilkan role Super Admin. Jika `0`, role Super Admin akan disembunyikan. |
+
+    ---
+
+    ## 📥 2. Create Role
+    Menambahkan role baru ke dalam sistem.
+
+    - **URL:** `/v1/api/role`
+    - **Method:** `POST`
+    - **Auth Required:** Yes (Sesuai Policy `create`)
+
+    ### 📥 Request Body
+    | Parameter | Tipe | Wajib | Deskripsi |
+    | :--- | :--- | :--- | :--- |
+    | `name` | `string` | Ya | Nama role unik (e.g., "Manager", "Staff"). |
+
+    **Contoh Response (201 Created):**
+    ```json
+    {
+        "data": {
+            "id": 5,
+            "name": "HRD",
+            "created_at": "2026-04-23T..."
+        }
+    }
+  type: text/markdown

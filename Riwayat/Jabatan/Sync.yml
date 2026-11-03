@@ -1,0 +1,250 @@
+info:
+  name: Sync
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-jabatan/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sync Riwayat Jabatan
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-jabatan/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Fri, 02 Oct 2026 12:50:05 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "2826566e-94d8-4295-a077-312e61b1c50b",
+              "asn_id": "A8ACA7AC414C3912E040640A040269BB",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "A5EB03E23C2BF6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Provinsi Bengkulu",
+              "id_satuan_kerja": "A5EB03E241A4F6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Provinsi Bengkulu",
+              "id_unor": "8ae4828859d211720159d4a4bd18508c",
+              "nama_unor": "Biro Organisasi",
+              "id_unor_induk": "8ae4828859d211720159d4a06f824b35",
+              "nama_unor_induk": "Asisten Administrasi Umum",
+              "id_eselon": "22",
+              "id_jabatan": null,
+              "nama_jabatan": "Kepala Biro Organisasi",
+              "tmt_jabatan": "2026-05-01",
+              "nomor_sk": "D.09.BKD TAHUN 2026",
+              "tanggal_sk": "2026-01-27",
+              "tmt_pelantikan": "2026-01-28",
+              "tmt_mutasi": "0001-01-01",
+              "id_jenis_penugasan": "D",
+              "id_jenis_mutasi": null,
+              "id_sub_jabatan": null,
+              "is_current": true
+            },
+            {
+              "id": "8ae482035240043e0152403b30f70210",
+              "asn_id": "A8ACA7AC414C3912E040640A040269BB",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "A5EB03E23C32F6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Kota Bengkulu",
+              "id_satuan_kerja": "A5EB03E241AEF6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Kota Bengkulu",
+              "id_unor": "8ae482884aed792e014b0a1ac0c518ba",
+              "nama_unor": "SEKSI PENGEMBANGAN PRODUK DAN USAHA PARIWISATA",
+              "id_unor_induk": "A8ACA73CFAE13912E040640A040269BB",
+              "nama_unor_induk": "DINAS PARIWISATA DAN EKONOMI KREATIF",
+              "id_eselon": "41",
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2015-10-19",
+              "nomor_sk": "SK.821.24-287",
+              "tanggal_sk": "2015-10-19",
+              "tmt_pelantikan": "2015-10-19",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": null,
+              "id_jenis_mutasi": null,
+              "id_sub_jabatan": null,
+              "is_current": false
+            },
+            {
+              "id": "8ae483a578a152c10178aa5cd3c26569",
+              "asn_id": "A8ACA7AC414C3912E040640A040269BB",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "A5EB03E23C32F6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Kota Bengkulu",
+              "id_satuan_kerja": "A5EB03E241AEF6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Kota Bengkulu",
+              "id_unor": "8ae483a5751e30770175514e3ea57db3",
+              "nama_unor": "Bagian Umum Pada Sekretariat Daerah Kota Bengkulu",
+              "id_unor_induk": "8ae483a5751e30770175514e3e997d97",
+              "nama_unor_induk": "Sekretariat Daerah Kota Bengkulu",
+              "id_eselon": "31",
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2021-03-30",
+              "nomor_sk": "SK.821.23-131",
+              "tanggal_sk": "2021-03-30",
+              "tmt_pelantikan": "2021-03-30",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": null,
+              "id_jenis_mutasi": null,
+              "id_sub_jabatan": null,
+              "is_current": false
+            },
+            {
+              "id": "8ae483a85f044631015f1ae94f676cbd",
+              "asn_id": "A8ACA7AC414C3912E040640A040269BB",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "A5EB03E23C32F6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Kota Bengkulu",
+              "id_satuan_kerja": "A5EB03E241AEF6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Kota Bengkulu",
+              "id_unor": "8ae483a85ecb3ec6015ee2ba5a65627e",
+              "nama_unor": "Seksi Riset, Edukasi, Pengembangan dan Industri, Akses Permodalan dan Pemasaran",
+              "id_unor_induk": "8ae483a85ec3764f015ec7917e080b16",
+              "nama_unor_induk": "Bidang Industri Pariwisata",
+              "id_eselon": "41",
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2017-01-09",
+              "nomor_sk": "SK.821.24-09",
+              "tanggal_sk": "2017-01-09",
+              "tmt_pelantikan": "2017-01-09",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": null,
+              "id_jenis_mutasi": null,
+              "id_sub_jabatan": null,
+              "is_current": false
+            },
+            {
+              "id": "8ae483a86b3f339c016b49bb171d3202",
+              "asn_id": "A8ACA7AC414C3912E040640A040269BB",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "A5EB03E23C32F6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Kota Bengkulu",
+              "id_satuan_kerja": "A5EB03E241AEF6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Kota Bengkulu",
+              "id_unor": "8ae483a864874fe1016492c27dc73308",
+              "nama_unor": "Sub Bagian Penyusunan Program dan Keuangan Sekretariat Badan Pendapatan Daerah Kota Bengkulu",
+              "id_unor_induk": null,
+              "nama_unor_induk": null,
+              "id_eselon": "41",
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2019-05-31",
+              "nomor_sk": "SK.821.24-309",
+              "tanggal_sk": "2019-05-31",
+              "tmt_pelantikan": "2019-05-31",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": null,
+              "id_jenis_mutasi": null,
+              "id_sub_jabatan": null,
+              "is_current": false
+            },
+            {
+              "id": "8ae483c6755a777001756359866464b0",
+              "asn_id": "A8ACA7AC414C3912E040640A040269BB",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "A5EB03E23C32F6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Kota Bengkulu",
+              "id_satuan_kerja": "A5EB03E241AEF6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Kota Bengkulu",
+              "id_unor": "8ae483a5751e30770175514e3eb27e17",
+              "nama_unor": "Bidang Mutasi dan Promosi",
+              "id_unor_induk": "8ae483a5751e30770175514e3eb27e13",
+              "nama_unor_induk": "Badan Kepegawaian dan Pengembangan Sumber Daya Manusia Kota Bengkulu",
+              "id_eselon": "32",
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2019-07-09",
+              "nomor_sk": "SK.821.23-335",
+              "tanggal_sk": "2019-07-09",
+              "tmt_pelantikan": "2019-07-09",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": null,
+              "id_jenis_mutasi": null,
+              "id_sub_jabatan": null,
+              "is_current": false
+            },
+            {
+              "id": "aa8438b8-c485-4b4a-9741-7b7eb91fe603",
+              "asn_id": "A8ACA7AC414C3912E040640A040269BB",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "A5EB03E23C32F6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Kota Bengkulu",
+              "id_satuan_kerja": "A5EB03E241AEF6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Kota Bengkulu",
+              "id_unor": "8ae483a5751e30770175514e3eb07e04",
+              "nama_unor": "Sekretariat Badan Pengelolaan Keuangan dan Aset Daerah Kota Bengkulu",
+              "id_unor_induk": "8ae483a5751e30770175514e3eb07e03",
+              "nama_unor_induk": "Badan Pengelolaan Keuangan dan Aset Daerah Kota Bengkulu",
+              "id_eselon": "31",
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2023-05-22",
+              "nomor_sk": "SK.800.1.3.3-195",
+              "tanggal_sk": "2023-05-22",
+              "tmt_pelantikan": "0001-01-01",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": null,
+              "id_jenis_mutasi": null,
+              "id_sub_jabatan": null,
+              "is_current": false
+            },
+            {
+              "id": "ff80808145a5fadf0145a6b440270287",
+              "asn_id": "A8ACA7AC414C3912E040640A040269BB",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "A5EB03E23C2BF6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Provinsi Bengkulu",
+              "id_satuan_kerja": "A5EB03E241A4F6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Provinsi Bengkulu",
+              "id_unor": "8ae4828659b32b280159b746df785747",
+              "nama_unor": "SEKSI RISET, EDUKASI, PENGEMBANGAN DAN INDUSTRI, AKSES PERMODALAN DAN PEMASARAN",
+              "id_unor_induk": "8ae4828659b32b280159b74230de5698",
+              "nama_unor_induk": "DINAS PARIWISATA",
+              "id_eselon": "41",
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2017-01-03",
+              "nomor_sk": "824.4-01",
+              "tanggal_sk": "2017-01-03",
+              "tmt_pelantikan": "2017-01-03",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": null,
+              "id_jenis_mutasi": null,
+              "id_sub_jabatan": null,
+              "is_current": false
+            }
+          ]

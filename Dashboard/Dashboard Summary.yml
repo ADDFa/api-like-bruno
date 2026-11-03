@@ -1,0 +1,443 @@
+info:
+  name: Dashboard Summary
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/dashboard-summary"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Dashboard Summary
+    request:
+      url: "{{api_url}}/dashboard-summary"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 09 Jul 2026 13:37:11 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "total_asn": 15170,
+            "total_pns": 9206,
+            "total_pppk": 1621,
+            "total_pppk_pw": 4343,
+            "data_total_asn_by_opd": [
+              {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "total_pns": 106,
+                "total_pppk": 13,
+                "total_pppk_pw": 13,
+                "total_asn": 132
+              },
+              {
+                "id": "8ae4828859d211720159d4aea88b5aaa",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Badan Kesatuan Bangsa Dan Politik Provinsi Bengkulu",
+                "total_pns": 49,
+                "total_pppk": 0,
+                "total_pppk_pw": 14,
+                "total_asn": 63
+              },
+              {
+                "id": "8ae4828859d211720159d4b11c7f5da4",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Badan Keuangan dan Aset Daerah Provinsi Bengkulu",
+                "total_pns": 103,
+                "total_pppk": 0,
+                "total_pppk_pw": 25,
+                "total_asn": 128
+              },
+              {
+                "id": "8ae4828859d211720159d4af7c745bfb",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Badan Penanggulangan Bencana Daerah Provinsi Bengkulu",
+                "total_pns": 57,
+                "total_pppk": 0,
+                "total_pppk_pw": 35,
+                "total_asn": 92
+              },
+              {
+                "id": "e436c61e-4ab1-4753-b600-888ec8393cf0",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Badan Pendapatan Daerah Provinsi Bengkulu",
+                "total_pns": 231,
+                "total_pppk": 0,
+                "total_pppk_pw": 67,
+                "total_asn": 298
+              },
+              {
+                "id": "8ae4828859d211720159d4b17f445e27",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Badan Pengembangan Sumber Daya Manusia Provinsi Bengkulu",
+                "total_pns": 92,
+                "total_pppk": 0,
+                "total_pppk_pw": 51,
+                "total_asn": 143
+              },
+              {
+                "id": "8ae482a759d908630159d9ec64b875b6",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Badan Penghubung Daerah Provinsi Bengkulu",
+                "total_pns": 45,
+                "total_pppk": 0,
+                "total_pppk_pw": 28,
+                "total_asn": 73
+              },
+              {
+                "id": "8ae4828859d211720159d4b3042b5fb6",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Badan Perencanaan Pembangunan, Riset dan Inovasi Daerah Provinsi Bengkulu",
+                "total_pns": 104,
+                "total_pppk": 0,
+                "total_pppk_pw": 14,
+                "total_asn": 118
+              },
+              {
+                "id": "8ae4828859d211720159d4a33f1e4f70",
+                "unor_induk": "8ae4828859d211720159d49e5a2848ba",
+                "nama": "Biro Hukum",
+                "total_pns": 61,
+                "total_pppk": 0,
+                "total_pppk_pw": 7,
+                "total_asn": 68
+              },
+              {
+                "id": "8ae4828859d211720159d4a4bd18508c",
+                "unor_induk": "8ae4828859d211720159d4a06f824b35",
+                "nama": "Biro Organisasi",
+                "total_pns": 51,
+                "total_pppk": 2,
+                "total_pppk_pw": 9,
+                "total_asn": 62
+              },
+              {
+                "id": "8ae4828859d211720159d4a2ad1e4ece",
+                "unor_induk": "8ae4828859d211720159d49e5a2848ba",
+                "nama": "Biro Pemerintahan dan Kesejahteraan Rakyat",
+                "total_pns": 78,
+                "total_pppk": 0,
+                "total_pppk_pw": 8,
+                "total_asn": 86
+              },
+              {
+                "id": "8ae4828859d211720159d4a3fd204ffd",
+                "unor_induk": "8ae4828859d211720159d49ec946492a",
+                "nama": "Biro Pengadaan Barang/Jasa dan  Administrasi Pembangunan",
+                "total_pns": 68,
+                "total_pppk": 0,
+                "total_pppk_pw": 11,
+                "total_asn": 79
+              },
+              {
+                "id": "8ae4828859d211720159d4a398cc4f8f",
+                "unor_induk": "8ae4828859d211720159d49ec946492a",
+                "nama": "Biro Perekonomian",
+                "total_pns": 56,
+                "total_pppk": 0,
+                "total_pppk_pw": 14,
+                "total_asn": 70
+              },
+              {
+                "id": "8ae4828859d211720159d4a4fad450d0",
+                "unor_induk": "8ae4828859d211720159d4a06f824b35",
+                "nama": "Biro Umum",
+                "total_pns": 122,
+                "total_pppk": 6,
+                "total_pppk_pw": 170,
+                "total_asn": 298
+              },
+              {
+                "id": "8ae4828859d211720159d51221d71fa8",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Energi Dan Sumber Daya Mineral Provinsi Bengkulu",
+                "total_pns": 79,
+                "total_pppk": 3,
+                "total_pppk_pw": 15,
+                "total_asn": 97
+              },
+              {
+                "id": "8ae4828859d211720159d513eb8c2063",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Kelautan dan Perikanan",
+                "total_pns": 102,
+                "total_pppk": 0,
+                "total_pppk_pw": 42,
+                "total_asn": 144
+              },
+              {
+                "id": "8ae4828859d211720159d5222fbf280c",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Kependudukan Dan Pencatatan Sipil Provinsi Bengkulu",
+                "total_pns": 45,
+                "total_pppk": 0,
+                "total_pppk_pw": 9,
+                "total_asn": 54
+              },
+              {
+                "id": "8ae4828859d211720159d52288ad282e",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Kesehatan Provinsi Bengkulu",
+                "total_pns": 282,
+                "total_pppk": 18,
+                "total_pppk_pw": 36,
+                "total_asn": 336
+              },
+              {
+                "id": "8ae482885a3910b7015a3abb18df7229",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Ketahanan Pangan Provinsi Bengkulu",
+                "total_pns": 46,
+                "total_pppk": 0,
+                "total_pppk_pw": 14,
+                "total_asn": 60
+              },
+              {
+                "id": "8ae4828859d211720159d4bef8ac6c80",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Ketenagakerjaan Dan Transmigrasi Provinsi Bengkulu",
+                "total_pns": 211,
+                "total_pppk": 0,
+                "total_pppk_pw": 65,
+                "total_asn": 276
+              },
+              {
+                "id": "8ae4828859d211720159d50fe0eb1e67",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Komunikasi, Informatika dan Statistik Provinsi Bengkulu",
+                "total_pns": 73,
+                "total_pppk": 0,
+                "total_pppk_pw": 39,
+                "total_asn": 112
+              },
+              {
+                "id": "8ae482855a435d5f015a461194ea510a",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Koperasi, Usaha Kecil dan Menengah Provinsi Bengkulu",
+                "total_pns": 74,
+                "total_pppk": 0,
+                "total_pppk_pw": 38,
+                "total_asn": 112
+              },
+              {
+                "id": "8ae4828859d211720159d525e8d82a1a",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Lingkungan Hidup dan Kehutanan Provinsi Bengkulu",
+                "total_pns": 308,
+                "total_pppk": 0,
+                "total_pppk_pw": 40,
+                "total_asn": 348
+              },
+              {
+                "id": "8ae4828859d211720159d526603c2a53",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Pariwisata Provinsi Bengkulu",
+                "total_pns": 69,
+                "total_pppk": 0,
+                "total_pppk_pw": 13,
+                "total_asn": 82
+              },
+              {
+                "id": "8ae4828859d211720159d527c1992b59",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Pekerjaan Umum dan Penataan Ruang Provinsi Bengkulu",
+                "total_pns": 197,
+                "total_pppk": 9,
+                "total_pppk_pw": 77,
+                "total_asn": 283
+              },
+              {
+                "id": "8ae4828859d211720159d5283e152be5",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Pemberdayaan Masyarakat Dan Desa Provinsi Bengkulu",
+                "total_pns": 69,
+                "total_pppk": 0,
+                "total_pppk_pw": 15,
+                "total_asn": 84
+              },
+              {
+                "id": "8ae4828559d737c90159d854f538365d",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Pemberdayaan Perempuan, Perlindungan Anak, Pengendalian Penduduk Dan Keluarga Berencana Provinsi Bengkulu",
+                "total_pns": 70,
+                "total_pppk": 0,
+                "total_pppk_pw": 11,
+                "total_asn": 81
+              },
+              {
+                "id": "8ae4828559d737c90159d85571ed36c4",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Pemuda dan Olahraga Provinsi Bengkulu",
+                "total_pns": 57,
+                "total_pppk": 0,
+                "total_pppk_pw": 45,
+                "total_asn": 102
+              },
+              {
+                "id": "8ae4828559d737c90159d855c94b36f7",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Provinsi Bengkulu",
+                "total_pns": 64,
+                "total_pppk": 0,
+                "total_pppk_pw": 14,
+                "total_asn": 78
+              },
+              {
+                "id": "8ae4828659d52a570159d539b70c0377",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Pendidikan dan Kebudayaan Provinsi Bengkulu",
+                "total_pns": 3884,
+                "total_pppk": 1420,
+                "total_pppk_pw": 2750,
+                "total_asn": 8054
+              },
+              {
+                "id": "8ae4828559d737c90159d856709d37eb",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Perhubungan Provinsi Bengkulu",
+                "total_pns": 67,
+                "total_pppk": 1,
+                "total_pppk_pw": 41,
+                "total_asn": 109
+              },
+              {
+                "id": "8ae4828559d737c90159d856c56038c8",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Perindustrian dan Perdagangan Provinsi Bengkulu",
+                "total_pns": 96,
+                "total_pppk": 5,
+                "total_pppk_pw": 26,
+                "total_asn": 127
+              },
+              {
+                "id": "8ae482a759d579350159d8c633212a97",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Perpustakaan dan Kearsipan Provinsi Bengkulu",
+                "total_pns": 80,
+                "total_pppk": 0,
+                "total_pppk_pw": 18,
+                "total_asn": 98
+              },
+              {
+                "id": "8ae4828659d52a570159d537bbc102d9",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Perumahan, Kawasan Permukiman dan Pertanahan Provinsi Bengkulu",
+                "total_pns": 52,
+                "total_pppk": 0,
+                "total_pppk_pw": 7,
+                "total_asn": 59
+              },
+              {
+                "id": "8ae4828859d211720159d52755ce2b22",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Peternakan dan Kesehatan Hewan Provinsi Bengkulu",
+                "total_pns": 91,
+                "total_pppk": 0,
+                "total_pppk_pw": 24,
+                "total_asn": 115
+              },
+              {
+                "id": "8ae482a759d579350159d8c8fe10318d",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Sosial Provinsi Bengkulu",
+                "total_pns": 120,
+                "total_pppk": 0,
+                "total_pppk_pw": 18,
+                "total_asn": 138
+              },
+              {
+                "id": "8ae4828859d211720159d4ccc4e47840",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Dinas Tanaman Pangan, Hortikultura Dan Perkebunan Provinsi Bengkulu",
+                "total_pns": 220,
+                "total_pppk": 16,
+                "total_pppk_pw": 115,
+                "total_asn": 351
+              },
+              {
+                "id": "8ae482a759d908630159d9ed1c3f7763",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Inspektorat Daerah Provinsi Bengkulu",
+                "total_pns": 142,
+                "total_pppk": 0,
+                "total_pppk_pw": 11,
+                "total_asn": 153
+              },
+              {
+                "id": "8ae482a759d908630159da222f7343ca",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Satuan Polisi Pamong Praja Provinsi Bengkulu",
+                "total_pns": 65,
+                "total_pppk": 20,
+                "total_pppk_pw": 133,
+                "total_asn": 218
+              },
+              {
+                "id": "8ae4828859d211720159d49dafdd4816",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Sekretariat Daerah",
+                "total_pns": 443,
+                "total_pppk": 8,
+                "total_pppk_pw": 219,
+                "total_asn": 670
+              },
+              {
+                "id": "8ae4828859d211720159d5073d1c1a2e",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "Sekretariat DPRD Provinsi Bengkulu",
+                "total_pns": 122,
+                "total_pppk": 0,
+                "total_pppk_pw": 146,
+                "total_asn": 268
+              },
+              {
+                "id": "8ae4828859d211720159d51ee5702682",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "UPTD Khusus Rumah Sakit Khusus Jiwa Soeprapto Daerah Bengkulu",
+                "total_pns": 507,
+                "total_pppk": 33,
+                "total_pppk_pw": 68,
+                "total_asn": 608
+              },
+              {
+                "id": "8ae482a759d579350159d8cc39b93bc9",
+                "unor_induk": "8ae4828859d211720159d49c046246b8",
+                "nama": "UPTD Khusus Rumah Sakit Umum Daerah Dr. M. Yunus",
+                "total_pns": 783,
+                "total_pppk": 63,
+                "total_pppk_pw": 47,
+                "total_asn": 893
+              }
+            ]
+          }

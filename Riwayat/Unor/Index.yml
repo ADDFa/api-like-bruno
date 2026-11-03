@@ -1,0 +1,86 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/asn/{{nip}}/riwayat-unor"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Riwayat Unor
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-unor"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 05 Aug 2026 03:26:41 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "A8ACA7D8A5EC3912E040640A040269BB",
+              "asn_id": "A8ACA7D8A5EB3912E040640A040269BB",
+              "instansi": "A5EB03E23C2DF6A0E040640A040252AD",
+              "asal_id": null,
+              "asal_nama": "MIGRASI",
+              "asal_nama_label": "MIGRASI",
+              "nama_unor_baru": "BADAN RUMAH SAKIT UMUM DAERAH",
+              "nomor_sk": null,
+              "tanggal_sk": "2000-01-23",
+              "unor_baru": "A8ACA73CEA693912E040640A040269BB"
+            },
+            {
+              "id": "ff80808131db6a820131dba6918f08b3",
+              "asn_id": "A8ACA7D8A5EB3912E040640A040269BB",
+              "instansi": "A5EB03E23C2DF6A0E040640A040252AD",
+              "asal_id": "ff80808131cc4e770131d08a06b61899",
+              "asal_nama": "PROSEDUR_KP",
+              "asal_nama_label": "PROSEDUR_KP",
+              "nama_unor_baru": "DINAS PENDIDIKAN, PEMUDA DAN OLAHRAGA",
+              "nomor_sk": null,
+              "tanggal_sk": "2011-10-01",
+              "unor_baru": "ff80808131cc4e770131cda024f808ab"
+            },
+            {
+              "id": "8ae483a560079f2401600c4a1d296a1f",
+              "asn_id": "A8ACA7D8A5EB3912E040640A040269BB",
+              "instansi": "A5EB03E23C2BF6A0E040640A040252AD",
+              "asal_id": null,
+              "asal_nama": "REKONSILIASI_DATA",
+              "asal_nama_label": "REKONSILIASI_DATA",
+              "nama_unor_baru": "SMKN 1 BENGKULU SELATAN",
+              "nomor_sk": "02525/KEP/HU/21700/2016",
+              "tanggal_sk": "2016-10-21",
+              "unor_baru": "8ae482a759d579350159d8d69bf4526e"
+            }
+          ]

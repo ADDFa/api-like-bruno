@@ -1,0 +1,7 @@
+info:
+  name: Nilai IP ASN
+  type: folder
+  seq: 7
+
+request:
+  auth: inherit

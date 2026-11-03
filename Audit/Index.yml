@@ -1,0 +1,803 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/audit"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Audit
+    request:
+      url: "{{api_url}}/audit"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.4.5
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 09 Sep 2026 06:49:34 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "01a084a1-38cc-7174-aacf-c1aa00473f23",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "sync_riwayat_unor",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "A8ACA7D4B44C3912E040640A040269BB",
+              "old_values": [],
+              "new_values": {
+                "name": "Sync Riwayat Unor",
+                "total_synced": 13,
+                "total_removed": 0,
+                "synced_at": "2026-09-09 05:25:53"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/197504072002122006/riwayat-unor/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T05:25:53.000000Z",
+              "updated_at": "2026-09-09T05:25:53.000000Z"
+            },
+            {
+              "id": "01a0849f-932f-733f-9714-46b7bd398ebe",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "sync_riwayat_skp",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "0A3D692356862FA8E050640A15027E0A",
+              "old_values": [],
+              "new_values": {
+                "name": "Sync Riwayat Skp",
+                "total_synced": 5,
+                "total_removed": 0,
+                "synced_at": "2026-09-09 05:24:05"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199010202015012001/riwayat-skp/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T05:24:05.000000Z",
+              "updated_at": "2026-09-09T05:24:05.000000Z"
+            },
+            {
+              "id": "01a0849f-10fb-716f-8717-bf40bd1da01a",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "sync_riwayat_kursus",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "0A3D692356862FA8E050640A15027E0A",
+              "old_values": [],
+              "new_values": {
+                "name": "Sync Riwayat Kursus",
+                "total_synced": 18,
+                "total_removed": 0,
+                "synced_at": "2026-09-09 05:23:32"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199010202015012001/riwayat-kursus/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T05:23:32.000000Z",
+              "updated_at": "2026-09-09T05:23:32.000000Z"
+            },
+            {
+              "id": "01a0849d-4394-723a-9023-27628236d906",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "sync_riwayat_unor",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "0A3D692356862FA8E050640A15027E0A",
+              "old_values": [],
+              "new_values": {
+                "name": "Sync Riwayat Unor",
+                "total_synced": 5,
+                "total_removed": 0,
+                "synced_at": "2026-09-09 05:21:33"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199010202015012001/riwayat-unor/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T05:21:34.000000Z",
+              "updated_at": "2026-09-09T05:21:34.000000Z"
+            },
+            {
+              "id": "01a0849c-cac6-7056-9702-6812dfe5f905",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "sync_riwayat_pendidikan",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "0A3D692356862FA8E050640A15027E0A",
+              "old_values": [],
+              "new_values": {
+                "name": "Sync Riwayat Pendidikan",
+                "total_synced": 5,
+                "total_removed": 0,
+                "synced_at": "2026-09-09 05:21:03"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199010202015012001/riwayat-pendidikan/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T05:21:03.000000Z",
+              "updated_at": "2026-09-09T05:21:03.000000Z"
+            },
+            {
+              "id": "01a0849b-e748-7318-b685-66bd72ff4588",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "sync_riwayat_golongan",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "0A3D692356862FA8E050640A15027E0A",
+              "old_values": [],
+              "new_values": {
+                "name": "Sync Riwayat Golongan",
+                "total_synced": 3,
+                "total_removed": 0,
+                "synced_at": "2026-09-09 05:20:04"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199010202015012001/riwayat-golongan/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T05:20:04.000000Z",
+              "updated_at": "2026-09-09T05:20:04.000000Z"
+            },
+            {
+              "id": "01a08495-9fd8-72df-8520-4ce5a887f5a4",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "sync_riwayat_angka_kredit",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e678acb016e680bde237fa7",
+              "old_values": [],
+              "new_values": {
+                "name": "Sync_Riwayat_Angka_Kredit",
+                "total_synced": 1,
+                "total_removed": 0,
+                "synced_at": "2026-09-09 05:13:13"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199209102020121002/riwayat-angka-kredit/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "bruno-runtime/3.4.2",
+              "tags": null,
+              "created_at": "2026-09-09T05:13:13.000000Z",
+              "updated_at": "2026-09-09T05:13:13.000000Z"
+            },
+            {
+              "id": "01a08492-8dbf-7229-a129-7c1804cd86a4",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "updated",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "0A3D692356862FA8E050640A15027E0A",
+              "old_values": {
+                "nama": "NASUHA UPDATE"
+              },
+              "new_values": {
+                "nama": "NASUHA"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/0A3D692356862FA8E050640A15027E0A/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T05:09:52.000000Z",
+              "updated_at": "2026-09-09T05:09:52.000000Z"
+            },
+            {
+              "id": "01a08492-89e0-72ab-87f4-aa53f52ad900",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "sync_data_utama",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "0A3D692356862FA8E050640A15027E0A",
+              "old_values": {
+                "nama": "NASUHA UPDATE, S.E."
+              },
+              "new_values": {
+                "nama": "NASUHA",
+                "updated_at": "2026-09-09 05:09:51"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/0A3D692356862FA8E050640A15027E0A/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T05:09:51.000000Z",
+              "updated_at": "2026-09-09T05:09:51.000000Z"
+            },
+            {
+              "id": "01a08481-275c-7076-bb9d-080ea3cbb44c",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "0A3D692356862FA8E050640A15027E0A",
+              "old_values": [],
+              "new_values": {
+                "total_synced": 3,
+                "synced_at": "2026-09-09 04:50:51"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199010202015012001/riwayat-golongan/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T04:50:51.000000Z",
+              "updated_at": "2026-09-09T04:50:51.000000Z"
+            },
+            {
+              "id": "01a08475-f7e0-73c7-abb7-fb1fdd14897a",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e678acb016e680bde237fa7",
+              "old_values": [],
+              "new_values": {
+                "total_synced": 1,
+                "synced_at": "2026-09-09 04:38:38"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199209102020121002/riwayat-jabatan/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T04:38:38.000000Z",
+              "updated_at": "2026-09-09T04:38:38.000000Z"
+            },
+            {
+              "id": "01a08468-57ce-70d8-b80b-6162736a48d6",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e678acb016e680bde237fa7",
+              "old_values": [],
+              "new_values": {
+                "total_synced": 1,
+                "synced_at": "2026-09-09 04:23:45"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199209102020121002/riwayat-angka-kredit/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "bruno-runtime/3.4.2",
+              "tags": null,
+              "created_at": "2026-09-09T04:23:45.000000Z",
+              "updated_at": "2026-09-09T04:23:45.000000Z"
+            },
+            {
+              "id": "01a08465-ed39-7058-a0b7-ce9ab9e3b299",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e678acb016e680bde237fa7",
+              "old_values": [],
+              "new_values": [],
+              "url": "https://api-like.test:8443/api/v1/asn/199209102020121002/riwayat-angka-kredit/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "bruno-runtime/3.4.2",
+              "tags": null,
+              "created_at": "2026-09-09T04:21:07.000000Z",
+              "updated_at": "2026-09-09T04:21:07.000000Z"
+            },
+            {
+              "id": "01a0845e-08f6-7114-bae9-8e5c7550a93f",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "created",
+              "auditable_type": "App\\Models\\TalentMapping",
+              "auditable_id": "01a0845e-0016-7103-a333-56f8511a09cc",
+              "old_values": [],
+              "new_values": {
+                "asn_id": "000000006e678acb016e680bde237fa7",
+                "detail_nilai_sumbu": "{\"nip\":\"199209102020121002\",\"level\":\"2\",\"box_attr\":{\"box\":5,\"x_axis\":236.874,\"y_axis\":113.25,\"z_axis\":1,\"axis_categories\":{\"x\":\"Menengah\",\"y\":\"Menengah\"}},\"dimension\":\"2D\",\"score_attr\":{\"total\":77.229,\"nilai_x\":39.479,\"nilai_y\":37.75},\"weight_mode\":\"mode_b\",\"axis_weights\":{\"x\":50,\"y\":50},\"nilai_talenta\":77.23,\"axis_categories\":{\"x\":\"Menengah\",\"y\":\"Menengah\"},\"is_use_kepka411\":true,\"axis_percentages\":{\"x\":78.96,\"y\":75.5},\"detail_compacted\":true,\"snapshot_version\":3,\"regulation_version\":\"kepka-411-2025\",\"calculation_details\":{\"X\":{\"total\":39.479,\"components\":[{\"path\":\"kompetensi\",\"type\":\"parent\",\"weight\":40,\"children\":[{\"path\":\"kompetensi.penkom\",\"type\":\"leaf\",\"weight\":20,\"children\":[],\"component\":\"penkom\",\"total_score\":10,\"weight_mode\":\"mode_b\",\"parent_weight\":40,\"converted_value\":100,\"effective_weight_absolute\":20},{\"path\":\"kompetensi.pengembangan_kompetensi\",\"type\":\"leaf\",\"weight\":10,\"children\":[],\"component\":\"pengembangan_kompetensi\",\"total_score\":1.25,\"weight_mode\":\"mode_b\",\"parent_weight\":40,\"converted_value\":25,\"effective_weight_absolute\":10},{\"path\":\"kompetensi.rjb\",\"type\":\"leaf\",\"weight\":10,\"children\":[],\"component\":\"rjb\",\"total_score\":2.6664999999999996,\"weight_mode\":\"mode_b\",\"parent_weight\":40,\"converted_value\":53.33,\"effective_weight_absolute\":10}],\"component\":\"kompetensi\",\"total_score\":13.9165,\"weight_mode\":\"mode_b\",\"parent_weight\":100,\"effective_weight_absolute\":40},{\"path\":\"potensi\",\"type\":\"parent\",\"weight\":25,\"children\":[{\"path\":\"potensi.penilaian_potensi\",\"type\":\"leaf\",\"weight\":25,\"children\":[],\"component\":\"penilaian_potensi\",\"total_score\":9.0625,\"weight_mode\":\"mode_b\",\"parent_weight\":25,\"converted_value\":72.5,\"effective_weight_absolute\":25}],\"component\":\"potensi\",\"total_score\":9.0625,\"weight_mode\":\"mode_b\",\"parent_weight\":100,\"effective_weight_absolute\":25},{\"path\":\"kualifikasi\",\"type\":\"parent\",\"weight\":20,\"children\":[{\"path\":\"kualifikasi.tingkat_pendidikan\",\"type\":\"leaf\",\"weight\":10,\"children\":[],\"component\":\"tingkat_pendidikan\",\"total_score\":4,\"weight_mode\":\"mode_b\",\"parent_weight\":20,\"converted_value\":80,\"effective_weight_absolute\":10},{\"path\":\"kualifikasi.kbi\",\"type\":\"leaf\",\"weight\":10,\"children\":[],\"component\":\"kbi\",\"total_score\":5,\"weight_mode\":\"mode_b\",\"parent_weight\":20,\"converted_value\":100,\"effective_weight_absolute\":10}],\"component\":\"kualifikasi\",\"total_score\":9,\"weight_mode\":\"mode_b\",\"parent_weight\":100,\"effective_weight_absolute\":20},{\"path\":\"integritas_moralitas\",\"type\":\"parent\",\"weight\":15,\"children\":[{\"path\":\"integritas_moralitas.hukdis\",\"type\":\"leaf\",\"weight\":15,\"children\":[],\"component\":\"hukdis\",\"total_score\":7.5,\"weight_mode\":\"mode_b\",\"parent_weight\":15,\"converted_value\":100,\"effective_weight_absolute\":15}],\"component\":\"integritas_moralitas\",\"total_score\":7.5,\"weight_mode\":\"mode_b\",\"parent_weight\":100,\"effective_weight_absolute\":15}]},\"Y\":{\"total\":37.75,\"components\":[{\"path\":\"kinerja_utama\",\"type\":\"parent\",\"weight\":60,\"children\":[{\"path\":\"kinerja_utama.skp\",\"type\":\"leaf\",\"weight\":60,\"children\":[],\"component\":\"skp\",\"total_score\":30,\"weight_mode\":\"mode_b\",\"parent_weight\":60,\"converted_value\":100,\"effective_weight_absolute\":60}],\"component\":\"kinerja_utama\",\"total_score\":30,\"weight_mode\":\"mode_b\",\"parent_weight\":100,\"effective_weight_absolute\":60},{\"path\":\"kinerja_penguat\",\"type\":\"parent\",\"weight\":40,\"children\":[{\"path\":\"kinerja_penguat.penghargaan\",\"type\":\"leaf\",\"weight\":15,\"children\":[],\"component\":\"penghargaan\",\"total_score\":0,\"weight_mode\":\"mode_b\",\"parent_weight\":40,\"converted_value\":0,\"effective_weight_absolute\":15},{\"path\":\"kinerja_penguat.p_tim\",\"type\":\"leaf\",\"weight\":15,\"children\":[],\"component\":\"p_tim\",\"total_score\":3.75,\"weight_mode\":\"mode_b\",\"parent_weight\":40,\"converted_value\":50,\"effective_weight_absolute\":15},{\"path\":\"kinerja_penguat.penilaian_360\",\"type\":\"leaf\",\"weight\":10,\"children\":[],\"component\":\"penilaian_360\",\"total_score\":4,\"weight_mode\":\"mode_b\",\"parent_weight\":40,\"converted_value\":80,\"effective_weight_absolute\":10}],\"component\":\"kinerja_penguat\",\"total_score\":7.75,\"weight_mode\":\"mode_b\",\"parent_weight\":100,\"effective_weight_absolute\":40}]}}}",
+                "id": "01a0845e-0016-7103-a333-56f8511a09cc"
+              },
+              "url": "https://api-like.test:8443/api/v1/public/talent-mapping/199209102020121002/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T04:12:30.000000Z",
+              "updated_at": "2026-09-09T04:12:30.000000Z"
+            },
+            {
+              "id": "01a08459-22e3-727d-b45c-621d4e3e8368",
+              "user_type": null,
+              "user_id": null,
+              "user_nama": null,
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e678acb016e680bde237fa7",
+              "old_values": {
+                "photo": null
+              },
+              "new_values": {
+                "photo": "asn-photos/pasfoto_000000006e678acb016e680bde237fa7.jpg",
+                "updated_at": "2026-09-09 04:07:09"
+              },
+              "url": "artisan queue:work --queue=default,reports,audits",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Symfony",
+              "tags": null,
+              "created_at": "2026-09-09T04:07:09.000000Z",
+              "updated_at": "2026-09-09T04:07:09.000000Z"
+            },
+            {
+              "id": "01a08454-6742-7165-83bc-1eea020e13d9",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "created",
+              "auditable_type": "App\\Models\\NilaiIpAsn",
+              "auditable_id": "7243",
+              "old_values": [],
+              "new_values": {
+                "id": "7243",
+                "asn_id": "000000006e5bac78016e5d30092568e0",
+                "tahun": "2025",
+                "kualifikasi": "20",
+                "kompetensi": "30",
+                "kinerja": "25",
+                "disiplin": "5",
+                "sub_total": "80"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199506132020122003/nilai-ip-asn/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "bruno-runtime/3.4.2",
+              "tags": null,
+              "created_at": "2026-09-09T04:01:59.000000Z",
+              "updated_at": "2026-09-09T04:01:59.000000Z"
+            },
+            {
+              "id": "01a08451-4186-73fa-9d7a-00c357256fb8",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "created",
+              "auditable_type": "App\\Models\\NilaiIpAsn",
+              "auditable_id": "0",
+              "old_values": [],
+              "new_values": {
+                "id": 0,
+                "asn_id": "000000006e5bac78016e5d30092568e0",
+                "tahun": "2025",
+                "kualifikasi": "20",
+                "kompetensi": "30",
+                "kinerja": "25",
+                "disiplin": "5",
+                "sub_total": "80"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/199506132020122003/nilai-ip-asn/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "bruno-runtime/3.4.2",
+              "tags": null,
+              "created_at": "2026-09-09T03:58:32.000000Z",
+              "updated_at": "2026-09-09T03:58:32.000000Z"
+            },
+            {
+              "id": "01a0844e-118e-70d2-b380-68124059798c",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "updated",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": {
+                "nama": "YUNI INDRIYANTI - BBB"
+              },
+              "new_values": {
+                "nama": "YUNI INDRIYANTI"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:55:03.000000Z",
+              "updated_at": "2026-09-09T03:55:03.000000Z"
+            },
+            {
+              "id": "01a0844e-067f-7280-bb84-71a9037da118",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": {
+                "nama": "YUNI INDRIYANTI - BBB, S.Pd."
+              },
+              "new_values": {
+                "nama": "YUNI INDRIYANTI",
+                "updated_at": "2026-09-09 03:55:01"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:55:01.000000Z",
+              "updated_at": "2026-09-09T03:55:01.000000Z"
+            },
+            {
+              "id": "01a08437-a79c-73ff-bb5b-ef0b9481de97",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "updated",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": null,
+              "new_values": null,
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:30:35.000000Z",
+              "updated_at": "2026-09-09T03:30:35.000000Z"
+            },
+            {
+              "id": "01a08433-163b-7008-912c-9b65aa882837",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "updated",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": {
+                "nama": "YUNI INDRIYANTI SDA"
+              },
+              "new_values": {
+                "nama": "YUNI INDRIYANTI"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:25:35.000000Z",
+              "updated_at": "2026-09-09T03:25:35.000000Z"
+            },
+            {
+              "id": "01a08431-2cca-736b-bab4-04e3d5f1dc52",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "updated",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": {
+                "nama": "YUNI INDRIYANTI SDA"
+              },
+              "new_values": {
+                "nama": "YUNI INDRIYANTI"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:23:30.000000Z",
+              "updated_at": "2026-09-09T03:23:30.000000Z"
+            },
+            {
+              "id": "01a0842f-ed26-7330-9b37-8edf2d822586",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "updated",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": {
+                "nama": "YUNI INDRIYANTI ASD"
+              },
+              "new_values": {
+                "nama": "YUNI INDRIYANTI"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:22:08.000000Z",
+              "updated_at": "2026-09-09T03:22:08.000000Z"
+            },
+            {
+              "id": "01a0842e-7cd0-7156-b6e0-7be898924b9e",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "updated",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": null,
+              "new_values": null,
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:20:34.000000Z",
+              "updated_at": "2026-09-09T03:20:34.000000Z"
+            },
+            {
+              "id": "01a0842e-7d35-715a-93c8-4d1ffecbec66",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "updated",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": null,
+              "new_values": null,
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:20:34.000000Z",
+              "updated_at": "2026-09-09T03:20:34.000000Z"
+            },
+            {
+              "id": "01a0842e-7d4e-72b9-bf29-e692281aa91e",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "updated",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": {
+                "nama": "YUNI INDRIYANTI ASD"
+              },
+              "new_values": {
+                "nama": "YUNI INDRIYANTI"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:20:34.000000Z",
+              "updated_at": "2026-09-09T03:20:34.000000Z"
+            },
+            {
+              "id": "01a0841f-def9-71c2-8999-171654915eed",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": null,
+              "new_values": null,
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:04:36.000000Z",
+              "updated_at": "2026-09-09T03:04:36.000000Z"
+            },
+            {
+              "id": "01a0841e-6f28-7160-91c8-d2d27a725c69",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": null,
+              "new_values": null,
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:03:02.000000Z",
+              "updated_at": "2026-09-09T03:03:02.000000Z"
+            },
+            {
+              "id": "01a0841d-3816-73d2-87a2-97246ff6d53d",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": null,
+              "new_values": null,
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T03:01:42.000000Z",
+              "updated_at": "2026-09-09T03:01:42.000000Z"
+            },
+            {
+              "id": "01a08416-abdd-710d-974c-8f8a2c77d8cd",
+              "user_type": "App\\Models\\User",
+              "user_id": "7430c37e-e0c6-444d-921c-48dbdb831e6d",
+              "user_nama": "Adha",
+              "user_nip": null,
+              "event": "synced",
+              "auditable_type": "App\\Models\\Asn",
+              "auditable_id": "000000006e5bac78016e5d30092568e0",
+              "old_values": {
+                "id": "000000006e5bac78016e5d30092568e0",
+                "agama_id": 1,
+                "jenis_pegawai_id": "10",
+                "kedudukan_hukum_id": "01",
+                "nip": "199506132020122003",
+                "nip_lama": null,
+                "jenis_dokumen_asn_id": 1,
+                "nomor_dokumen_asn": "1607035306950001",
+                "latihan_struktural": null,
+                "nomor_spmt": null,
+                "tanggal_spmt": null,
+                "pangkat_akhir": "Penata Muda Tingkat I",
+                "status_pegawai": "PNS",
+                "kartu_pegawai": "A202200045667",
+                "jenjang": "PT",
+                "is_penyetaraan": 0,
+                "photo": null,
+                "nama": "YUNI INDRIYANTI, S.Pd.",
+                "gelar_depan": null,
+                "gelar_belakang": "S.Pd.",
+                "nik": "1607035306950001",
+                "alamat": "JL. KOMP BLK NO D 16 RT. 05 RW. 02 KEL. PANORAMA KEC. SINGARAN PATI KOTA BENGKULUasd",
+                "kode_pos": null,
+                "email": "yindriyt@gmail.com",
+                "nomor_hp": "081314243213",
+                "nomor_telp": "081314243213",
+                "jenis_kelamin": "F",
+                "tempat_lahir_id": "A5EB03E220A6F6A0E040640A040252AD",
+                "tanggal_lahir": "1995-06-13",
+                "tmt_cpns": "2020-12-01",
+                "nomor_sk_cpns": "P. 944 TAHUN 2020",
+                "tanggal_sk_cpns": "2020-12-07",
+                "tmt_pns": "2022-01-01",
+                "nomor_sk_pns": "SK. 821 – T.1719 TAHUN 2021",
+                "tanggal_sk_pns": "2021-12-24",
+                "nomor_sttpl": "00032635/LATSAR CPNS III/ 5800/017/LAN-BPSDMBKL/ 2021",
+                "tanggal_sttpl": "2021-08-04",
+                "tmt_pensiun": null,
+                "nomor_sk_pensiun": null,
+                "tanggal_sk_pensiun": null,
+                "instansi_id": "A5EB03E23C2BF6A0E040640A040252AD",
+                "satuan_kerja_id": "A5EB03E241A4F6A0E040640A040252AD",
+                "kantor_regional_id": "07",
+                "instansi_kerja_id": "A5EB03E23C2BF6A0E040640A040252AD",
+                "satuan_kerja_penempatan_id": "A5EB03E241A4F6A0E040640A040252AD",
+                "unor_id": "8ae4828559d737c90159d884667113bb",
+                "unor_induk_id": "8ae4828659d52a570159d539b70c0377",
+                "lokasi_kerja_id": "A5EB03E22686F6A0E040640A040252AD",
+                "masa_kerja_tahun": 0,
+                "masa_kerja_bulan": 0,
+                "gaji_pokok": "0",
+                "created_at": "2026-06-25T11:47:19.000000Z",
+                "updated_at": "2026-09-07T09:37:10.000000Z"
+              },
+              "new_values": {
+                "id": "000000006e5bac78016e5d30092568e0",
+                "agama_id": "1",
+                "jenis_pegawai_id": "10",
+                "kedudukan_hukum_id": "01",
+                "nip": "199506132020122003",
+                "nip_lama": null,
+                "jenis_dokumen_asn_id": "1",
+                "nomor_dokumen_asn": "1607035306950001",
+                "latihan_struktural": null,
+                "nomor_spmt": null,
+                "tanggal_spmt": null,
+                "pangkat_akhir": "Penata Muda Tingkat I",
+                "status_pegawai": "PNS",
+                "kartu_pegawai": "A202200045667",
+                "jenjang": "PT",
+                "is_penyetaraan": 0,
+                "photo": null,
+                "nama": "YUNI INDRIYANTI, S.Pd.",
+                "gelar_depan": null,
+                "gelar_belakang": "S.Pd.",
+                "nik": "1607035306950001",
+                "alamat": "JL. KOMP BLK NO D 16 RT. 05 RW. 02 KEL. PANORAMA KEC. SINGARAN PATI KOTA BENGKULUasd",
+                "kode_pos": null,
+                "email": "yindriyt@gmail.com",
+                "nomor_hp": "081314243213",
+                "nomor_telp": "081314243213",
+                "jenis_kelamin": "F",
+                "tempat_lahir_id": "A5EB03E220A6F6A0E040640A040252AD",
+                "tanggal_lahir": "1995-06-13",
+                "tmt_cpns": "2020-12-01",
+                "nomor_sk_cpns": "P. 944 TAHUN 2020",
+                "tanggal_sk_cpns": "2020-12-07",
+                "tmt_pns": "2022-01-01",
+                "nomor_sk_pns": "SK. 821 – T.1719 TAHUN 2021",
+                "tanggal_sk_pns": "2021-12-24",
+                "nomor_sttpl": "00032635/LATSAR CPNS III/ 5800/017/LAN-BPSDMBKL/ 2021",
+                "tanggal_sttpl": "2021-08-04",
+                "tmt_pensiun": null,
+                "nomor_sk_pensiun": null,
+                "tanggal_sk_pensiun": null,
+                "instansi_id": "A5EB03E23C2BF6A0E040640A040252AD",
+                "satuan_kerja_id": "A5EB03E241A4F6A0E040640A040252AD",
+                "kantor_regional_id": "07",
+                "instansi_kerja_id": "A5EB03E23C2BF6A0E040640A040252AD",
+                "satuan_kerja_penempatan_id": "A5EB03E241A4F6A0E040640A040252AD",
+                "unor_id": "8ae4828559d737c90159d884667113bb",
+                "unor_induk_id": "8ae4828659d52a570159d539b70c0377",
+                "lokasi_kerja_id": "A5EB03E22686F6A0E040640A040252AD",
+                "masa_kerja_tahun": 0,
+                "masa_kerja_bulan": 0,
+                "gaji_pokok": 0,
+                "created_at": "2026-06-25T11:47:19.000000Z",
+                "updated_at": "2026-09-07T09:37:10.000000Z"
+              },
+              "url": "https://api-like.test:8443/api/v1/asn/000000006e5bac78016e5d30092568e0/sync",
+              "ip_address": "127.0.0.1",
+              "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+              "tags": null,
+              "created_at": "2026-09-09T02:54:33.000000Z",
+              "updated_at": "2026-09-09T02:54:33.000000Z"
+            }
+          ]

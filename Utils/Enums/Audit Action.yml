@@ -1,0 +1,166 @@
+info:
+  name: Audit Action
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{api_url}}/{{prefix}}/audit-action"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Audit Action
+    request:
+      url: "{{api_url}}/{{prefix}}/audit-action"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 14 Sep 2026 03:49:50 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "label": "Created",
+              "value": "created"
+            },
+            {
+              "label": "Updated",
+              "value": "updated"
+            },
+            {
+              "label": "Deleted",
+              "value": "deleted"
+            },
+            {
+              "label": "Restored",
+              "value": "restored"
+            },
+            {
+              "label": "Synced",
+              "value": "synced"
+            },
+            {
+              "label": "Assign Role",
+              "value": "assign_role"
+            },
+            {
+              "label": "Revoke Role",
+              "value": "revoke_role"
+            },
+            {
+              "label": "Sync Role",
+              "value": "sync_role"
+            },
+            {
+              "label": "Assign Permission",
+              "value": "assign_permission"
+            },
+            {
+              "label": "Revoke Permission",
+              "value": "revoke_permission"
+            },
+            {
+              "label": "Sync Permission",
+              "value": "sync_permission"
+            },
+            {
+              "label": "Sync Data Utama",
+              "value": "sync_data_utama"
+            },
+            {
+              "label": "Sync Nilai Ip Asn",
+              "value": "sync_nilai_ip_asn"
+            },
+            {
+              "label": "Sync Photo",
+              "value": "sync_photo"
+            },
+            {
+              "label": "Sync Talent Mapping",
+              "value": "sync_talent_mapping"
+            },
+            {
+              "label": "Sync Riwayat Angka Kredit",
+              "value": "sync_riwayat_angka_kredit"
+            },
+            {
+              "label": "Sync Riwayat Diklat",
+              "value": "sync_riwayat_diklat"
+            },
+            {
+              "label": "Sync Riwayat Golongan",
+              "value": "sync_riwayat_golongan"
+            },
+            {
+              "label": "Sync Riwayat Hukdis",
+              "value": "sync_riwayat_hukdis"
+            },
+            {
+              "label": "Sync Riwayat Jabatan",
+              "value": "sync_riwayat_jabatan"
+            },
+            {
+              "label": "Sync Riwayat Kompetensi",
+              "value": "sync_riwayat_kompetensi"
+            },
+            {
+              "label": "Sync Riwayat Kursus",
+              "value": "sync_riwayat_kursus"
+            },
+            {
+              "label": "Sync Riwayat Pendidikan",
+              "value": "sync_riwayat_pendidikan"
+            },
+            {
+              "label": "Sync Riwayat Penghargaan",
+              "value": "sync_riwayat_penghargaan"
+            },
+            {
+              "label": "Sync Riwayat Potensi",
+              "value": "sync_riwayat_potensi"
+            },
+            {
+              "label": "Sync Riwayat Sertifikasi",
+              "value": "sync_riwayat_sertifikasi"
+            },
+            {
+              "label": "Sync Riwayat Skp",
+              "value": "sync_riwayat_skp"
+            },
+            {
+              "label": "Sync Riwayat Skp 2022",
+              "value": "sync_riwayat_skp_2022"
+            },
+            {
+              "label": "Sync Riwayat Unor",
+              "value": "sync_riwayat_unor"
+            }
+          ]

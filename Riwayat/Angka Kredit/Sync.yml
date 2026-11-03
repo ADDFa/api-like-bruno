@@ -1,0 +1,271 @@
+info:
+  name: Sync
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-angka-kredit/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Riwayat Angka Kredit
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-angka-kredit/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 03 Aug 2026 10:10:35 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "0ac427a4-18a8-4bcb-8f01-d1c31c129d1b",
+              "nomor_sk": "141/1.16.22.4/SMANEL/2024",
+              "tanggal_sk": "2024-01-03",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2023",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2023",
+              "kredit_utama": 0,
+              "kredit_penunjang": 25,
+              "id_riwayat_jabatan": "ecfb4671-893d-4e42-982d-36ac37aa2598",
+              "nama_riwayat_jabatan": "Guru Ahli Muda"
+            },
+            {
+              "id": "0f00c6e5-d6f3-11ef-b762-0a580a80080d",
+              "nomor_sk": "372/KEP/5800/SK/PAK/2025",
+              "tanggal_sk": "2025-01-04",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2024",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2024",
+              "kredit_utama": 25,
+              "kredit_penunjang": 25,
+              "id_riwayat_jabatan": "ecfb4671-893d-4e42-982d-36ac37aa2598",
+              "nama_riwayat_jabatan": "Guru Ahli Muda"
+            },
+            {
+              "id": "260cd81c-f5af-11f0-b6d9-0a580a810296",
+              "nomor_sk": "1127/KEP/5800/SK/PAK/2026",
+              "tanggal_sk": "2026-01-06",
+              "bulan_mulai_penilaian": "2",
+              "tahun_mulai_penilaian": "2025",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2025",
+              "kredit_utama": 34.375,
+              "kredit_penunjang": 34.375,
+              "id_riwayat_jabatan": "c65e123b-4d87-11f0-adb3-0a580a800840",
+              "nama_riwayat_jabatan": "Guru Ahli Madya"
+            },
+            {
+              "id": "8ae4828755702bd1015571188c9773b8",
+              "nomor_sk": "800/86/AK/DIKNASPORA/2011",
+              "tanggal_sk": "2013-01-01",
+              "bulan_mulai_penilaian": "7",
+              "tahun_mulai_penilaian": "2011",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2011",
+              "kredit_utama": 6.038,
+              "kredit_penunjang": 6.538,
+              "id_riwayat_jabatan": null,
+              "nama_riwayat_jabatan": null
+            },
+            {
+              "id": "8ae4828755702bd101557119c0887487",
+              "nomor_sk": "800/328/AK/DIKNASPORA/2012",
+              "tanggal_sk": "2012-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2012",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2012",
+              "kredit_utama": 9.72,
+              "kredit_penunjang": 10.38,
+              "id_riwayat_jabatan": null,
+              "nama_riwayat_jabatan": null
+            },
+            {
+              "id": "8ae4828755702bd10155711afead7588",
+              "nomor_sk": "800/328/AK/DIKNASPORA/2013",
+              "tanggal_sk": "2013-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2013",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2013",
+              "kredit_utama": 9.5,
+              "kredit_penunjang": 10.58,
+              "id_riwayat_jabatan": null,
+              "nama_riwayat_jabatan": null
+            },
+            {
+              "id": "8ae4828755702bd10155711c06a87673",
+              "nomor_sk": "800/328/AK/DIKNASPORA/2014",
+              "tanggal_sk": "2014-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2014",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2014",
+              "kredit_utama": 11.6,
+              "kredit_penunjang": 12.68,
+              "id_riwayat_jabatan": null,
+              "nama_riwayat_jabatan": null
+            },
+            {
+              "id": "8ae4828755702bd10155711d6b7a7739",
+              "nomor_sk": "800/328/AK/DIKNASPORA/2015",
+              "tanggal_sk": "2015-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2015",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2015",
+              "kredit_utama": 13.5,
+              "kredit_penunjang": 14.49,
+              "id_riwayat_jabatan": null,
+              "nama_riwayat_jabatan": null
+            },
+            {
+              "id": "8ae4828755702bd10155711e8d4f77d1",
+              "nomor_sk": "800/328/AK/DIKNASPORA/2016",
+              "tanggal_sk": "2016-06-30",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2016",
+              "bulan_selesai_penilaian": "6",
+              "tahun_selesai_penilaian": "2016",
+              "kredit_utama": 1,
+              "kredit_penunjang": 1.455,
+              "id_riwayat_jabatan": null,
+              "nama_riwayat_jabatan": null
+            },
+            {
+              "id": "8ae483c57e63ea10017e66494de87123",
+              "nomor_sk": "823.3/4758/pak.II/dikbud/2021",
+              "tanggal_sk": "2021-12-31",
+              "bulan_mulai_penilaian": "7",
+              "tahun_mulai_penilaian": "2016",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2016",
+              "kredit_utama": 14.125,
+              "kredit_penunjang": 14.875,
+              "id_riwayat_jabatan": "8ae4828758662b77015866f625c6713c",
+              "nama_riwayat_jabatan": "Guru Ahli Muda"
+            },
+            {
+              "id": "8ae483c57e63ea10017e664aac717195",
+              "nomor_sk": "823.3/4759/pak.II/dikbud/2021",
+              "tanggal_sk": "2021-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2017",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2017",
+              "kredit_utama": 21.25,
+              "kredit_penunjang": 22,
+              "id_riwayat_jabatan": "8ae4828758662b77015866f625c6713c",
+              "nama_riwayat_jabatan": "Guru Ahli Muda"
+            },
+            {
+              "id": "8ae483c57e63ea10017e664c81ad722b",
+              "nomor_sk": "823.3/4760/pak.II/dikbud/2021",
+              "tanggal_sk": "2021-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2018",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2018",
+              "kredit_utama": 20.25,
+              "kredit_penunjang": 21,
+              "id_riwayat_jabatan": "8ae4828758662b77015866f625c6713c",
+              "nama_riwayat_jabatan": "Guru Ahli Muda"
+            },
+            {
+              "id": "8ae483c57e63ea10017e664eebae7312",
+              "nomor_sk": "823.3/4761/pak.II/dikbud/2021",
+              "tanggal_sk": "2021-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2019",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2019",
+              "kredit_utama": 21.25,
+              "kredit_penunjang": 22,
+              "id_riwayat_jabatan": "8ae4828758662b77015866f625c6713c",
+              "nama_riwayat_jabatan": "Guru Ahli Muda"
+            },
+            {
+              "id": "8ae483c57e63ea10017e6654d9d47534",
+              "nomor_sk": "823.3/4762/pak.II/dikbud/2021",
+              "tanggal_sk": "2021-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2020",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2020",
+              "kredit_utama": 27.25,
+              "kredit_penunjang": 28,
+              "id_riwayat_jabatan": "8ae4828758662b77015866f625c6713c",
+              "nama_riwayat_jabatan": "Guru Ahli Muda"
+            },
+            {
+              "id": "8ae483c57e63ea10017e6656d00275c4",
+              "nomor_sk": "823.3/4763/pak.II/dikbud/2021",
+              "tanggal_sk": "2021-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2021",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2021",
+              "kredit_utama": 21.25,
+              "kredit_penunjang": 22,
+              "id_riwayat_jabatan": "8ae4828758662b77015866f625c6713c",
+              "nama_riwayat_jabatan": "Guru Ahli Muda"
+            },
+            {
+              "id": "a06ff59f-1405-4b1a-b787-0a106d56ac04",
+              "nomor_sk": "800.1.4.5/2027",
+              "tanggal_sk": "2023-12-31",
+              "bulan_mulai_penilaian": "1",
+              "tahun_mulai_penilaian": "2022",
+              "bulan_selesai_penilaian": "12",
+              "tahun_selesai_penilaian": "2022",
+              "kredit_utama": 0,
+              "kredit_penunjang": 188.858,
+              "id_riwayat_jabatan": "ecfb4671-893d-4e42-982d-36ac37aa2598",
+              "nama_riwayat_jabatan": "Guru Ahli Muda"
+            },
+            {
+              "id": "ff8080813606695501361108b0a023be",
+              "nomor_sk": "800/86",
+              "tanggal_sk": "2011-06-30",
+              "bulan_mulai_penilaian": "3",
+              "tahun_mulai_penilaian": "2009",
+              "bulan_selesai_penilaian": "6",
+              "tahun_selesai_penilaian": "2011",
+              "kredit_utama": 167.56,
+              "kredit_penunjang": 170.16,
+              "id_riwayat_jabatan": null,
+              "nama_riwayat_jabatan": null
+            }
+          ]

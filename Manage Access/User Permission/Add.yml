@@ -1,0 +1,71 @@
+info:
+  name: Add
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{api_url}}/user-permission/{{user_id}}"
+  body:
+    type: json
+    data: |-
+      {
+        "permissions": [
+          "019f6afa-8117-715b-93b3-ee3d6be96e8c"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Tambah Extra Permission User
+    request:
+      url: "{{process.env.BASE_URL}}/user-permission/{{user_id}}"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "permissions": [
+              "019e6296-1be4-73b8-a891-81586728ffbc"
+            ]
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 26 May 2026 04:59:51 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "permission_id": "019e6296-1be4-73b8-a891-81586728ffbc",
+              "name": "create-user",
+              "name_title": "Create User"
+            }
+          ]

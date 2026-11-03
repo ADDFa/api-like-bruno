@@ -1,0 +1,54 @@
+info:
+  name: Sign Out
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{api_url}}/sign-out"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sign Out
+    request:
+      url: "{{process.env.BASE_URL}}/sign-out"
+      method: POST
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 26 May 2026 03:04:25 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: access-control-allow-origin
+          value: "*"
+        - name: set-cookie
+          value: refresh_token=deleted; expires=Mon, 26 May 2025 03:04:24 GMT; Max-Age=0; path=/; secure; httponly; samesite=lax
+      body:
+        type: json
+        data: |-
+          {
+            "is_success": true,
+            "data": null
+          }

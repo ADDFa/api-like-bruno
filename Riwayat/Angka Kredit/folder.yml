@@ -1,0 +1,7 @@
+info:
+  name: Angka Kredit
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

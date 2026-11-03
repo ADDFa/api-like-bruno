@@ -1,0 +1,118 @@
+info:
+  name: Sync
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-skp-2022/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Riwayat SKP 2022
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-skp-2022/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 05 Aug 2026 03:25:19 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "2f3549a3-c16e-4fc7-bf16-f0558067fe95",
+              "asn_id": "A8ACA7D8A5EB3912E040640A040269BB",
+              "tahun": "2023",
+              "nilai_hasil_kinerja": 2,
+              "hasil_kinerja": "SESUAI EKSPEKTASI",
+              "kuadran_hasil_kinerja": 2,
+              "kuadran_kinerja": "BAIK",
+              "nilai_perilaku_kinerja": 2,
+              "perilaku_kinerja": "SESUAI EKSPEKTASI",
+              "nama_penilai": "NURFADILLAHWATI",
+              "nomor_induk_penilai": "197508211998012001",
+              "status_penilai": "ASN",
+              "id_golongan_penilai": "43",
+              "nama_jabatan_penilai": "Guru Ahli Madya",
+              "nama_unor_penilai": "SMK Negeri 1 Bengkulu Selatan"
+            },
+            {
+              "id": "3e118f96-eadb-11f0-bff0-0a580a80098a",
+              "asn_id": "A8ACA7D8A5EB3912E040640A040269BB",
+              "tahun": "2025",
+              "nilai_hasil_kinerja": 2,
+              "hasil_kinerja": "SESUAI EKSPEKTASI",
+              "kuadran_hasil_kinerja": 2,
+              "kuadran_kinerja": "BAIK",
+              "nilai_perilaku_kinerja": 2,
+              "perilaku_kinerja": "SESUAI EKSPEKTASI",
+              "nama_penilai": "NURFADILLAHWATI",
+              "nomor_induk_penilai": "197508211998012001",
+              "status_penilai": "ASN",
+              "id_golongan_penilai": "43",
+              "nama_jabatan_penilai": "Guru Ahli Madya",
+              "nama_unor_penilai": "SMKN 1 Bengkulu Selatan"
+            },
+            {
+              "id": "7c4d75a9-d705-11ef-b762-0a580a80080d",
+              "asn_id": "A8ACA7D8A5EB3912E040640A040269BB",
+              "tahun": "2024",
+              "nilai_hasil_kinerja": 2,
+              "hasil_kinerja": "SESUAI EKSPEKTASI",
+              "kuadran_hasil_kinerja": 2,
+              "kuadran_kinerja": "BAIK",
+              "nilai_perilaku_kinerja": 2,
+              "perilaku_kinerja": "SESUAI EKSPEKTASI",
+              "nama_penilai": "NURFADILLAHWATI",
+              "nomor_induk_penilai": "197508211998012001",
+              "status_penilai": "ASN",
+              "id_golongan_penilai": "43",
+              "nama_jabatan_penilai": "Guru Ahli Madya",
+              "nama_unor_penilai": "SMKN 1 BENGKULU SELATAN"
+            },
+            {
+              "id": "f3c9e7a8-e4a9-49bd-bd16-efbf0d376c2d",
+              "asn_id": "A8ACA7D8A5EB3912E040640A040269BB",
+              "tahun": "2022",
+              "nilai_hasil_kinerja": 2,
+              "hasil_kinerja": "SESUAI EKSPEKTASI",
+              "kuadran_hasil_kinerja": 2,
+              "kuadran_kinerja": "BAIK",
+              "nilai_perilaku_kinerja": 2,
+              "perilaku_kinerja": "SESUAI EKSPEKTASI",
+              "nama_penilai": "ASRIN APENDI",
+              "nomor_induk_penilai": "197303022000031004",
+              "status_penilai": "ASN",
+              "id_golongan_penilai": "42",
+              "nama_jabatan_penilai": "Guru Ahli Madya",
+              "nama_unor_penilai": "SMKN 1 BENGKULU SELATAN"
+            }
+          ]

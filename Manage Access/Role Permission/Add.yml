@@ -1,0 +1,103 @@
+info:
+  name: Add
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{api_url}}/role-permission/{{role_id}}"
+  body:
+    type: json
+    data: |-
+      {
+        "permissions": [
+          "019f6afa-812c-7214-aa1b-5be55d8a535e"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Menambahkan Akses Role
+    request:
+      url: "{{process.env.BASE_URL}}/role-permission/{{role_id}}"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "permissions": [
+              "019d863a-153e-72f9-a24d-5b6a009c5897",
+              "019d863a-1543-70b0-b8b3-5c1ed3000479",
+              "019d863a-1556-708f-af05-96e6adef431e",
+              "019d863a-1560-73c1-8d8a-6b2c59dc9cf7"
+            ]
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: host
+          value: 127.0.0.1:8000
+        - name: connection
+          value: close
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 13 Apr 2026 15:49:06 GMT
+        - name: content-type
+          value: application/json
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "group": "position",
+              "permissions": [
+                {
+                  "permission_id": "019d863a-1556-708f-af05-96e6adef431e",
+                  "name": "create-position",
+                  "name_title": "Create Position"
+                },
+                {
+                  "permission_id": "019d863a-1560-73c1-8d8a-6b2c59dc9cf7",
+                  "name": "remove-position",
+                  "name_title": "Remove Position"
+                }
+              ]
+            },
+            {
+              "group": "user",
+              "permissions": [
+                {
+                  "permission_id": "019d863a-153e-72f9-a24d-5b6a009c5897",
+                  "name": "view-user",
+                  "name_title": "View User"
+                },
+                {
+                  "permission_id": "019d863a-1543-70b0-b8b3-5c1ed3000479",
+                  "name": "create-user",
+                  "name_title": "Create User"
+                }
+              ]
+            },
+            {
+              "group": "user position history",
+              "permissions": [
+                {
+                  "permission_id": "019d863a-1592-7197-a288-ea0a91211d54",
+                  "name": "user-position-history",
+                  "name_title": "User Position History"
+                }
+              ]
+            }
+          ]

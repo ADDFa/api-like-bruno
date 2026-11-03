@@ -1,0 +1,74 @@
+info:
+  name: Update
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{api_url}}/pengumuman/{{pengumuman_id}}"
+  body:
+    type: form-urlencoded
+    data:
+      - name: judul
+        value: Pembaruan WFH Update
+      - name: konten
+        value: ""
+        disabled: true
+      - name: tanggal_efektif
+        value: 2026-07-30
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update Pengumuman
+    request:
+      url: "{{api_url}}/pengumuman/{{pengumuman_id}}"
+      method: PUT
+      body:
+        type: form-urlencoded
+        data:
+          - name: judul
+            value: Pembaruan WFH Update
+          - name: konten
+            value: ""
+            disabled: true
+          - name: tanggal_efektif
+            value: 2026-07-30
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 09 Jul 2026 07:41:51 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "019f45d0-e77f-7052-b8d0-d8e70af6a0d1",
+            "judul": "Pembaruan WFH Update",
+            "konten": "Jadwal wfh sekarang digenerate setiap minggu di hari Kamis/Jum'at",
+            "tanggal_efektif": "2026-07-30"
+          }

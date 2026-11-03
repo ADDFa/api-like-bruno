@@ -1,0 +1,53 @@
+info:
+  name: Sync Data Unor
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{api_url}}/unor/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Data Unor
+    request:
+      url: "{{api_url}}/unor/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 30 Sep 2026 02:36:16 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "batch_id": "a2ddd0fa-09c6-4a34-858f-ef073c703ffc",
+            "total_items": 1023,
+            "message": "Proses sinkronisasi 1023 Data UNOR berhasil masuk ke dalam antrean (Bus)."
+          }

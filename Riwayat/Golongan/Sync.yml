@@ -1,0 +1,118 @@
+info:
+  name: Sync
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-golongan/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Riwayat Golongan
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-golongan/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 03 Aug 2026 09:49:31 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "8ae482875d0f3165015d1059f638326f",
+              "pangkat": "Penata",
+              "id_golongan": "33",
+              "nama_golongan": "III/c",
+              "nomor_sk": "SK.823 - A.124 Tahun 2017",
+              "tanggal_sk": "2017-05-02",
+              "tmt_golongan": "2017-04-01",
+              "nomor_pertek_bkn": "HG-21700000884",
+              "tanggal_pertek_bkn": "2017-02-17",
+              "jumlah_kredit_utama": 0,
+              "jumlah_kredit_tambahan": 0,
+              "id_jenis_kp": "101",
+              "nama_jenis_kp": "Reguler",
+              "masa_kerja_golongan_tahun": 8,
+              "masa_kerja_golongan_bulan": 2
+            },
+            {
+              "id": "8ae483c5784bf98a01787ccc35720a99",
+              "pangkat": "Penata Tingkat I",
+              "id_golongan": "34",
+              "nama_golongan": "III/d",
+              "nomor_sk": "SK. 823 - C. 347 TAHUN 2021",
+              "tanggal_sk": "2021-03-29",
+              "tmt_golongan": "2021-04-01",
+              "nomor_pertek_bkn": "HG-21700000441",
+              "tanggal_pertek_bkn": "2021-02-22",
+              "jumlah_kredit_utama": 0,
+              "jumlah_kredit_tambahan": 0,
+              "id_jenis_kp": "101",
+              "nama_jenis_kp": "Reguler",
+              "masa_kerja_golongan_tahun": 12,
+              "masa_kerja_golongan_bulan": 2
+            },
+            {
+              "id": "A8ACA8AB1CC03912E040640A040269BB",
+              "pangkat": "Penata Muda",
+              "id_golongan": "31",
+              "nama_golongan": "III/a",
+              "nomor_sk": "821 - 334",
+              "tanggal_sk": null,
+              "tmt_golongan": "2009-02-01",
+              "nomor_pertek_bkn": "HG-21700000420",
+              "tanggal_pertek_bkn": null,
+              "jumlah_kredit_utama": 0,
+              "jumlah_kredit_tambahan": 0,
+              "id_jenis_kp": "211",
+              "nama_jenis_kp": "Gol. dari Pengadaan CPNS/PNS",
+              "masa_kerja_golongan_tahun": 0,
+              "masa_kerja_golongan_bulan": 0
+            },
+            {
+              "id": "ff8080813d53c628013d57b2baac787d",
+              "pangkat": "Penata Muda Tingkat I",
+              "id_golongan": "32",
+              "nama_golongan": "III/b",
+              "nomor_sk": "SK.823.N.25",
+              "tanggal_sk": "2013-03-28",
+              "tmt_golongan": "2013-04-01",
+              "nomor_pertek_bkn": "HG-21700000420",
+              "tanggal_pertek_bkn": "2013-03-11",
+              "jumlah_kredit_utama": 0,
+              "jumlah_kredit_tambahan": 0,
+              "id_jenis_kp": "101",
+              "nama_jenis_kp": "Reguler",
+              "masa_kerja_golongan_tahun": 4,
+              "masa_kerja_golongan_bulan": 2
+            }
+          ]

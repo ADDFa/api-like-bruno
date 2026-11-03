@@ -1,0 +1,49 @@
+info:
+  name: Role User
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    # 📘 Role User Management API
+
+    Base Endpoint: /v1/api/roles/{role}/users
+
+    ---
+
+    ## 🔹 1. Get List Users in Role
+    Mengambil daftar user yang memiliki role tertentu.
+
+    ### Endpoint
+    ```sh
+    GET /v1/api/roles/{role}/users
+    ```
+
+
+    ### Path Parameter
+    | Parameter | Tipe    | Deskripsi |
+    |----------|--------|----------|
+    | role     | integer | ID role |
+
+    ### Response (200 OK)
+    ```json
+    [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john@example.com"
+      },
+      {
+        "id": 2,
+        "name": "Jane Doe",
+        "email": "jane@example.com"
+      }
+    ]
+
+    Keterangan
+    Data diurutkan berdasarkan name (ascending)
+    Menggunakan UserResource
+  type: text/markdown

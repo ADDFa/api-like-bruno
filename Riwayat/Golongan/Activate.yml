@@ -1,0 +1,66 @@
+info:
+  name: Activate
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{api_url}}/riwayat-golongan/{{riwayat_golongan_id}}/activate"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Activate Riwayat Golongan
+    request:
+      url: "{{api_url}}/riwayat-golongan/{{riwayat_golongan_id}}/activate"
+      method: PATCH
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 21 Sep 2026 10:10:14 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "8ae483a5689eea8d0168a2025d004a8b",
+            "pangkat": "Penata",
+            "id_golongan": "33",
+            "nama_golongan": "III/c",
+            "nomor_sk": "800 - 86 Tahun 2019",
+            "tanggal_sk": "2019-03-29",
+            "tmt_golongan": "2019-04-01",
+            "nomor_pertek_bkn": "HG-21709000057",
+            "tanggal_pertek_bkn": "2019-01-22",
+            "jumlah_kredit_utama": 0,
+            "jumlah_kredit_tambahan": 0,
+            "id_jenis_kp": "101",
+            "nama_jenis_kp": "Reguler",
+            "masa_kerja_golongan_tahun": 8,
+            "masa_kerja_golongan_bulan": 3,
+            "is_current": true
+          }

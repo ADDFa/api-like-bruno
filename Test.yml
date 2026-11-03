@@ -1,0 +1,19 @@
+info:
+  name: Test
+  type: http
+  seq: 22
+
+http:
+  method: GET
+  url: "{{api_url}}/test?id=8ae483c67c8cc5fe017c8d6ad6920938"
+  params:
+    - name: id
+      value: 8ae483c67c8cc5fe017c8d6ad6920938
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

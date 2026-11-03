@@ -1,0 +1,71 @@
+info:
+  name: List
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/role-user/{{role_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Daftar Role User Tertentu
+    request:
+      url: "{{process.env.BASE_URL}}/role-user/{{role_id}}"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: host
+          value: 127.0.0.1:8000
+        - name: connection
+          value: close
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 13 Apr 2026 17:01:22 GMT
+        - name: content-type
+          value: application/json
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "4f5045e0-2dba-441c-8fd4-adb86d560ad2",
+              "name": "Dr. Haven Shanahan V",
+              "username": "addfa",
+              "email": "kub.reina@example.org",
+              "email_verified_at": "2026-04-13T17:01:05.000000Z",
+              "status": "active",
+              "last_updated": "2026-04-13T17:01:05.000000Z"
+            },
+            {
+              "id": "5f7ee66f-5852-4ef7-ab72-21bda6d96c8f",
+              "name": "Ericka Langworth IV",
+              "username": "user-2",
+              "email": "mbeer@example.net",
+              "email_verified_at": "2026-04-13T17:01:05.000000Z",
+              "status": "active",
+              "last_updated": "2026-04-13T17:01:05.000000Z"
+            },
+            {
+              "id": "cd5b2ffc-3cc6-4b60-a049-154c1d408a7b",
+              "name": "Jace O'Connell",
+              "username": "user-1",
+              "email": "fmckenzie@example.com",
+              "email_verified_at": "2026-04-13T17:01:05.000000Z",
+              "status": "active",
+              "last_updated": "2026-04-13T17:01:05.000000Z"
+            }
+          ]

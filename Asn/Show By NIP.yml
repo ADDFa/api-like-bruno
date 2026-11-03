@@ -1,0 +1,119 @@
+info:
+  name: Show By NIP
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{api_url}}/asn/show-by-nip/{{nip}}?includes=kedudukanHukum,jabatan,unor,opd"
+  params:
+    - name: includes
+      value: kedudukanHukum,jabatan,unor,opd
+      type: query
+    - name: includes
+      value: unor,unorInduk
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Detail ASN - Show By NIP
+    request:
+      url: "{{api_url}}/asn/show-by-nip/{{nip}}"
+      method: GET
+      params:
+        - name: includes
+          value: unor,unorInduk
+          type: query
+          disabled: true
+        - name: includes
+          value: unor,unorInduk
+          type: query
+          disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 30 Jun 2026 06:56:24 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "55"
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "id": "0A3D692356862FA8E050640A15027E0A",
+            "nip": "199010202015012001",
+            "nomor_dokumen_asn": "1702186010900002",
+            "latihan_struktural": null,
+            "nomor_spmt": "800/0023/I.1/2022",
+            "tanggal_spmt": null,
+            "pangkat_akhir": "Penata Muda",
+            "kartu_pegawai": null,
+            "jenjang": "MH",
+            "is_penyetaraan": 0,
+            "nama": "NASUHA, S.E.",
+            "gelar_depan": null,
+            "gelar_belakang": "S.E.",
+            "nik": "1702186010900002",
+            "alamat": "JL. KALIMANTAN RT.004 / RW.001 KELURAHAN KAMPUNG KELAWI KEC. SUNGAI SERUT KOTA BENGKULU",
+            "kode_pos": null,
+            "email": "nanasuha.bona@gmail.com",
+            "nomor_hp": "085378487650",
+            "nomor_telp": "085378487650",
+            "jenis_kelamin": "F",
+            "tempat_lahir_id": null,
+            "tanggal_lahir": "1990-10-20",
+            "tmt_cpns": "2015-01-01",
+            "nomor_sk_cpns": "V. 263 TAHUN 2015 Tanggal 30 Maret 3015",
+            "tanggal_sk_cpns": "2015-03-30",
+            "tmt_pns": "2016-08-01",
+            "nomor_sk_pns": "SK.813-J.308 TAHUN 2016",
+            "tanggal_sk_pns": "2016-06-13",
+            "nomor_sttpl": "002276/Diklat Prajabatan II/17/1771/LAN/2016",
+            "tanggal_sttpl": "2016-04-12",
+            "tmt_pensiun": null,
+            "nomor_sk_pensiun": null,
+            "tanggal_sk_pensiun": null,
+            "masa_kerja_tahun": 7,
+            "masa_kerja_bulan": 1,
+            "gaji_pokok": "3057300.00000000000000000000000000000000000000000000000000000",
+            "tanggal_dibuat": "2026-06-25 11:47",
+            "update_terakhir": null,
+            "unor": {
+              "id": "8ae4828859d211720159d4d94568011c",
+              "nama": "Bidang Pengadaan, Pemberhentian dan Informasi Kepegawaian",
+              "nama_jabatan": "Kepala Bidang Pengadaan, Pemberhentian dan Informasi Kepegawaian",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-06-24 16:03"
+            },
+            "unor_induk": {
+              "id": "8ae4828859d211720159d4af349e5bc5",
+              "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+              "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-06-24 16:03"
+            }
+          }

@@ -1,0 +1,238 @@
+info:
+  name: Permission
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{api_url}}/permission?grouping=1"
+  params:
+    - name: grouping
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Permission
+    request:
+      url: "{{process.env.BASE_URL}}/permission"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: host
+          value: 127.0.0.1:8000
+        - name: connection
+          value: close
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Sat, 25 Apr 2026 16:49:35 GMT
+        - name: content-type
+          value: application/json
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "permission_id": "019dc4a5-d470-71ec-bce2-1c68910d1b6b",
+              "name": "view-user",
+              "name_title": "View User"
+            },
+            {
+              "permission_id": "019dc4a5-d477-732a-87f6-766535938193",
+              "name": "create-user",
+              "name_title": "Create User"
+            },
+            {
+              "permission_id": "019dc4a5-d47c-732c-b4ee-6e9e28749d04",
+              "name": "update-user",
+              "name_title": "Update User"
+            },
+            {
+              "permission_id": "019dc4a5-d482-712b-be28-27e29bddce47",
+              "name": "remove-user",
+              "name_title": "Remove User"
+            },
+            {
+              "permission_id": "019dc4a5-d486-7034-a9a6-446bc6b07735",
+              "name": "promote-employee",
+              "name_title": "Promote Employee"
+            },
+            {
+              "permission_id": "019dc4a5-d48c-73ba-a103-2b597a12dc89",
+              "name": "mutate-employee",
+              "name_title": "Mutate Employee"
+            },
+            {
+              "permission_id": "019dc4a5-d490-701b-b8ed-e01dd285af22",
+              "name": "demote-employee",
+              "name_title": "Demote Employee"
+            },
+            {
+              "permission_id": "019dc4a5-d496-7362-a67b-bd90c45f5dff",
+              "name": "retirement-employee",
+              "name_title": "Retirement Employee"
+            },
+            {
+              "permission_id": "019dc4a5-d49c-72aa-873f-62f13873d2a2",
+              "name": "view-office",
+              "name_title": "View Office"
+            },
+            {
+              "permission_id": "019dc4a5-d4a4-716e-ba79-f92ee7bdacc9",
+              "name": "create-office",
+              "name_title": "Create Office"
+            },
+            {
+              "permission_id": "019dc4a5-d4aa-72ba-bd90-32c05f0f0a98",
+              "name": "update-office",
+              "name_title": "Update Office"
+            },
+            {
+              "permission_id": "019dc4a5-d4af-73ea-8848-57226fe8ef54",
+              "name": "remove-office",
+              "name_title": "Remove Office"
+            },
+            {
+              "permission_id": "019dc4a5-d4b5-7222-851d-80c550344640",
+              "name": "view-department",
+              "name_title": "View Department"
+            },
+            {
+              "permission_id": "019dc4a5-d4ba-71ce-a096-fee89ebe3386",
+              "name": "create-department",
+              "name_title": "Create Department"
+            },
+            {
+              "permission_id": "019dc4a5-d4c0-7361-913d-60a3bfdfa8a3",
+              "name": "update-department",
+              "name_title": "Update Department"
+            },
+            {
+              "permission_id": "019dc4a5-d4c5-712f-a827-de8951efe638",
+              "name": "remove-department",
+              "name_title": "Remove Department"
+            },
+            {
+              "permission_id": "019dc4a5-d4cf-7271-8a1f-c28f8c997dce",
+              "name": "view-position",
+              "name_title": "View Position"
+            },
+            {
+              "permission_id": "019dc4a5-d4f1-723c-b7b1-69b62ab1d3fd",
+              "name": "create-position",
+              "name_title": "Create Position"
+            },
+            {
+              "permission_id": "019dc4a5-d4f6-73b9-84ad-e1a17e4c2d5e",
+              "name": "update-position",
+              "name_title": "Update Position"
+            },
+            {
+              "permission_id": "019dc4a5-d4fa-7060-86ac-90f4552ad1b2",
+              "name": "remove-position",
+              "name_title": "Remove Position"
+            },
+            {
+              "permission_id": "019dc4a5-d4fd-7088-b2e5-5e959ebf89a4",
+              "name": "view-leaveType",
+              "name_title": "View Leave Type"
+            },
+            {
+              "permission_id": "019dc4a5-d501-70bf-acf9-8300cc4af2c2",
+              "name": "create-leaveType",
+              "name_title": "Create Leave Type"
+            },
+            {
+              "permission_id": "019dc4a5-d504-706b-a042-573624de1dd4",
+              "name": "update-leaveType",
+              "name_title": "Update Leave Type"
+            },
+            {
+              "permission_id": "019dc4a5-d508-709e-8fb3-e999e387c096",
+              "name": "remove-leaveType",
+              "name_title": "Remove Leave Type"
+            },
+            {
+              "permission_id": "019dc4a5-d50c-728d-bafd-1331ea75b962",
+              "name": "view-leave",
+              "name_title": "View Leave"
+            },
+            {
+              "permission_id": "019dc4a5-d510-70f9-a1c9-d063c9032269",
+              "name": "create-leave",
+              "name_title": "Create Leave"
+            },
+            {
+              "permission_id": "019dc4a5-d514-7346-8296-a56fbf133938",
+              "name": "update-leave",
+              "name_title": "Update Leave"
+            },
+            {
+              "permission_id": "019dc4a5-d517-71eb-b0dc-86749a926294",
+              "name": "remove-leave",
+              "name_title": "Remove Leave"
+            },
+            {
+              "permission_id": "019dc4a5-d51b-72eb-a9c1-e7175a48caeb",
+              "name": "view-permissionEarylyLeave",
+              "name_title": "View Permission Earyly Leave"
+            },
+            {
+              "permission_id": "019dc4a5-d520-71f4-b6ea-89a836046ea5",
+              "name": "create-permissionEarylyLeave",
+              "name_title": "Create Permission Earyly Leave"
+            },
+            {
+              "permission_id": "019dc4a5-d526-7279-89bc-f400a33b7ea3",
+              "name": "update-permissionEarylyLeave",
+              "name_title": "Update Permission Earyly Leave"
+            },
+            {
+              "permission_id": "019dc4a5-d52b-7166-99ed-3e32cd43f91c",
+              "name": "view-attendance",
+              "name_title": "View Attendance"
+            },
+            {
+              "permission_id": "019dc4a5-d530-7072-bc7d-e82dde04ae87",
+              "name": "create-attendance",
+              "name_title": "Create Attendance"
+            },
+            {
+              "permission_id": "019dc4a5-d535-7113-ba11-a0ac0c2d94e1",
+              "name": "update-attendance",
+              "name_title": "Update Attendance"
+            },
+            {
+              "permission_id": "019dc4a5-d53b-7394-9083-7964aa0e5e61",
+              "name": "remove-attendance",
+              "name_title": "Remove Attendance"
+            },
+            {
+              "permission_id": "019dc4a5-d540-72af-8f11-b98ea73b2008",
+              "name": "update-userProfile",
+              "name_title": "Update User Profile"
+            },
+            {
+              "permission_id": "019dc4a5-d545-72ca-8b0a-afc7884b6698",
+              "name": "removePhoto-userProfile",
+              "name_title": "Remove Photo User Profile"
+            },
+            {
+              "permission_id": "019dc4a5-d54a-73c5-af37-ef3fda1d17bf",
+              "name": "user-position-history",
+              "name_title": "User Position History"
+            }
+          ]

@@ -1,0 +1,51 @@
+info:
+  name: Store
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{api_url}}/asn/{{nip}}/riwayat-jabatan"
+  body:
+    type: multipart-form
+    data:
+      - name: unor_id
+        type: text
+        value: 8ae4828859d211720159d4af7c745bfb
+      - name: jenis_jabatan_id
+        type: text
+        value: "1"
+      - name: jabatan_id
+        type: text
+        value: 8ae4828859d211720159d4af7c745bfb
+      - name: jenis_mutasi
+        type: text
+        value: MJ
+      - name: jenis_penugasan
+        type: text
+        value: D
+      - name: nomor_sk
+        type: text
+        value: SK.824-B.04 TAHUN 2026
+      - name: sub_jabatan_id
+        type: text
+        value: ""
+      - name: tanggal_sk
+        type: text
+        value: 2026-04-01
+      - name: tmt_jabatan
+        type: text
+        value: 2026-04-01
+      - name: tmt_mutasi
+        type: text
+        value: 2026-04-01
+      - name: tmt_pelantikan
+        type: text
+        value: 2026-04-01
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

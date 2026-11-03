@@ -1,0 +1,128 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/asn/{{nip}}/riwayat-pendidikan"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Riwayat Pendidikan
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-pendidikan"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 03 Aug 2026 10:30:30 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "A8ACA9A1F56E3912E040640A040269BB",
+              "id_pendidikan": "A5EB03E20E14F6A0E040640A040252AD",
+              "nama_pendidikan": "D-I/A-I EKONOMI BISNIS",
+              "id_tingkat_pendidikan": "20",
+              "nama_tingkat_pendidikan": "Diploma I",
+              "tanggal_lulus": null,
+              "is_pendidikan_pertama": 1,
+              "nomor_ijazah": "99",
+              "nama_institusi_pendidikan": "LIKMI",
+              "gelar_depan": null,
+              "gelar_belakang": null
+            },
+            {
+              "id": "8ae482a55081e924015083078f156d59",
+              "id_pendidikan": "A5EB03E20EB8F6A0E040640A040252AD",
+              "nama_pendidikan": "SEKOLAH DASAR",
+              "id_tingkat_pendidikan": "05",
+              "nama_tingkat_pendidikan": "Sekolah Dasar",
+              "tanggal_lulus": "1987-06-06",
+              "is_pendidikan_pertama": 1,
+              "nomor_ijazah": "22OAoa0000838",
+              "nama_institusi_pendidikan": "SDN 18 KOTA BENGKULU",
+              "gelar_depan": null,
+              "gelar_belakang": null
+            },
+            {
+              "id": "A8ACA9A1D2D03912E040640A040269BB",
+              "id_pendidikan": "A5EB03E20ED1F6A0E040640A040252AD",
+              "nama_pendidikan": "SLTP UMUM",
+              "id_tingkat_pendidikan": "10",
+              "nama_tingkat_pendidikan": "SLTP",
+              "tanggal_lulus": "1990-05-31",
+              "is_pendidikan_pertama": 1,
+              "nomor_ijazah": "22 OB ob 0861354",
+              "nama_institusi_pendidikan": "SMP NEGERI 2",
+              "gelar_depan": null,
+              "gelar_belakang": null
+            },
+            {
+              "id": "A8ACA9A1F56D3912E040640A040269BB",
+              "id_pendidikan": "A5EB03E215B7F6A0E040640A040252AD",
+              "nama_pendidikan": "SMA A.2/BIOLOGI",
+              "id_tingkat_pendidikan": "15",
+              "nama_tingkat_pendidikan": "SLTA",
+              "tanggal_lulus": "1993-05-21",
+              "is_pendidikan_pertama": 1,
+              "nomor_ijazah": "22 OB og 0400741",
+              "nama_institusi_pendidikan": "SMA NEGERI 1",
+              "gelar_depan": null,
+              "gelar_belakang": null
+            },
+            {
+              "id": "A8ACA9A1D0B43912E040640A040269BB",
+              "id_pendidikan": "A5EB03E20E50F6A0E040640A040252AD",
+              "nama_pendidikan": "S-1 KOMPUTER MANAJEMEN INFORMATIKA",
+              "id_tingkat_pendidikan": "40",
+              "nama_tingkat_pendidikan": "S-1/Sarjana",
+              "tanggal_lulus": "2000-03-06",
+              "is_pendidikan_pertama": 1,
+              "nomor_ijazah": "0052/SK/III/2000",
+              "nama_institusi_pendidikan": "STMIK LIKMI",
+              "gelar_depan": null,
+              "gelar_belakang": "S.Kom"
+            },
+            {
+              "id": "8ae483a86a0735ae016a1f41df367112",
+              "id_pendidikan": "8ae48287358087350135898f1554109a",
+              "nama_pendidikan": "S-2 MANAJEMEN",
+              "id_tingkat_pendidikan": "45",
+              "nama_tingkat_pendidikan": "S-2",
+              "tanggal_lulus": "2018-01-01",
+              "is_pendidikan_pertama": 1,
+              "nomor_ijazah": "005-I/UNIB/FEB/S-2/2018",
+              "nama_institusi_pendidikan": "UNIVERSITAS BENGKULU",
+              "gelar_depan": null,
+              "gelar_belakang": "M.M"
+            }
+          ]

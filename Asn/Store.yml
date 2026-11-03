@@ -1,0 +1,190 @@
+info:
+  name: Store
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{api_url}}/asn"
+  body:
+    type: json
+    data: |-
+      {
+        "asn": {
+          "agama_id": "1",
+          "kedudukan_hukum_id": "01",
+          "nip": "197411132003121003",
+          "nama": "Nopri Walihan",
+          "gelar_depan": "",
+          "gelar_belakang": "S.Pd., MM.",
+          "nomor_hp": "",
+          "jenis_kelamin": "M",
+          "unor_induk_id": "8ae4828859d211720159d49c046246b8",
+          "unor_id": "8ae4828559d737c90159d85571ed36c4"
+        },
+
+        "riwayat_jabatan": {
+          "jenis_jabatan_id": "1",
+          "id_jabatan": "8ae4828559d737c90159d85571ed36c4",
+          "tmt_jabatan": "2026-05-01",
+          "nomor_sk": "D.09 BKD TAHUN 2026",
+          "tanggal_sk": "2026-01-27",
+          "tmt_pelantikan": "2026-01-28",
+          "tmt_mutasi": "2026-01-01",
+          "id_jenis_penugasan": "D",
+          "id_jenis_mutasi": "MJ"
+        },
+
+        "riwayat_golongan": {
+          "id_golongan": "42",
+          "nomor_sk": "SK. 823.4 – L. 245 TAHUN 2020",
+          "tanggal_sk": "2020-03-04",
+          "tmt_golongan": "2020-04-01"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Tambah ASN
+    request:
+      url: "{{api_url}}/asn"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "asn": {
+              "agama_id": "1",
+              "kedudukan_hukum_id": "01",
+              "nip": "197411132003121003",
+              "nama": "Nopri Walihan",
+              "gelar_depan": "",
+              "gelar_belakang": "S.Pd., MM.",
+              "nomor_hp": "",
+              "jenis_kelamin": "M",
+              "unor_induk_id": "8ae4828859d211720159d49c046246b8",
+              "unor_id": "8ae4828559d737c90159d85571ed36c4"
+            },
+
+            "riwayat_jabatan": {
+              "jenis_jabatan_id": "1",
+              "id_jabatan": "8ae4828559d737c90159d85571ed36c4",
+              "tmt_jabatan": "2026-05-01",
+              "nomor_sk": "D.09 BKD TAHUN 2026",
+              "tanggal_sk": "2026-01-27",
+              "tmt_pelantikan": "2026-01-28",
+              "tmt_mutasi": "2026-01-01",
+              "id_jenis_penugasan": "D",
+              "id_jenis_mutasi": "MJ"
+            },
+
+            "riwayat_golongan": {
+              "id_golongan": "42",
+              "nomor_sk": "SK. 823.4 – L. 245 TAHUN 2020",
+              "tanggal_sk": "2020-03-04",
+              "tmt_golongan": "2020-04-01"
+            }
+          }
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 17 Sep 2026 12:06:08 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "DF33CC27C9CC44C0B431AB142C837599",
+            "nip": "197411132003121003",
+            "nomor_dokumen_asn": null,
+            "latihan_struktural": null,
+            "nomor_spmt": null,
+            "tanggal_spmt": null,
+            "pangkat_akhir": "Pembina Tingkat I",
+            "kartu_pegawai": null,
+            "jenjang": null,
+            "is_penyetaraan": null,
+            "nama": "Nopri Walihan, S.Pd., MM.",
+            "gelar_depan": null,
+            "gelar_belakang": "S.Pd., MM.",
+            "nik": null,
+            "alamat": null,
+            "kode_pos": null,
+            "email": null,
+            "nomor_hp": null,
+            "nomor_telp": null,
+            "jenis_kelamin": "M",
+            "tempat_lahir_id": null,
+            "tanggal_lahir": null,
+            "tmt_cpns": null,
+            "nomor_sk_cpns": null,
+            "tanggal_sk_cpns": null,
+            "tmt_pns": null,
+            "nomor_sk_pns": null,
+            "tanggal_sk_pns": null,
+            "nomor_sttpl": null,
+            "tanggal_sttpl": null,
+            "tmt_pensiun": null,
+            "nomor_sk_pensiun": null,
+            "tanggal_sk_pensiun": null,
+            "masa_kerja_tahun": null,
+            "masa_kerja_bulan": null,
+            "gaji_pokok": null,
+            "tanggal_dibuat": "2026-09-17 12:06",
+            "update_terakhir": "2026-09-17 12:06",
+            "opd": {
+              "id": "8ae4828559d737c90159d85571ed36c4",
+              "nama": "Dinas Pemuda dan Olahraga Provinsi Bengkulu",
+              "nama_jabatan": "Kepala Dinas Pemuda dan Olahraga Provinsi Bengkulu",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-07-28 13:37",
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d49c046246b8",
+                "nama": "PEMERINTAH PROVINSI BENGKULU",
+                "nama_jabatan": "GUBERNUR BENGKULU",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-07-28 13:37",
+                "parent_recursive": null
+              }
+            },
+            "unor": {
+              "id": "8ae4828559d737c90159d85571ed36c4",
+              "nama": "Dinas Pemuda dan Olahraga Provinsi Bengkulu",
+              "nama_jabatan": "Kepala Dinas Pemuda dan Olahraga Provinsi Bengkulu",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-07-28 13:37",
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d49c046246b8",
+                "nama": "PEMERINTAH PROVINSI BENGKULU",
+                "nama_jabatan": "GUBERNUR BENGKULU",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-07-28 13:37",
+                "parent_recursive": null
+              }
+            }
+          }

@@ -1,0 +1,125 @@
+info:
+  name: Update
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{asn_id}}"
+  body:
+    type: form-urlencoded
+    data:
+      - name: agama_id
+        value: "1"
+        disabled: true
+      - name: alamat
+        value: JL. KOMP BLK NO D 16 RT. 05 RW. 02 KEL. PANORAMA KEC. SINGARAN PATI KOTA BENGKULUasd
+      - name: email
+        value: sudirmanto0613@gmail.com
+        disabled: true
+      - name: nomor_hp
+        value: ""
+        disabled: true
+      - name: nomor_telep
+        value: ""
+        disabled: true
+      - name: kpkn_id
+        value: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update Data ASN
+    request:
+      url: "{{api_url}}/asn/{{asn_id}}"
+      method: PUT
+      body:
+        type: form-urlencoded
+        data:
+          - name: agama_id
+            value: "1"
+          - name: alamat
+            value: JL. KOMP BLK NO D 16 RT. 05 RW. 02 KEL. PANORAMA KEC. SINGARAN PATI KOTA BENGKULU
+          - name: email
+            value: sudirmanto0613@gmail.com
+          - name: nomor_hp
+            value: ""
+            disabled: true
+          - name: nomor_telepon
+            value: ""
+            disabled: true
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 30 Jun 2026 08:15:44 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "is_success": true,
+            "data": {
+              "id": "084559D1E400E7B5E050640A0202192A",
+              "nip": "196206131989081003",
+              "nomor_dokumen_asn": "1771021306640001",
+              "latihan_struktural": null,
+              "nomor_spmt": null,
+              "tanggal_spmt": null,
+              "pangkat_akhir": "Penata Muda",
+              "kartu_pegawai": null,
+              "jenjang": null,
+              "is_penyetaraan": 0,
+              "nama": "SUDIRMANTO",
+              "gelar_depan": null,
+              "gelar_belakang": null,
+              "nik": "1771021306640001",
+              "alamat": "JL. KOMP BLK NO D 16 RT. 05 RW. 02 KEL. PANORAMA KEC. SINGARAN PATI KOTA BENGKULU",
+              "kode_pos": 38226,
+              "email": "sudirmanto0613@gmail.com",
+              "nomor_hp": null,
+              "nomor_telp": null,
+              "jenis_kelamin": "M",
+              "tempat_lahir_id": null,
+              "tanggal_lahir": "1962-06-13",
+              "tmt_cpns": "1989-08-01",
+              "nomor_sk_cpns": null,
+              "tanggal_sk_cpns": null,
+              "tmt_pns": "1990-09-01",
+              "nomor_sk_pns": null,
+              "tanggal_sk_pns": null,
+              "nomor_sttpl": null,
+              "tanggal_sttpl": null,
+              "tmt_pensiun": null,
+              "nomor_sk_pensiun": null,
+              "tanggal_sk_pensiun": null,
+              "masa_kerja_tahun": 30,
+              "masa_kerja_bulan": 10,
+              "gaji_pokok": "3409800.00000000000000000000000000000000000000000000000000000",
+              "tanggal_dibuat": "2026-06-25 11:47",
+              "update_terakhir": "2026-06-30 08:15"
+            }
+          }

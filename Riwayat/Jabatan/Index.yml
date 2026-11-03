@@ -1,0 +1,211 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/asn/{{nip}}/riwayat-jabatan"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Riwayat Jabatan
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-jabatan"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 03 Aug 2026 10:19:47 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "8ae483a66f8ecae8016fb1a1efc518e6",
+              "jenis_jabatan_id": "4",
+              "id_instansi_kerja": "A5EB03E23C2BF6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Provinsi Bengkulu",
+              "id_satuan_kerja": "A5EB03E241A4F6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Provinsi Bengkulu",
+              "id_unor": "8ae4828659d52a570159d5388b350309",
+              "nama_unor": "Sekretaris Dinas Perumahan, Kawasan Pemukiman dan Pertahanan",
+              "id_unor_induk": "8ae4828659d52a570159d537bbc102d9",
+              "nama_unor_induk": "Dinas Perumahan, Kawasan Permukiman dan Pertanahan Provinsi Bengkulu",
+              "id_eselon": null,
+              "id_jabatan": "8ae482894be32eea014be844d2b8639c",
+              "nama_jabatan": "PENGAWAS PEMANFAATAN TANAH",
+              "tmt_jabatan": "2020-01-02",
+              "nomor_sk": "sk.824-04.01 tahun 2020",
+              "tanggal_sk": "2020-01-02",
+              "tmt_pelantikan": "2020-01-02",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": "",
+              "id_jenis_mutasi": "",
+              "id_sub_jabatan": ""
+            },
+            {
+              "id": "8ae483a56cf690bc016cfb04e7033f42",
+              "jenis_jabatan_id": "4",
+              "id_instansi_kerja": "A5EB03E23C2BF6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Provinsi Bengkulu",
+              "id_satuan_kerja": "A5EB03E241ADF6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Kab. Bengkulu Tengah",
+              "id_unor": "8ae4828659d52a570159d537bbc102d9",
+              "nama_unor": "Dinas Perumahan, Kawasan Permukiman dan Pertanahan Provinsi Bengkulu",
+              "id_unor_induk": "8ae4828859d211720159d49c046246b8",
+              "nama_unor_induk": "PEMERINTAH PROVINSI BENGKULU",
+              "id_eselon": null,
+              "id_jabatan": "8ae482894be32eea014be844d2b8639c",
+              "nama_jabatan": "PENGAWAS PEMANFAATAN TANAH",
+              "tmt_jabatan": "2019-08-05",
+              "nomor_sk": "824-A.859 TAHUN 2019",
+              "tanggal_sk": "2019-08-05",
+              "tmt_pelantikan": null,
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": "",
+              "id_jenis_mutasi": "",
+              "id_sub_jabatan": ""
+            },
+            {
+              "id": "8ae483a66cace127016cb2eb0fe55c39",
+              "jenis_jabatan_id": "4",
+              "id_instansi_kerja": "A5EB03E23B7FF6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Kab. Bengkulu Tengah",
+              "id_satuan_kerja": "A5EB03E241ADF6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Kab. Bengkulu Tengah",
+              "id_unor": "ff808081315d525d01316b26d6cd24b8",
+              "nama_unor": "SEKSI PENGENDALIAN DAN PENGURANGAN SAMPAH",
+              "id_unor_induk": "8ae483c67640f4b8017652753c321709",
+              "nama_unor_induk": "DINAS LINGKUNGAN HIDUP",
+              "id_eselon": null,
+              "id_jabatan": "8ae482894be32eea014be8438c5c634a",
+              "nama_jabatan": "PENGAWAS LAPANGAN ANGKUTAN SAMPAH",
+              "tmt_jabatan": "2019-04-11",
+              "nomor_sk": "800 – 102 TAHUN 2019",
+              "tanggal_sk": "2019-04-11",
+              "tmt_pelantikan": null,
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": "",
+              "id_jenis_mutasi": "",
+              "id_sub_jabatan": ""
+            },
+            {
+              "id": "8ae482885269143c01527933246c3b0c",
+              "jenis_jabatan_id": "4",
+              "id_instansi_kerja": "8ae482894305762301430a5c07e7709c",
+              "nama_instansi_kerja": "Pemerintah Kab. Musi Rawas Utara",
+              "id_satuan_kerja": "8ae482894305762301430a5c0865709d",
+              "nama_satuan_kerja": "Kabupaten Musi Rawas Utara",
+              "id_unor": "8ae4828743d872520143f1bd67d15e08",
+              "nama_unor": "BIDANG GEOLOGI",
+              "id_unor_induk": "8ae48288433590ac01436c5b90c54473",
+              "nama_unor_induk": "DINAS PERTAMBANGAN,ENERGI LINGKUNGAN HIDUP",
+              "id_eselon": null,
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2016-04-01",
+              "nomor_sk": "37/KPTS/III/MRU/2015",
+              "tanggal_sk": "2015-08-18",
+              "tmt_pelantikan": "2015-08-20",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": "",
+              "id_jenis_mutasi": "",
+              "id_sub_jabatan": ""
+            },
+            {
+              "id": "8ae482a55081e9240150852677b7095f",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "8ae482894305762301430a5c07e7709c",
+              "nama_instansi_kerja": "Pemerintah Kab. Musi Rawas Utara",
+              "id_satuan_kerja": "8ae482894305762301430a5c0865709d",
+              "nama_satuan_kerja": "Kabupaten Musi Rawas Utara",
+              "id_unor": "8ae4828743d872520143f1bd67d15e08",
+              "nama_unor": "BIDANG GEOLOGI",
+              "id_unor_induk": "8ae48288433590ac01436c5b90c54473",
+              "nama_unor_induk": "DINAS PERTAMBANGAN,ENERGI LINGKUNGAN HIDUP",
+              "id_eselon": null,
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2015-08-18",
+              "nomor_sk": "37/KPTS/III/MRU/2015",
+              "tanggal_sk": "2015-08-18",
+              "tmt_pelantikan": null,
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": "",
+              "id_jenis_mutasi": "",
+              "id_sub_jabatan": ""
+            },
+            {
+              "id": "8ae482a55081e924015085299c280ed0",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "8ae482894305762301430a5c07e7709c",
+              "nama_instansi_kerja": "Pemerintah Kab. Musi Rawas Utara",
+              "id_satuan_kerja": "8ae482894305762301430a5c0865709d",
+              "nama_satuan_kerja": "Kabupaten Musi Rawas Utara",
+              "id_unor": "8ae4828843d874210143f19b2df900dc",
+              "nama_unor": "BIDANG BINA MARGA",
+              "id_unor_induk": "8ae48288433590ac01436c599c0d4460",
+              "nama_unor_induk": "DINAS PEKERJAAN UMUM DAN PENATAAN RUANG",
+              "id_eselon": null,
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2015-03-31",
+              "nomor_sk": "45/KPTS/III/MRU/2015",
+              "tanggal_sk": "2015-03-31",
+              "tmt_pelantikan": null,
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": "",
+              "id_jenis_mutasi": "",
+              "id_sub_jabatan": ""
+            },
+            {
+              "id": "ff80808134fabec7013531810b533a1b",
+              "jenis_jabatan_id": "1",
+              "id_instansi_kerja": "A5EB03E23C2BF6A0E040640A040252AD",
+              "nama_instansi_kerja": "Pemerintah Provinsi Bengkulu",
+              "id_satuan_kerja": "A5EB03E241A4F6A0E040640A040252AD",
+              "nama_satuan_kerja": "Pemerintah Provinsi Bengkulu",
+              "id_unor": "ff80808132cd33330132dc1af7c00cec",
+              "nama_unor": "SEKSI IRIGASI DAN RAWA",
+              "id_unor_induk": "A8ACA73CE3B33912E040640A040269BB",
+              "nama_unor_induk": "DINAS PEKERJAAN UMUM PROVINSI BENGKULU",
+              "id_eselon": "41",
+              "id_jabatan": null,
+              "nama_jabatan": null,
+              "tmt_jabatan": "2011-06-28",
+              "nomor_sk": "SK.821.4 G-58 Tahun 2011",
+              "tanggal_sk": "2011-06-28",
+              "tmt_pelantikan": "2011-06-28",
+              "tmt_mutasi": null,
+              "id_jenis_penugasan": "",
+              "id_jenis_mutasi": "",
+              "id_sub_jabatan": ""
+            }
+          ]

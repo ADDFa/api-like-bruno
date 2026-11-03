@@ -1,0 +1,115 @@
+info:
+  name: Sync
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-kursus/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Riwayat Kursus
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-kursus/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 04 Aug 2026 08:41:12 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "8ae482a55081e924015084eced642c49",
+              "id_jenis_diklat": null,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": null,
+              "sertifikat_jenis_kursus": "DIKLAT TEKNIS",
+              "institusi_penyelenggara": "LKPP",
+              "jumlah_jam": 30,
+              "nama_kursus": "PENGADAAN  BARANG/JASA PEMERINTAH TINGKAT MENENGAH",
+              "nomor_sertifikat": null,
+              "tanggal_kursus": "2013-05-23",
+              "tanggal_selesai_kursus": null
+            },
+            {
+              "id": "8ae482a55081e924015084efe02d3090",
+              "id_jenis_diklat": null,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": null,
+              "sertifikat_jenis_kursus": "DIKLAT TEKNIS",
+              "institusi_penyelenggara": "DEPARTEMEN PEKERJAAN UMUM",
+              "jumlah_jam": 100,
+              "nama_kursus": "FUNGSIONAL PENGANGKATAN PERTAMA TEKNIK TATA BANGUNAN  DAN PERUMAHAN TINGKAT AHLI",
+              "nomor_sertifikat": "406/DFPPTTB&PTA-BDW III YGY/2009",
+              "tanggal_kursus": "2009-08-15",
+              "tanggal_selesai_kursus": null
+            },
+            {
+              "id": "8ae482a55081e924015084f31dc53565",
+              "id_jenis_diklat": null,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": null,
+              "sertifikat_jenis_kursus": "DIKLAT TEKNIS",
+              "institusi_penyelenggara": "PUSDIKLAT DEPARTEMEN PEKERJAAN UMUM",
+              "jumlah_jam": 40,
+              "nama_kursus": "TATA CARA PENGADAAN JASA KONSTRUKSI",
+              "nomor_sertifikat": "494/JAKON/W-07/99",
+              "tanggal_kursus": "1999-04-27",
+              "tanggal_selesai_kursus": null
+            },
+            {
+              "id": "8ae482a55081e9240150850bf22a5a3b",
+              "id_jenis_diklat": null,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": null,
+              "sertifikat_jenis_kursus": "DIKLAT TEKNIS",
+              "institusi_penyelenggara": "PUSDIKLAT DEPARTEMEN PEKERJAAN UMUM",
+              "jumlah_jam": 120,
+              "nama_kursus": "Perencana bidang drainase",
+              "nomor_sertifikat": null,
+              "tanggal_kursus": "1996-10-11",
+              "tanggal_selesai_kursus": null
+            },
+            {
+              "id": "8ae482a55081e9240150851293fc653a",
+              "id_jenis_diklat": null,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": null,
+              "sertifikat_jenis_kursus": "DIKLAT TEKNIS",
+              "institusi_penyelenggara": "DEPARTEMEN PEKERJAAN UMUM",
+              "jumlah_jam": 40,
+              "nama_kursus": "Orientasi dan pelatihan dasar satker dan ppk provinsi se-indonesia",
+              "nomor_sertifikat": "KP.03.08.  vb/238",
+              "tanggal_kursus": "2010-03-25",
+              "tanggal_selesai_kursus": null
+            }
+          ]

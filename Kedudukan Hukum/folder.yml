@@ -1,0 +1,7 @@
+info:
+  name: Kedudukan Hukum
+  type: folder
+  seq: 16
+
+request:
+  auth: inherit

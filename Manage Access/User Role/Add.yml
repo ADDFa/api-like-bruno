@@ -1,0 +1,76 @@
+info:
+  name: Add
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{api_url}}/user-role/{{user_id}}"
+  body:
+    type: json
+    data: |
+      {
+        "roles": [
+          "019f6514-edd9-70cf-ac8a-dcb278865280"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Tambah User Role
+    request:
+      url: "{{process.env.BASE_URL}}/user-role/{{user_id}}"
+      method: POST
+      body:
+        type: json
+        data: |
+          {
+            "roles": [
+              "019e6296-1bfb-71ac-ba0d-615cf1a73fc9"
+            ]
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 26 May 2026 04:50:57 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "role_id": "019e6296-1bf6-7301-ac1f-18b9ac6de400",
+              "name": "super-admin",
+              "name_title": "Super Admin"
+            },
+            {
+              "role_id": "019e6296-1bfb-71ac-ba0d-615cf1a73fc9",
+              "name": "admin",
+              "name_title": "Admin"
+            }
+          ]

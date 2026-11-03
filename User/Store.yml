@@ -1,0 +1,100 @@
+info:
+  name: Store
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{api_url}}/user"
+  body:
+    type: form-urlencoded
+    data:
+      - name: asn_id
+        value: ""
+        disabled: true
+      - name: nama
+        value: User 1
+      - name: email
+        value: user1@gmail.com
+      - name: username
+        value: user1
+      - name: password
+        value: User1.123
+      - name: password_confirmation
+        value: User1.123
+      - name: role
+        value: 019f64f5-838a-7015-96ab-f132cc137972
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Tambah User
+    request:
+      url: "{{api_url}}/user"
+      method: POST
+      body:
+        type: form-urlencoded
+        data:
+          - name: asn_id
+            value: ""
+            disabled: true
+          - name: nama
+            value: User 1
+          - name: email
+            value: user1@gmail.com
+          - name: username
+            value: user1
+          - name: password
+            value: User1.123
+          - name: password_confirmation
+            value: User1.123
+          - name: role
+            value: 019f64f5-838a-7015-96ab-f132cc137972
+    response:
+      status: 201
+      statusText: Created
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 15 Jul 2026 09:19:28 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "019f6512-f189-72ed-a3ae-3477fbf6deb9",
+            "name": "User 1",
+            "username": "user1",
+            "email": "user1@gmail.com",
+            "status": "active",
+            "opd": null,
+            "unor": null,
+            "roles": [
+              {
+                "role_id": "019f64f5-838a-7015-96ab-f132cc137972",
+                "name": "admin",
+                "name_title": "Admin"
+              }
+            ]
+          }

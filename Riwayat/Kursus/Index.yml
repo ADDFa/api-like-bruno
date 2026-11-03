@@ -1,0 +1,180 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/asn/{{nip}}/riwayat-kursus"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Riwayat Kursus
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-kursus"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 03 Aug 2026 10:28:47 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "b8e907c1-86fd-44fa-b8f5-cfa9c428a294",
+              "id_jenis_diklat": null,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": "",
+              "sertifikat_jenis_kursus": "DIKLAT TEKNIS",
+              "institusi_penyelenggara": "Badan Diklat Provinsi Bengkulu",
+              "jumlah_jam": 135,
+              "nama_kursus": "Diklat Prajabatan",
+              "nomor_sertifikat": "34.909/LAN/1018/Diklat Prajabatan Gol.III/Badan Diklat Provinsi/2005",
+              "tanggal_kursus": "2005-12-08",
+              "tanggal_selesai_kursus": "2005-12-23"
+            },
+            {
+              "id": "8ae483c684123a31018418b8cb217724",
+              "id_jenis_diklat": 3,
+              "id_jenis_kursus": "315A64AF2ACBE9EDE050640A29020F6C",
+              "nama_jenis_kursus": "",
+              "sertifikat_jenis_kursus": "DIKLAT TEKNIS",
+              "institusi_penyelenggara": "Kementerian Komunikasi dan Informatika RI ",
+              "jumlah_jam": 50,
+              "nama_kursus": "Video Content Creator Batch 2",
+              "nomor_sertifikat": "TA/2022/3090/1463090100-1502",
+              "tanggal_kursus": "2022-08-08",
+              "tanggal_selesai_kursus": "2022-09-10"
+            },
+            {
+              "id": "6e5ebea2-3fe7-4500-85a7-0e9adfc1e4c9",
+              "id_jenis_diklat": 3,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": null,
+              "sertifikat_jenis_kursus": "DIKLAT TEKNIS",
+              "institusi_penyelenggara": "BPSDM Kemendagri RI",
+              "jumlah_jam": 2,
+              "nama_kursus": "Program Kemendagri Merdeka Belajar dengan Tema : Mastering Your Life, Mastering Your Jobs",
+              "nomor_sertifikat": "-",
+              "tanggal_kursus": "2023-09-06",
+              "tanggal_selesai_kursus": "2023-09-06"
+            },
+            {
+              "id": "e628c9f0-405b-4eb8-bbf3-9991d493884d",
+              "id_jenis_diklat": 9,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": "",
+              "sertifikat_jenis_kursus": "SEMINAR/WORKSHOP/SEJENISNYA",
+              "institusi_penyelenggara": "BPSDM Jawa Timur",
+              "jumlah_jam": 3,
+              "nama_kursus": "Webinar ASN Belajar Seri 37 \"Undang-Undang ASN 2023-Apa Yang Baru?\"",
+              "nomor_sertifikat": "No. SERT - 8260 / WEBINAR / ASNB - 37 / 205.3 / 2023",
+              "tanggal_kursus": "2023-10-12",
+              "tanggal_selesai_kursus": "2023-10-12"
+            },
+            {
+              "id": "9d9ddab9-b1df-4d12-9ca3-0b295159ad38",
+              "id_jenis_diklat": 9,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": "",
+              "sertifikat_jenis_kursus": "SEMINAR/WORKSHOP/SEJENISNYA",
+              "institusi_penyelenggara": "BPSDM JAWA TIMUR",
+              "jumlah_jam": 3,
+              "nama_kursus": "WEBINAR ASN BELAJAR SERI 40 ETIKA DIGITAL UNTUK ASN",
+              "nomor_sertifikat": "5007 / WEBINAR / ASNB - 40 / 205.4 / 2023",
+              "tanggal_kursus": "2023-11-02",
+              "tanggal_selesai_kursus": "2023-11-02"
+            },
+            {
+              "id": "3af04ace-7470-4689-895a-430688e9b541",
+              "id_jenis_diklat": 8,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": null,
+              "sertifikat_jenis_kursus": "DIKLAT TEKNIS",
+              "institusi_penyelenggara": "Arsip Nasional Republik Indonesia",
+              "jumlah_jam": 10,
+              "nama_kursus": "Bimbingan Teknis Pengelolaan Arsip Statis Pemerintah Daerah",
+              "nomor_sertifikat": "BA.02.04/56/2024",
+              "tanggal_kursus": "2024-01-15",
+              "tanggal_selesai_kursus": "2024-01-16"
+            },
+            {
+              "id": "0be6f09a-4044-41a6-8ffd-1c621f571f91",
+              "id_jenis_diklat": 9,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": null,
+              "sertifikat_jenis_kursus": "SEMINAR/WORKSHOP/SEJENISNYA",
+              "institusi_penyelenggara": "BPSDM Daerah Provinsi Sulawesi Barat",
+              "jumlah_jam": 3,
+              "nama_kursus": "Mendorong Pertumbuhan Ekonomi Melalui Percepatan Realisasi Pendapatan dan Belanja Daerah",
+              "nomor_sertifikat": "2702.01.04/1737/2024",
+              "tanggal_kursus": "2024-01-17",
+              "tanggal_selesai_kursus": "2024-01-17"
+            },
+            {
+              "id": "8bfbacaa-b6bd-47ac-9264-63d5e31327f5",
+              "id_jenis_diklat": 9,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": "",
+              "sertifikat_jenis_kursus": "SEMINAR/WORKSHOP/SEJENISNYA",
+              "institusi_penyelenggara": "BPSDM Provinsi Jawa Timur",
+              "jumlah_jam": 3,
+              "nama_kursus": "Manajemen Perubahan Bagaimana Penerapannya di Sektor Publik",
+              "nomor_sertifikat": "SERT-9726/WEBINAR/ASNB-02/205.5/2024",
+              "tanggal_kursus": "2024-01-18",
+              "tanggal_selesai_kursus": "2024-01-18"
+            },
+            {
+              "id": "64d35e28-6c83-4f8f-b0c2-45015e5d2d8b",
+              "id_jenis_diklat": 9,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": null,
+              "sertifikat_jenis_kursus": "SEMINAR/WORKSHOP/SEJENISNYA",
+              "institusi_penyelenggara": "BPSDM Provinsi Kalimantan Timur",
+              "jumlah_jam": 2,
+              "nama_kursus": "Menuju Birokrasi yang Professional di Era digital melalui Peningkatan Indeks Profesionalisme ASN",
+              "nomor_sertifikat": "000.7.5.6 / 02096 - 2024 / BPSDM-IV",
+              "tanggal_kursus": "2024-01-31",
+              "tanggal_selesai_kursus": "2024-01-30"
+            },
+            {
+              "id": "d808191d-788a-413c-9771-9c84dc95bcd2",
+              "id_jenis_diklat": 9,
+              "id_jenis_kursus": null,
+              "nama_jenis_kursus": "",
+              "sertifikat_jenis_kursus": "SEMINAR/WORKSHOP/SEJENISNYA",
+              "institusi_penyelenggara": "BPSDM Provinsi Sulawesi Barat",
+              "jumlah_jam": 3,
+              "nama_kursus": "Optimalisasi Penggunaan e-katalog dalam pengadaan barang dan jasa",
+              "nomor_sertifikat": "3702.01.04/3527/2024",
+              "tanggal_kursus": "2024-01-31",
+              "tanggal_selesai_kursus": "2024-01-31"
+            }
+          ]

@@ -1,0 +1,108 @@
+info:
+  name: Index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{api_url}}/role?with_super_admin=1"
+  params:
+    - name: with_super_admin
+      value: "1"
+      type: query
+    - name: per_page
+      value: "2"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Data Role
+    request:
+      url: "{{process.env.BASE_URL}}/role"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: host
+          value: 127.0.0.1:8000
+        - name: connection
+          value: close
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 13 Apr 2026 15:46:48 GMT
+        - name: content-type
+          value: application/json
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "role_id": "019d863a-15de-711b-963d-0a62b38a98c4",
+              "name": "admin",
+              "name_title": "Admin"
+            },
+            {
+              "role_id": "019d863a-1623-7190-8d54-1d71fe8c15ca",
+              "name": "employee",
+              "name_title": "Employee"
+            }
+          ]
+  - name: Data Role - Dengan Super Admin
+    request:
+      url: "{{process.env.BASE_URL}}/role?with_super_admin=1"
+      method: GET
+      params:
+        - name: with_super_admin
+          value: "1"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: host
+          value: 127.0.0.1:8000
+        - name: connection
+          value: close
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 13 Apr 2026 15:47:38 GMT
+        - name: content-type
+          value: application/json
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "role_id": "019d863a-159a-7378-acf8-34aab12e48b5",
+              "name": "super-admin",
+              "name_title": "Super Admin"
+            },
+            {
+              "role_id": "019d863a-15de-711b-963d-0a62b38a98c4",
+              "name": "admin",
+              "name_title": "Admin"
+            },
+            {
+              "role_id": "019d863a-1623-7190-8d54-1d71fe8c15ca",
+              "name": "employee",
+              "name_title": "Employee"
+            }
+          ]

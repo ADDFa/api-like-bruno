@@ -1,0 +1,15 @@
+info:
+  name: Remove Leader
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{api_url}}/unor/8ae483a767725bf50167865422e225c8/remove-leader"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

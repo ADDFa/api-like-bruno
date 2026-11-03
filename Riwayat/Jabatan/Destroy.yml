@@ -1,0 +1,15 @@
+info:
+  name: Destroy
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{api_url}}/asn/{{nip}}/riwayat-jabatan/{{riwayat_jabatan_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

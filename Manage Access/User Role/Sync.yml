@@ -1,0 +1,78 @@
+info:
+  name: Sync
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{api_url}}/user-role/{{user_id}}/sync"
+  body:
+    type: json
+    data: |-
+      {
+        "roles": [
+          "019ef7cb-f262-713c-9b2f-3b1613b0e8b8",
+          "019f64f5-838a-7015-96ab-f132cc137972"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron User Role
+    request:
+      url: "{{api_url}}/user-role/{{user_id}}/sync"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "roles": [
+              "019ef7cb-f262-713c-9b2f-3b1613b0e8b8",
+              "019f64f5-838a-7015-96ab-f132cc137972"
+            ]
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Fri, 24 Jul 2026 12:23:40 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "55"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "role_id": "019ef7cb-f262-713c-9b2f-3b1613b0e8b8",
+              "name": "super-admin",
+              "name_title": "Super Admin"
+            },
+            {
+              "role_id": "019f64f5-838a-7015-96ab-f132cc137972",
+              "name": "admin",
+              "name_title": "Admin"
+            }
+          ]

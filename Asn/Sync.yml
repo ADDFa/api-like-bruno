@@ -1,0 +1,125 @@
+info:
+  name: Sync
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{asn_id}}/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron ASN
+    request:
+      url: "{{api_url}}/asn/{{asn_id}}/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Wed, 05 Aug 2026 10:50:17 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "A8ACA763FB443912E040640A040269BB",
+            "nip": "198407292011011006",
+            "nomor_dokumen_asn": "1771022907840004",
+            "latihan_struktural": null,
+            "nomor_spmt": "800/034/II/2011",
+            "tanggal_spmt": null,
+            "pangkat_akhir": "Penata Tingkat I",
+            "kartu_pegawai": "A201200112468",
+            "jenjang": "MU",
+            "is_penyetaraan": 0,
+            "nama": "AKHMAD YULIANSYAH, S.Kom",
+            "gelar_depan": null,
+            "gelar_belakang": "S.Kom",
+            "nik": "1771022907840004",
+            "alamat": "JL ADZAKI 1 PERUMAHAN BUKIT ADZAKI NO 12 RT 025 RW 002 KELURAHAN SUMUR DEWA KOTA BENGKULU",
+            "kode_pos": null,
+            "email": "a111ek@yahoo.com",
+            "nomor_hp": "085228072621",
+            "nomor_telp": "+6285228072621",
+            "jenis_kelamin": "M",
+            "tempat_lahir_id": "A5EB03E21F19F6A0E040640A040252AD",
+            "tanggal_lahir": "1984-07-29",
+            "tmt_cpns": "2011-01-01",
+            "nomor_sk_cpns": "K.813.3 - 248",
+            "tanggal_sk_cpns": "2011-02-05",
+            "tmt_pns": "2012-11-01",
+            "nomor_sk_pns": "821.13 - 0744",
+            "tanggal_sk_pns": "2012-10-18",
+            "nomor_sttpl": "31.296/LAN/0239/Diklat Prajab Gol.III/Badan Diklat Prov/2012",
+            "tanggal_sttpl": "2012-07-18",
+            "tmt_pensiun": null,
+            "nomor_sk_pensiun": null,
+            "tanggal_sk_pensiun": null,
+            "masa_kerja_tahun": 12,
+            "masa_kerja_bulan": 3,
+            "gaji_pokok": "3172300.00000000000000000000000000000000000000000000000000000",
+            "tanggal_dibuat": "2026-06-25 11:47",
+            "update_terakhir": "2026-08-05 10:50",
+            "opd": {
+              "id": "8ae4828859d211720159d4af349e5bc5",
+              "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+              "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-07-28 13:37",
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d49c046246b8",
+                "nama": "PEMERINTAH PROVINSI BENGKULU",
+                "nama_jabatan": "GUBERNUR BENGKULU",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-07-28 13:37",
+                "parent_recursive": null
+              }
+            },
+            "unor": {
+              "id": "8ae4828859d211720159d4d94568011c",
+              "nama": "Bidang Pengadaan, Pemberhentian dan Informasi Kepegawaian",
+              "nama_jabatan": "Kepala Bidang Pengadaan, Pemberhentian dan Informasi Kepegawaian",
+              "tanggal_dibuat": "2026-06-24 16:01",
+              "update_terakhir": "2026-07-28 13:37",
+              "parent_recursive": {
+                "id": "8ae4828859d211720159d4af349e5bc5",
+                "nama": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "nama_jabatan": "Kepala Badan Kepegawaian Daerah Provinsi Bengkulu",
+                "tanggal_dibuat": "2026-06-24 16:01",
+                "update_terakhir": "2026-07-28 13:37",
+                "parent_recursive": {
+                  "id": "8ae4828859d211720159d49c046246b8",
+                  "nama": "PEMERINTAH PROVINSI BENGKULU",
+                  "nama_jabatan": "GUBERNUR BENGKULU",
+                  "tanggal_dibuat": "2026-06-24 16:01",
+                  "update_terakhir": "2026-07-28 13:37",
+                  "parent_recursive": null
+                }
+              }
+            }
+          }

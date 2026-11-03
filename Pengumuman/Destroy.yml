@@ -1,0 +1,57 @@
+info:
+  name: Destroy
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{api_url}}/pengumuman/{{pengumuman_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Hapus Pengumuman
+    request:
+      url: "{{api_url}}/pengumuman/{{pengumuman_id}}"
+      method: DELETE
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Thu, 09 Jul 2026 07:42:25 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "is_success": true,
+            "data": {
+              "id": "019f45d3-b35e-73af-bb9d-177ecf53b918",
+              "judul": "Perubahan SKP",
+              "konten": "Batas akhir pengisian SKP periode ini adalah tanggal 31 Mei.",
+              "tanggal_efektif": "2026-07-08"
+            }
+          }

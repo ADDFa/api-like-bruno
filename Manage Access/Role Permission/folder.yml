@@ -1,0 +1,46 @@
+info:
+  name: Role Permission
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    # API Documentation - Role Permission Management
+
+    Modul ini digunakan untuk mengelola pemetaan hak akses (*permissions*) terhadap *role* tertentu.
+
+    **Base URL:** `/v1/api/role-permission`
+
+    ---
+
+    ## 📋 1. List Role Permissions
+    Mengambil daftar izin yang dimiliki oleh sebuah role, dikelompokkan berdasarkan kategori modul.
+
+    - **URL:** `/v1/api/role-permission/{role_id}`
+    - **Method:** `GET`
+    - **Auth Required:** Yes (Bearer Token)
+
+    ### 📤 Response Structure
+    Data dikembalikan dalam bentuk array objek yang sudah dikelompokkan (*grouped*). Sistem secara otomatis memparsing nama permission (misal: `create-user` menjadi grup `user`).
+
+    **Contoh Response:**
+    ```json
+    [
+        {
+            "group": "user",
+            "permissions": [
+                { "id": 1, "name": "view-user" },
+                { "id": 2, "name": "create-user" }
+            ]
+        },
+        {
+            "group": "user position history",
+            "permissions": [
+                { "id": 15, "name": "user-position-history" }
+            ]
+        }
+    ]
+  type: text/markdown

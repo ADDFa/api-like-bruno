@@ -1,0 +1,23 @@
+info:
+  name: Store From ASN
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{api_url}}/user/store-from-asn"
+  body:
+    type: form-urlencoded
+    data:
+      - name: nip
+        value: "196012012006041023"
+      - name: nip
+        value: "199010202015012001"
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

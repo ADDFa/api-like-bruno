@@ -1,0 +1,7 @@
+info:
+  name: SKP 2022
+  type: folder
+  seq: 13
+
+request:
+  auth: inherit

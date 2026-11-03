@@ -1,0 +1,102 @@
+info:
+  name: Sync
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-pendidikan/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Riwayat Pendidikan
+    request:
+      url: "{{api_url}}/asn/{{nip}}/riwayat-pendidikan/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 04 Aug 2026 09:34:41 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "57"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "8ae4820650678dbe0150702c1e226627",
+              "id_pendidikan": "A5EB03E21ADFF6A0E040640A040252AD",
+              "nama_pendidikan": "SMA IPA",
+              "id_tingkat_pendidikan": "15",
+              "nama_tingkat_pendidikan": "SLTA",
+              "tanggal_lulus": "2003-06-14",
+              "is_pendidikan_pertama": 0,
+              "nomor_ijazah": "DN.26Mu0380609",
+              "nama_institusi_pendidikan": "SMA NEGERI 02 KOTA BENGKULU",
+              "gelar_depan": null,
+              "gelar_belakang": null
+            },
+            {
+              "id": "8ae4820650678dbe0150702f68896ae4",
+              "id_pendidikan": "8ae4829b3b1bac32013b21e03bda450a",
+              "nama_pendidikan": "SLTP",
+              "id_tingkat_pendidikan": "10",
+              "nama_tingkat_pendidikan": "SLTP",
+              "tanggal_lulus": "2000-06-12",
+              "is_pendidikan_pertama": 0,
+              "nomor_ijazah": "22DI2341257",
+              "nama_institusi_pendidikan": "SMP NEGERI 02 KOTA BENGKULU",
+              "gelar_depan": null,
+              "gelar_belakang": null
+            },
+            {
+              "id": "8ae4820650678dbe01507031946c6d43",
+              "id_pendidikan": "A5EB03E20EB8F6A0E040640A040252AD",
+              "nama_pendidikan": "SEKOLAH DASAR",
+              "id_tingkat_pendidikan": "05",
+              "nama_tingkat_pendidikan": "Sekolah Dasar",
+              "tanggal_lulus": "1997-06-07",
+              "is_pendidikan_pertama": 0,
+              "nomor_ijazah": "22OAoa0002924",
+              "nama_institusi_pendidikan": "SD NEGERI 61 KOTA BENGKULU",
+              "gelar_depan": null,
+              "gelar_belakang": null
+            },
+            {
+              "id": "A8ACA96D7BDB3912E040640A040269BB",
+              "id_pendidikan": "8ae4829d4cb7fd84014cbaec3b6e2bb6",
+              "nama_pendidikan": "S-1 SARJANA KOMPUTER",
+              "id_tingkat_pendidikan": "40",
+              "nama_tingkat_pendidikan": "S-1/Sarjana",
+              "tanggal_lulus": "2009-08-19",
+              "is_pendidikan_pertama": 1,
+              "nomor_ijazah": "7143/PA/2009",
+              "nama_institusi_pendidikan": "UNIVERSITAS GADJAH MADA",
+              "gelar_depan": null,
+              "gelar_belakang": "S.Kom"
+            }
+          ]

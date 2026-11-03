@@ -1,0 +1,59 @@
+info:
+  name: Update
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{api_url}}/role/{{role_id}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "pejabat-penilai"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update Role
+    request:
+      url: "{{process.env.BASE_URL}}/role/{{role_id}}"
+      method: PUT
+      body:
+        type: json
+        data: |-
+          {
+            "name": "hrd"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: host
+          value: 127.0.0.1:8000
+        - name: connection
+          value: close
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 13 Apr 2026 16:12:01 GMT
+        - name: content-type
+          value: application/json
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "role_id": "019d878f-f2f8-73c8-81e2-33c3c6a61ab4",
+            "name": "hrd",
+            "name_title": "Hrd"
+          }

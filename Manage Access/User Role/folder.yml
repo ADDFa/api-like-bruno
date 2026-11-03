@@ -1,0 +1,51 @@
+info:
+  name: User Role
+  type: folder
+  seq: 4
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    #### Role Super Admin
+    - Role **super-admin** tidak akan bisa Ditambahkan ataupun Dihapus
+    - Hal ini tidak akan menyebabkan error apapun
+    - Meskipun ID dikirimkan untuk dihapus/ditambahkan
+
+    # 📘 User Role Management API
+
+    Base Endpoint: /v1/api/users/{user}/roles
+
+    ---
+
+    ## 🔹 1. Get List Roles of User
+    Mengambil daftar role yang dimiliki oleh user tertentu.
+
+    ### Endpoint
+
+    ```sh
+    GET /v1/api/users/{user}/roles
+    ```
+
+    ### Path Parameter
+    | Parameter | Tipe    | Deskripsi |
+    |----------|--------|----------|
+    | user     | integer | ID user |
+
+    ### Response (200 OK)
+    ```json
+    [
+      {
+        "id": 1,
+        "name": "Admin"
+      },
+      {
+        "id": 2,
+        "name": "User"
+      }
+    ]
+    ```
+
+    asd
+  type: text/markdown

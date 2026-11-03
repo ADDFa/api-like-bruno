@@ -1,0 +1,38 @@
+info:
+  name: Update
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/riwayat-jabatan/{{riwayat_jabatan_id}}"
+  body:
+    type: form-urlencoded
+    data:
+      - name: unor_id
+        value: 8ae483a7653c1ec201655ba3e31a5870
+      - name: jenis_jabatan_id
+        value: "4"
+      - name: jabatan_id
+        value: 03188A44940745ACE050640A0302603E
+      - name: jenis_penugasan
+        value: D
+      - name: nomor_sk
+        value: xxx
+      - name: sub_jabatan_id
+        value: ""
+      - name: tanggal_sk
+        value: 2024-01-01
+      - name: tmt_jabatan
+        value: 2019-04-01
+      - name: tmt_mutasi
+        value: 2024-04-01
+      - name: tmt_pelantikan
+        value: 2024-04-01
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

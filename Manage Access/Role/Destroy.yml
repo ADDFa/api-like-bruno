@@ -1,0 +1,47 @@
+info:
+  name: Destroy
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{api_url}}/role/{{role_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Hapus Role
+    request:
+      url: "{{process.env.BASE_URL}}/role/{{role_id}}"
+      method: DELETE
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: host
+          value: 127.0.0.1:8000
+        - name: connection
+          value: close
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 13 Apr 2026 16:11:29 GMT
+        - name: content-type
+          value: application/json
+        - name: access-control-allow-origin
+          value: "*"
+      body:
+        type: json
+        data: |-
+          {
+            "role_id": "019d8791-558b-70d3-b1aa-cd1e1f6ed2d7",
+            "name": "hrd",
+            "name_title": "Hrd"
+          }

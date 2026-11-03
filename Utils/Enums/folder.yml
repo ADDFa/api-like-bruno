@@ -1,0 +1,10 @@
+info:
+  name: Enums
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+  variables:
+    - name: prefix
+      value: utils/enum

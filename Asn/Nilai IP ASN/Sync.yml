@@ -1,0 +1,57 @@
+info:
+  name: Sync
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: "{{api_url}}/asn/{{nip}}/nilai-ip-asn/sync"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Sinkron Nilai IP ASN
+    request:
+      url: "{{api_url}}/asn/{{nip}}/nilai-ip-asn/sync"
+      method: PUT
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Tue, 04 Aug 2026 09:25:33 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "58"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": 2649746,
+            "tahun": "2025",
+            "kualifikasi": "25.00",
+            "kompetensi": "20.80",
+            "kinerja": "25.00",
+            "disiplin": "5.00",
+            "sub_total": "75.80"
+          }

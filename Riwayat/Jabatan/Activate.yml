@@ -1,0 +1,72 @@
+info:
+  name: Activate
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{api_url}}/riwayat-jabatan/{{riwayat_jabatan_id}}/activate"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Activate Riwayat Jabatan
+    request:
+      url: "{{api_url}}/riwayat-jabatan/{{riwayat_jabatan_id}}/activate"
+      method: PATCH
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: server
+          value: nginx/1.27.3
+        - name: content-type
+          value: application/json
+        - name: transfer-encoding
+          value: chunked
+        - name: connection
+          value: keep-alive
+        - name: x-powered-by
+          value: PHP/8.3.16
+        - name: cache-control
+          value: no-cache, private
+        - name: date
+          value: Mon, 21 Sep 2026 09:20:08 GMT
+        - name: x-ratelimit-limit
+          value: "60"
+        - name: x-ratelimit-remaining
+          value: "59"
+        - name: vary
+          value: Origin
+      body:
+        type: json
+        data: |-
+          {
+            "id": "a061dfc6-4ba5-493a-8d85-021b7e2e3644",
+            "jenis_jabatan_id": "2",
+            "id_instansi_kerja": "A5EB03E23C2BF6A0E040640A040252AD",
+            "nama_instansi_kerja": "Pemerintah Provinsi Bengkulu",
+            "id_satuan_kerja": "A5EB03E241A4F6A0E040640A040252AD",
+            "nama_satuan_kerja": "Pemerintah Provinsi Bengkulu",
+            "id_unor": "8ae4828859d211720159d4d94568011c",
+            "nama_unor": "Bidang Pengadaan, Pemberhentian dan Informasi Kepegawaian",
+            "id_unor_induk": "8ae4828859d211720159d4af349e5bc5",
+            "nama_unor_induk": "Badan Kepegawaian Daerah Provinsi Bengkulu",
+            "id_eselon": null,
+            "id_jabatan": "B0AADCFD91072D55E050640A290328BE",
+            "nama_jabatan": "Analis Sumber Daya Manusia Aparatur Ahli Muda",
+            "tmt_jabatan": "2026-02-02",
+            "nomor_sk": "SK.821.3 A.78 BKD TAHUN 2026",
+            "tanggal_sk": "2026-02-26",
+            "tmt_pelantikan": "2026-03-09",
+            "tmt_mutasi": "0001-01-01",
+            "id_jenis_penugasan": null,
+            "id_jenis_mutasi": "MJ",
+            "id_sub_jabatan": null,
+            "is_current": true
+          }
