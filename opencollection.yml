@@ -51,7 +51,7 @@ request:
     - name: unor_pempov
       value: 8ae4828859d211720159d49c046246b8
     - name: riwayat_jabatan_id
-      value: 679c2e05-d45a-11f1-bbe6-1ab69573c028
+      value: 8ae483a66fc5c9a2016fd0aee4e704ed
     - name: riwayat_golongan_id
       value: 8ae483a5689eea8d0168a2025d004a8b
     - name: riwayat_pendidikan_id

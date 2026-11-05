@@ -19,3 +19,4 @@ docs:
     Update dan Destroy saat ini hanya mengubah data LIKE. Isi `riwayat_skp_2022_id` sebelum memakai keduanya.
     Teks hasil kinerja, kuadran kinerja, dan perilaku kinerja disimpan di LIKE; skema create SIASN hanya menerima nilai angka.
     Pada uji NIP 198907162019022004 untuk tahun 2023, SIASN menjawab HTTP 404 `Pns tidak ditemukan`.
+  type: text/markdown
