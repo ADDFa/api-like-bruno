@@ -5,3 +5,17 @@ info:
 
 request:
   auth: inherit
+  variables:
+    - name: skp_2022_nip
+      value: "198907162019022004"
+    - name: skp_2022_penilai_asn_id
+      value: F79FB959E52F15CFE040640A1502405A
+    - name: riwayat_skp_2022_id
+      value: ""
+
+docs:
+  content: |-
+    Store mengirim SKP 2022 ke SIASN melalui `/skp22/save`, lalu menyimpannya di LIKE jika SIASN menerima.
+    Update dan Destroy saat ini hanya mengubah data LIKE. Isi `riwayat_skp_2022_id` sebelum memakai keduanya.
+    Teks hasil kinerja, kuadran kinerja, dan perilaku kinerja disimpan di LIKE; skema create SIASN hanya menerima nilai angka.
+    Pada uji NIP 198907162019022004 untuk tahun 2023, SIASN menjawab HTTP 404 `Pns tidak ditemukan`.

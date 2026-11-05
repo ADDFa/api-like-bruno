@@ -1,0 +1,15 @@
+info:
+  name: Destroy
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{api_url}}/asn/{{skp_2022_nip}}/riwayat-skp-2022/{{riwayat_skp_2022_id}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,11 +1,11 @@
 info:
   name: Sync
   type: http
-  seq: 2
+  seq: 3
 
 http:
   method: PUT
-  url: "{{api_url}}/asn/{{nip}}/riwayat-skp-2022/sync"
+  url: "{{api_url}}/asn/{{skp_2022_nip}}/riwayat-skp-2022/sync"
   auth: inherit
 
 settings:
@@ -15,9 +15,9 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Sinkron Riwayat SKP 2022
+  - name: Contoh respons ASN lain (arsip)
     request:
-      url: "{{api_url}}/asn/{{nip}}/riwayat-skp-2022/sync"
+      url: "{{api_url}}/asn/{{skp_2022_nip}}/riwayat-skp-2022/sync"
       method: PUT
     response:
       status: 200

@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{api_url}}/asn/{{nip}}/riwayat-skp-2022"
+  url: "{{api_url}}/asn/{{skp_2022_nip}}/riwayat-skp-2022"
   auth: inherit
 
 settings:
@@ -15,9 +15,9 @@ settings:
   maxRedirects: 5
 
 examples:
-  - name: Riwayat SKP 2022
+  - name: Contoh respons ASN lain (arsip)
     request:
-      url: "{{api_url}}/asn/{{nip}}/riwayat-skp-2022"
+      url: "{{api_url}}/asn/{{skp_2022_nip}}/riwayat-skp-2022"
       method: GET
     response:
       status: 200

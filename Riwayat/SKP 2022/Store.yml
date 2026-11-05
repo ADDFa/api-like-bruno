@@ -1,0 +1,28 @@
+info:
+  name: Store
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{api_url}}/asn/{{skp_2022_nip}}/riwayat-skp-2022"
+  body:
+    type: json
+    data: |-
+      {
+        "tahun": 2023,
+        "nilai_hasil_kinerja": 2,
+        "kuadran_hasil_kinerja": 2,
+        "nilai_perilaku_kinerja": 2,
+        "hasil_kinerja": "SESUAI EKSPEKTASI",
+        "kuadran_kinerja": "BAIK",
+        "perilaku_kinerja": "SESUAI EKSPEKTASI",
+        "penilai_asn_id": "{{skp_2022_penilai_asn_id}}"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
