@@ -1,0 +1,83 @@
+info:
+  name: Users With Login Sessions
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{api_url}}/device-connected?view=users&page=1&per_page=10"
+  params:
+    - name: view
+      value: users
+      type: query
+    - name: page
+      value: "1"
+      type: query
+    - name: per_page
+      value: "10"
+      type: query
+    - name: search
+      value: contoh
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |-
+    Khusus super-admin. Satu baris mewakili satu pengguna dengan sesi aktif. Daftar diurutkan dari `latest_session.created_at` terbaru; pagination menghitung pengguna, bukan jumlah sesi.
+    `session_count` adalah jumlah sesi aktif pengguna. `latest_session` memuat ringkasan perangkat/IP dan waktu sesi terakhir. Untuk semua sesi pengguna, gunakan "User Login Sessions".
+    `search` opsional untuk mencari nama, username, atau email (maksimal 100 karakter). Pengguna biasa mendapat HTTP 403.
+    Respons memakai pagination Laravel; contoh di bawah menampilkan field utama. Nilai ID dan waktu hanya ilustrasi.
+
+examples:
+  - name: Users With Login Sessions
+    request:
+      url: "{{api_url}}/device-connected?view=users&page=1&per_page=10"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "current_page": 1,
+            "data": [
+              {
+                "user": {
+                  "id": "11111111-1111-4111-8111-111111111111",
+                  "name": "Contoh Pengguna",
+                  "username": "contoh",
+                  "email": "contoh@example.test"
+                },
+                "session_count": 2,
+                "latest_session": {
+                  "id": "01J00000000000000000000000",
+                  "user_id": "11111111-1111-4111-8111-111111111111",
+                  "user": {
+                    "id": "11111111-1111-4111-8111-111111111111",
+                    "name": "Contoh Pengguna",
+                    "username": "contoh",
+                    "email": "contoh@example.test"
+                  },
+                  "device": "Chrome",
+                  "ip_address": "192.0.2.10",
+                  "created_at": "2026-11-06T08:00:00.000000Z",
+                  "updated_at": "2026-11-06T08:00:00.000000Z",
+                  "expired_at": "2026-11-20T08:00:00.000000Z",
+                  "is_current": false
+                }
+              }
+            ],
+            "from": 1,
+            "last_page": 1,
+            "per_page": 10,
+            "to": 1,
+            "total": 1
+          }

@@ -1,5 +1,5 @@
 info:
-  name: Sign Out All Device
+  name: Sign Out All My Sessions
   type: http
   seq: 4
 
@@ -14,39 +14,26 @@ settings:
   followRedirects: true
   maxRedirects: 5
 
+docs:
+  content: |-
+    Mencabut seluruh sesi milik pengguna yang sedang login. Tidak memerlukan body.
+    Respons `data.revoked_count` menunjukkan jumlah baris `user_tokens` yang dihapus. Cookie `refresh_token` milik perangkat ini dihapus.
+    Bearer token yang sudah terbit pada perangkat lain masih dapat dipakai sampai masa berlakunya habis.
+
 examples:
-  - name: Sign Out All Device
+  - name: Sign Out All My Sessions
     request:
-      url: "{{process.env.BASE_URL}}/sign-out-all-device"
+      url: "{{api_url}}/sign-out-all-device"
       method: POST
     response:
       status: 200
       statusText: OK
-      headers:
-        - name: server
-          value: nginx/1.27.3
-        - name: content-type
-          value: application/json
-        - name: transfer-encoding
-          value: chunked
-        - name: connection
-          value: keep-alive
-        - name: x-powered-by
-          value: PHP/8.3.16
-        - name: cache-control
-          value: no-cache, private
-        - name: date
-          value: Tue, 26 May 2026 03:05:05 GMT
-        - name: x-ratelimit-limit
-          value: "60"
-        - name: x-ratelimit-remaining
-          value: "59"
-        - name: access-control-allow-origin
-          value: "*"
       body:
         type: json
         data: |-
           {
             "is_success": true,
-            "data": null
+            "data": {
+              "revoked_count": 2
+            }
           }
