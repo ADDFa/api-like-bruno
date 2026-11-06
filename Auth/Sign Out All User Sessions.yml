@@ -1,0 +1,52 @@
+info:
+  name: Sign Out All User Sessions
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{api_url}}/sign-out-all-device"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": "{{session_user_id}}"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |-
+    Khusus super-admin untuk mencabut seluruh sesi pengguna lain. `user_id` wajib berupa UUID pengguna sasaran; isi variabel folder Auth `session_user_id` sebelum menjalankan permintaan. Nilai awalnya kosong agar tidak menargetkan pengguna secara tidak sengaja.
+    Pengguna biasa yang mengirim ID pengguna lain mendapat HTTP 403. Jika tanpa `user_id`, endpoint mencabut sesi akun yang sedang login seperti "Sign Out All My Sessions".
+    Operasi ini menghapus seluruh baris `user_tokens` milik pengguna sasaran, termasuk yang sudah kedaluwarsa. `revoked_count` dapat bernilai 0. Cookie milik super-admin tidak dihapus saat sasaran adalah pengguna lain.
+    Bearer token sasaran yang sudah diterbitkan masih dapat dipakai sampai kedaluwarsa. Contoh respons hanya ilustrasi.
+
+examples:
+  - name: Sign Out All User Sessions
+    request:
+      url: "{{api_url}}/sign-out-all-device"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "user_id": "11111111-1111-4111-8111-111111111111"
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "is_success": true,
+            "data": {
+              "revoked_count": 2
+            }
+          }

@@ -5,3 +5,15 @@ info:
 
 request:
   auth: inherit
+  variables:
+    - name: session_user_id
+      value: ""
+
+docs:
+  content: |-
+    Endpoint sesi login memakai tabel `user_tokens` dan memerlukan bearer token.
+    Pengguna biasa hanya dapat melihat sesi miliknya. Super-admin dapat melihat daftar pengguna dengan sesi aktif, lalu membuka detail sesi pengguna tertentu.
+    Hasil GET berpaginasi: `page` mulai dari 1 dan `per_page` 1–100 (default 10). Hanya sesi dengan `expired_at` yang belum lewat yang ditampilkan.
+    `is_current` dihitung dari cookie `refresh_token`; tanpa cookie ini nilainya `false` meskipun bearer token masih berlaku.
+    Respons tidak pernah mengirim nilai refresh token. Mencabut seluruh sesi menghapus token penyegaran di `user_tokens`; bearer token yang sudah diterbitkan tetap berlaku hingga kedaluwarsa.
+    Super-admin juga dapat mencabut seluruh sesi semua pengguna melalui "Sign Out All Users". Operasi ini ikut mencabut sesi super-admin sendiri.

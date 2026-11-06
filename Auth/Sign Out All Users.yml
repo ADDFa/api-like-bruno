@@ -1,0 +1,40 @@
+info:
+  name: Sign Out All Users
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{api_url}}/sign-out-all-users"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs:
+  content: |-
+    Khusus super-admin. Mencabut seluruh sesi login semua pengguna, termasuk sesi super-admin yang menjalankan permintaan ini. Tidak memerlukan body.
+    Seluruh baris `user_tokens` dihapus; `data.revoked_count` menunjukkan jumlah baris yang dihapus. Cookie `refresh_token` perangkat ini dihapus.
+    Pengguna biasa mendapat HTTP 403. Bearer token yang sudah terbit tetap berlaku sampai kedaluwarsa, sehingga pencabutan tidak langsung menghentikan semua permintaan API.
+    Permintaan ini bersifat destruktif; jalankan hanya jika memang ingin mengeluarkan semua pengguna.
+
+examples:
+  - name: Sign Out All Users
+    request:
+      url: "{{api_url}}/sign-out-all-users"
+      method: POST
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: json
+        data: |-
+          {
+            "is_success": true,
+            "data": {
+              "revoked_count": 25
+            }
+          }
